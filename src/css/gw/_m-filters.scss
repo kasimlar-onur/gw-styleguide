@@ -1,0 +1,12 @@
+.m-filters {
+
+  &__form {
+    padding: 40px 40px;
+  }
+
+  &__fa-checkbox-filters {
+    @extend .fa-checkbox-custom;
+    padding-left: 60px !important;
+    float: none !important;
+  }
+}

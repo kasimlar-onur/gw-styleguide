@@ -1,0 +1,37 @@
+.breadcrumb{
+    margin-bottom: 0px !important;
+    color: $colorTertiary30;
+    padding: 6px 32px;
+    
+    i{
+        font-size: 20px;
+        color: $colorTertiary60;
+    }
+    
+    a{
+        font-size: 12px !important;
+        font-weight: normal;
+        text-decoration: none;
+        color: $colorPrimary100;
+    }
+    
+    a:hover, a:active, a:focus{
+        text-decoration: none;
+    }
+
+    .toggle-add-menu {
+        position: absolute;
+        right: 32px;
+    }
+
+}
+
+.breadcrumb::after{
+    clear: inherit !important;
+}
+
+@media(max-width: 576px){
+    .breadcrumb{
+        display:none;
+    }
+}

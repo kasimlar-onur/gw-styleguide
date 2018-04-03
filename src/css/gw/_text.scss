@@ -1,0 +1,84 @@
+/* Noto Fonts */
+/* Noto Sans SC (Chinese Simplified) */
+@import url(//fonts.googleapis.com/earlyaccess/notosanssc.css);
+/* Noto Sans Japanese (Japanese) */
+@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+/* Noto Sans Thai (Thai) */
+@import url(//fonts.googleapis.com/earlyaccess/notosansthai.css);
+/* Noto Sans Georgian (Georgian)  */
+@import url(//fonts.googleapis.com/earlyaccess/notosansgeorgian.css);
+/* Noto Kufi Arabic (Arabic) */
+@import url(//fonts.googleapis.com/earlyaccess/notokufiarabic.css);
+/* Noto Naskh Arabic (Arabic) */
+@import url(//fonts.googleapis.com/earlyaccess/notonaskharabic.css);
+
+/* headlines */
+
+h1{
+	color: $colorTertiary100;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+h2{
+    color: $colorTertiary100;
+    font-size: 34px;
+    line-height: 38px;
+}
+
+h3{
+    color: $colorTertiary100;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+h4{
+    color: $colorTertiary100;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+h1.blue-background{
+	color: $colorForeground100;
+}
+
+p{
+    font-size: 16px;
+    line-height: 22px;
+    color: $colorTertiary90;
+}
+
+p.primary{
+    color: $colorTertiary90;
+}
+
+p.secondary{
+    color: $colorTertiary60;
+}
+
+p.disabled{
+    color: $colorTertiary30;
+}
+
+.text-color-primary {
+    color: $colorPrimary100;
+}
+
+.dark-background {
+    p {
+        color: $colorForeground100;
+    }
+    p.primary{
+        color: $colorForeground100;
+    }
+
+    p.secondary{
+        color: $colorForeground70;
+    }
+
+    p.disabled{
+        color: $colorForeground50;
+    }
+}
+

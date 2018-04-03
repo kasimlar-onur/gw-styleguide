@@ -1,0 +1,351 @@
+/* 1. Labels
+ * 2. input fields on white background
+ * 3. input fields on dark background
+ */
+
+/* Labels - General */
+   
+/* normal background */
+
+label{
+    font-size: 12px;
+    color: $colorTertiary40;
+    padding-top: 16px;
+    margin-bottom: 0;
+}
+
+label.focused{
+    color: $colorPrimary100 !important;
+}
+
+/* on dark background */
+
+.dark-background{
+    label{
+        color: $colorForeground40;
+    }
+}
+
+input, textarea {
+    caret-color: $colorPrimary100;
+}
+
+/* Inputs on white background */
+
+input[type="text"].form-control:not(.trigger), 
+input[type="assetCategories"].form-control,
+input[type="assetTags"].form-control,
+input[type="color"].form-control,
+input[type="number"].form-control,
+input[type="email"].form-control,
+input[type="url"].form-control{
+    border-bottom: 1px solid $colorTertiary40;
+    //font-size: 16px;
+    //font-weight: bold;
+    color: $colorTertiary90;
+    margin-bottom: 11px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    line-height: 16px;
+}
+
+input.form-control[type="text"]:focus:not(.trigger):not(.full-width), 
+input.form-control[type="assetCategories"]:focus,
+input.form-control[type="assetTags"]:focus,
+input.form-control[type="color"]:focus,
+input.form-control[type="number"]:focus,
+input.form-control[type="email"]:focus,
+input.form-control[type="url"]:focus{
+    border-bottom: 2px solid $colorPrimary100;
+    padding-bottom: 7px;
+}
+
+/* error field jumps with border change - prevent padding-bottom change to 5px */
+
+.has-error{
+    input[type="text"]:not(.trigger),
+    input.form-control[type="assetCategories"]:not(.trigger),
+    input.form-control[type="assetTags"]:not(.trigger),
+    input.form-control[type="color"]:focus{
+        border-bottom: 2px solid $colorDanger100;
+        padding-bottom: 6px;
+        font-size: 16px;
+        font-weight: bold;
+        color: $colorTertiary90;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        line-height: 16px;
+    }
+    
+    input.form-control[type="password"], input.form-control[type="password"]:focus,
+    input.form-control[type="assetCategories"], input.form-control[type="assetTags"],
+    input.form-control[type="number"], input.form-control[type="email"],
+    input.form-control[type="url"]{
+        border-bottom: 2px solid $colorDanger100;
+    }
+    
+    .help-block, .control-label, .radio, .checkbox, .radio-inline, .checkbox-inline, .radio label, .checkbox label, .radio-inline label, .checkbox-inline label{
+        font-size: 12px;
+        color: $colorDanger100;
+    }
+}
+
+/* password input */
+
+input[type="password"]{
+    border-bottom: 1px solid $colorTertiary40;
+    font-size: 16px;
+    font-weight: bold;
+    color: $colorTertiary90;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    line-height: 16px;
+}
+
+input[type="password"]:focus{
+    border-bottom: 2px solid $colorPrimary100;
+    padding-bottom: 7px;
+    color: $colorTertiary90;
+}
+
+/* disabled input */
+
+fieldset[disabled] .form-control, .form-control[disabled], .form-controlselect[disabled]{
+    border-bottom: 1px solid $colorTertiary20 !important;
+}
+
+/* placeholders */
+
+/* normal */
+
+.form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $colorTertiary40;
+}
+.form-control::-moz-placeholder { /* Firefox 19+ */
+  color: $colorTertiary40;
+}
+.form-control:-ms-input-placeholder { /* IE 10+ */
+  color: $colorTertiary40 !important;
+}
+.form-control:-moz-placeholder { /* Firefox 18- */
+  color: $colorTertiary40;
+}
+
+/* focus */
+
+.form-control:focus::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $colorTertiary40;
+}
+.form-control:focus::-moz-placeholder { /* Firefox 19+ */
+  color: $colorTertiary40;
+}
+.form-control:focus:-ms-input-placeholder { /* IE 10+ */
+  color: $colorTertiary40 !important;
+}
+.form-control:focus:-moz-placeholder { /* Firefox 18- */
+  color: $colorTertiary40;
+}
+
+/* disabled */
+
+fieldset[disabled] .form-control::-webkit-input-placeholder, .form-control[disabled]::-webkit-input-placeholder, .form-controlselect[disabled]::-webkit-input-placeholder{
+    color: $colorTertiary20;
+}
+fieldset[disabled] .form-control::-moz-placeholder, .form-control[disabled]::-moz-placeholder, .form-controlselect[disabled]::-moz-placeholder{
+    color: $colorTertiary20;
+}
+fieldset[disabled] .form-control:-ms-input-placeholder, .form-control[disabled]:-ms-input-placeholder, .form-controlselect[disabled]:-ms-input-placeholder{
+    color: $colorTertiary20 !important;
+}
+fieldset[disabled] .form-control:-moz-placeholder, .form-control[disabled]:-moz-placeholder, .form-controlselect[disabled]:-moz-placeholder{
+    color: $colorTertiary20;
+}
+
+/* textareas */
+
+textarea.form-control{
+    border: none;
+    border-bottom: 1px solid $colorTertiary40;
+    color: $colorTertiary90;
+}
+
+textarea.form-control:focus{
+    border: none;
+    border-bottom: 2px solid $colorPrimary100;
+    color: $colorTertiary90;
+}
+
+/* input on blue background */
+
+.dark-background{
+    /* Inputs on white background */
+
+    input[type="text"]:not(.trigger){
+        border-bottom: 1px solid $colorForeground40;
+        font-size: 16px;
+        font-weight: bold;
+        color: $colorForeground90;
+        margin-bottom: 11px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        line-height: 16px;
+    }
+
+    input[type="text"]:not(.trigger):focus{
+        border-bottom: 2px solid $colorPrimary100;
+        padding-bottom: 7px;
+    }
+
+    /* error field jumps with border change - prevent padding-bottom change to 5px */
+
+    .has-error{
+        input[type="text"]:not(.trigger){
+            border-bottom: 2px solid $colorDanger100;
+            padding-bottom: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            color: $colorForeground90;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            line-height: 16px;
+        }
+
+        input[type="password"], input[type="password"]:focus{
+            border-bottom: 2px solid $colorDanger100;
+        }
+
+        .help-block, .control-label, .radio, .checkbox, .radio-inline, .checkbox-inline, .radio label, .checkbox label, .radio-inline label, .checkbox-inline label{
+            font-size: 12px;
+            color: $colorDanger100;
+        }
+    }
+
+    /* password input */
+
+    input[type="password"]{
+        border-bottom: 1px solid $colorForeground40;
+        font-size: 16px;
+        font-weight: bold;
+        color: $colorForeground90;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        line-height: 16px;
+    }
+
+    input[type="password"]:focus{
+        border-bottom: 2px solid $colorPrimary100;
+        padding-bottom: 7px;
+    }
+
+    /* disabled input */
+
+    fieldset[disabled] .form-control, .form-control[disabled], .form-controlselect[disabled]{
+        border-bottom: 1px solid $colorForeground20 !important;
+    }
+
+    /* placeholders */
+
+    /* normal */
+
+    .form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $colorForeground70;
+    }
+    .form-control::-moz-placeholder { /* Firefox 19+ */
+      color: $colorForeground70;
+    }
+    .form-control:-ms-input-placeholder { /* IE 10+ */
+      color: $colorForeground70 !important;
+    }
+    .form-control:-moz-placeholder { /* Firefox 18- */
+      color: $colorForeground70;
+    }
+
+    /* focus */
+
+    .form-control:focus::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $colorForeground70;
+    }
+    .form-control:focus::-moz-placeholder { /* Firefox 19+ */
+      color: $colorForeground70;
+    }
+    .form-control:focus:-ms-input-placeholder { /* IE 10+ */
+      color: $colorForeground70 !important;
+    }
+    .form-control:focus:-moz-placeholder { /* Firefox 18- */
+      color: $colorForeground70;
+    }
+
+    /* disabled */
+
+    fieldset[disabled] .form-control::-webkit-input-placeholder, .form-control[disabled]::-webkit-input-placeholder, .form-controlselect[disabled]::-webkit-input-placeholder{
+        color: $colorForeground20;
+    }
+    fieldset[disabled] .form-control::-moz-placeholder, .form-control[disabled]::-moz-placeholder, .form-controlselect[disabled]::-moz-placeholder{
+        color: $colorForeground20;
+    }
+    fieldset[disabled] .form-control:-ms-input-placeholder, .form-control[disabled]:-ms-input-placeholder, .form-controlselect[disabled]:-ms-input-placeholder{
+        color: $colorForeground20 !important;
+    }
+    fieldset[disabled] .form-control:-moz-placeholder, .form-control[disabled]:-moz-placeholder, .form-controlselect[disabled]:-moz-placeholder{
+        color: $colorForeground20;
+    }
+
+    /* textareas */
+
+    textarea.form-control{
+        border: none;
+        border-bottom: 1px solid $colorForeground40;
+        color: $colorForeground90;
+    }
+
+    textarea.form-control:focus{
+        border: none;
+        border-bottom: 2px solid $colorPrimary100;
+        color: $colorForeground90;
+    }
+}
+
+/** full width inputs and textfields **/
+
+input[type="text"].full-width{
+    background-color: $colorForeground100;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    border: none;
+    width: 100%;
+    overflow-y: auto;
+    font-weight: normal;
+    color: $colorTertiary90;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    outline-color: transparent;
+}
+
+textarea.full-width{
+    background-color: $colorForeground100;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    border: none;
+    width: 100%;
+    overflow-y: auto;
+    color: $colorTertiary90;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    outline-color: transparent;
+}
+
+/** input placeholder colors **/
+
+.full-width::-webkit-input-placeholder {
+    color: $colorTertiary40;
+}
+.full-width:-moz-placeholder {
+    color: $colorTertiary40;
+
+}
+.full-width::-moz-placeholder {
+    color: $colorTertiary40;
+
+}

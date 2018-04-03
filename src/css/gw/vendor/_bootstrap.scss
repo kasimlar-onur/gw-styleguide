@@ -1,0 +1,24 @@
+/*!
+ * Bootstrap v3.3.5 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+// Core variables and mixins
+@import "aui/lexicon/bootstrap/variables";
+@import "aui/lexicon/bootstrap/mixins";
+
+// Reset and dependencies
+@import "aui/lexicon/bootstrap/normalize";
+
+// Core CSS
+@import "aui/lexicon/bootstrap/buttons";
+
+// Components
+@import "aui/lexicon/bootstrap/component-animations";
+@import "aui/lexicon/bootstrap/dropdowns";
+
+// Components w/ JavaScript
+// Utility classes
+@import "aui/lexicon/bootstrap/utilities";
+@import "aui/lexicon/bootstrap/responsive-utilities";

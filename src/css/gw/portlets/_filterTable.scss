@@ -1,0 +1,571 @@
+.filterable {
+  color: inherit;
+  border-bottom: inherit;
+  cursor: pointer;
+  font-style: normal;
+}
+
+.filterable:hover {
+  color: #5bb75b;
+  border-bottom: inherit;
+  font-style: normal;
+}
+
+.filterable-active {
+  color: #5bb75b !important;
+  font-style: italic;
+}
+
+.filterable-match {
+}
+
+.filterable-no-match {
+  display: none !important;
+}
+
+.gwkp-order-overview-dropdown-table-space {
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+}
+
+.gwkp-order-overview-filter-row {
+  display: none;
+
+}
+
+.gwkp-orderoverview-dropdown-left {
+  float: left;
+}
+
+.gwkp-orderoverview-btn-row-left {
+  float: left;
+  padding-left: 10%;
+
+}
+
+.gwkp-order-overview-clear-float {
+  clear: both;
+}
+
+#gwkp-orderoverview-filter-elems li:first-child {
+  .gwkp-orderoverview-uparrow {
+    display: none;
+  }
+}
+
+#gwkp-orderoverview-filter-elems li:last-child {
+  .gwkp-orderoverview-downarrow {
+    display: none;
+  }
+}
+
+#gwkp-orderoverview-filter-elems li a {
+  display: inline-block;
+}
+
+.gwkp-orderoverview-dropdown-action-buttons {
+  float: right;
+  padding-top: 5px;
+}
+
+.gw-dropdown-list, .gw-dropdown-list-btn {
+  width: 200px;
+  height: 30px;
+
+  span {
+    padding-left: 10px;
+    padding-top: 7px;
+    height: 30px;
+    display: inherit;
+  }
+}
+
+.gw-dropdown-list {
+  background-color: $colorForeground100;
+}
+
+.gw-dropdown-list-btn {
+  span {
+    width: 90%;
+    background-color: $colorForeground100;
+  }
+
+}
+
+.input-text, .search-input-from-to {
+  padding-left: 10px;
+}
+
+.ul-drag-and-drop {
+  list-style: inherit;
+
+  li {
+    list-style: none;
+  }
+
+  li, li label {
+    cursor: move;
+  }
+  li label span::before {
+    cursor: pointer;
+  }
+}
+
+.filterSetIcon, .tableUpButton {
+  color: $colorPrimary100 !important;
+}
+
+.fa-ul {
+	position:absolute;
+    margin-left: -9px !important;
+    top: -8px;
+}
+
+.fa-ul-parent{
+	position:relative;
+	float:right;
+	}
+
+.hiddenVisibility {
+// visibility: hidden;
+}
+
+.fa-sort-amount-asc, .fa-sort-amount-desc {
+  position: absolute;
+  padding-top: 3px;
+  margin-left: 3px;
+}
+
+#addRequestModal .modal-body {
+	    background-color: #fff;
+	}
+
+.gw-dropdown-icon {
+
+  [class^="gwicon-"], [class*=" gwicon-"] {
+    font-size: 4.1rem;
+    line-height: 0.5;
+    vertical-align: middle;
+  }
+
+  width: 252px;
+
+  a {
+    width: 250px;
+  }
+
+  div {
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: top;
+  }
+
+  ul li, a span {
+    cursor: pointer;
+    i {
+      margin-right: 10px;
+      font-size: 30px;
+      vertical-align: middle;
+    }
+    div {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+
+}
+
+
+
+.gwkp-filtertable-wrapper {
+
+  label.error {
+    display: block;
+    position: absolute;
+    padding-top: 0;
+    padding-left: 5px;
+    font-size: 12px;
+    color: $colorDanger100;
+  }
+
+  .select-filter {
+    width: 280px;
+  }
+
+  .gw-dropdown-list label.error {
+    padding-top: 2px;
+  }
+
+  .modal-dialog #request-portlet{
+	.gw-dropdown{
+		 border-bottom: 1px solid $overviewTableBorderColor;
+	 	 max-height: inherit !important;
+	}.gw-dropdown.open{	
+	    border-bottom: 2px solid $colorModalDropdownOpened;
+	    	}.dropdown-menu {
+	    background-color: #ebebeb;
+	    border: 0;
+	    border-radius: 0 ;
+	    box-shadow: none;
+	    font-size: 16px;
+	    padding: 0;
+	    top:100%;
+	    li:hover{
+	    	 background-color: #F7FAFA;
+	    }
+	}
+	} 
+	
+	.fa-comments{
+		cursor: pointer;
+		display:inline-block; 
+	}
+
+
+
+  .filter-def-wrapper {
+    min-width: 450px;
+  }
+
+  .gw-dropdown, .gw-dropdown.open {
+    border-bottom: none !important;
+    max-height: inherit;
+
+    .gw-dropdown-menu {
+      background-color: $colorForeground100;
+      max-height: 500px;
+      padding-bottom: 20px;
+      border: 1px solid $overviewTableBorderColor !important; // todo replace this;
+      border-top: none;
+      margin-top: 0;
+      margin-left: -1px;
+      overflow: hidden;
+
+      input[type='radio']:checked ~ .gw-input-label {
+        font-weight: bold;
+      }
+
+      input[type='radio']:checked ~ .gw-input-label:before {
+        font-weight: normal;
+      }
+
+      .icon-remove {
+        padding: 8px 0 0 0;
+      }
+
+      li {
+        &:hover {
+          background-color: #ffe8d9;
+        }
+      }
+    }
+  }
+
+  .border-right {
+    border-right: 1px solid $overviewTableBorderColor;
+  }
+
+  .border-left {
+    border-left: 1px solid $overviewTableBorderColor;
+  }
+
+  .icon-remove {
+    color: $colorInfo100;
+    cursor: pointer;
+    &:hover {
+      color: $colorIconHover;
+    }
+  }
+
+}
+
+.filter-drop-down-menu {
+  margin-top: 3px !important;
+}
+
+.filter-dropdown {
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  label.radio-inline {
+
+    height: inherit !important;
+    padding: 4px 0 4px 10px;
+
+    input {
+      display: none;
+    }
+
+    .gw-input-label {
+      padding: 15px 0;
+      font-size: 12px;
+    }
+  }
+
+  .gw-dropdown-toggle {
+    width: 50px;
+    min-width: 0;
+  }
+
+  .gw-dropdown-toggle, input {
+    border: none;
+    padding-bottom: 2px;
+    width: 40px;
+  }
+
+  .chevron-bottom, .chevron-top {
+    right: 9px;
+  }
+
+  .chevron-bottom {
+    top: 32%;
+  }
+
+}
+
+.gw-td-spinner {
+  text-align: center;
+  font-size: 40px;
+  color: $colorInfo100;
+}
+
+.dropdown-filters {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: none;
+
+  .toggle-collapse {
+    display: inline-block;
+    vertical-align: top;
+    cursor:pointer;
+  }
+
+  i[class^="icon-caret-"] {
+    margin-left: 15px;
+  }
+
+  .filter-count {
+    font-size: 10px;
+    color: white;
+    margin: 15px 8px 0px -8px;
+    float: left;
+  }
+
+  .search-icon {
+    font-size: 15px !important;
+    padding-left: 5px;
+    padding-top: 5px;
+  }
+}
+
+.defined-filters {
+  display: inline-block;
+}
+
+.bg-secondary {
+  padding: 10px;
+  font-size: 12px !important;
+  background-color: $colorForeground100;
+
+  > div {
+    margin: 5px 0 5px 0;
+  }
+
+  .input-text, .search-input-from-to {
+    height: 30px;
+    border: none;
+    float:left;
+  }
+
+  .border-component {
+      border: 1px solid $overviewTableBorderColor !important;
+      margin-right: 10px;
+      margin-bottom: 15px;
+  }
+
+}
+
+.filter-search-input {
+
+  /*
+  .border-left {
+    border-left: 1px solid $overviewTableBorderColor;
+  }
+
+  .border-right {
+    border-left: 1px solid $overviewTableBorderColor;
+  }
+*/
+
+  .search-input-text {
+    width: 280px;
+  }
+
+  .search-input-from-to-value {
+    width: 145px;
+    min-width: 145px;
+  }
+
+}
+
+.filter-save-input {
+  float: left;
+}
+
+.dropdown-filter {
+  margin-left: 20px;
+  min-width: 440px;
+
+  .filter-sum {
+    background-color: #24cb7f; //todo add this to colors
+    border-right: none;
+    vertical-align: middle;
+    display: inline-block;
+  }
+}
+
+
+
+.gwkp-orderoverview .popover{
+  &.bottom .arrow {
+    top: -11px !important;
+    left: 50% !important;
+    margin-left: -11px !important;
+    border-bottom-color: #fff !important;
+    border-top-width: 0 !important;
+  }.arrow {
+     border-width: 11px !important;
+   }
+}
+
+.test-add-request{
+  float:right;
+}
+
+
+.icon-status {
+  font-size: 2.1rem !important;
+}
+
+.filter-table-header-info {
+  display: block !important;
+  position: absolute;
+  font-size: 0.8rem;
+}
+
+
+// TODO refactor all the code above
+// e.g why do we define here the body tag?
+// Replace all colours with constants.
+//
+
+body {
+  font-family: Arial-MT, Helvetica, sans-serif !important;
+}
+
+.highlight {
+  font-weight: normal !important;
+}
+
+.filter-table {
+
+  thead>tr>th {
+    padding-right: 30px !important;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+  table, thead, tbody, th, td, tr {
+    display: block !important;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  td, th {
+    padding: 6px;
+    text-align: left;
+  }
+  tr {
+    border: 0 solid #ccc;
+  }
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 45%;
+      white-space: nowrap;
+      background-color: rgba(0, 0, 0, 0.02);
+      font-weight: bold;
+      padding: 8px 41px;
+    }
+  }
+  .table > tbody > tr {
+    border-bottom: 0 solid rgba(0, 0, 0, 0.2);
+  }
+  .table-bordered > tbody > tr > td {
+    border: 0 solid #ddd;
+  }
+
+  .text-xs-left {
+    text-align: left;
+  }
+
+  .filterTable td {
+      padding-left: 50% !important;
+      &:last-child {
+        padding-bottom: 30px !important;
+      }
+      &:nth-child(3) {
+        //todo: remove this hotfix
+        padding-left: 50%!important;
+      }
+      &:before {
+        content: attr(data-title);
+      }
+  }
+}
+
+span.dots{
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width:99%;
+}
+
+.dgs-icon {
+  color: $colorDanger100;
+  font-size: 17px;
+}
+
+/* css to disable events */
+.area-disabled {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+
+/* header alignment */
+
+th[data-header-key="gwkp-order-overview-order-type"],
+  [data-header-key="gwkp-order-overview-order-state"],
+  [data-header-key="gwkp-order-overview-shipping-unit"],
+  [data-header-key="gwkp-order-overview-interaction"] {
+
+  text-align: center;
+}

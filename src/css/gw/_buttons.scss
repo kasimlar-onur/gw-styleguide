@@ -1,0 +1,539 @@
+@import "colors";
+
+.btn {
+	font-size: 14px !important;
+    padding: 13px 16px;
+    font-weight: bold;
+    //margin-right:2px !important;
+    margin-bottom: 2px !important;
+}
+
+.btn:focus, .btn:active, .btn:hover{
+    font-weight: bold;
+}
+
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn{
+    opacity: 1.0 !important;
+}
+
+/* secondary buttons */
+
+.btn-default{
+	background-color: transparent;
+	border-color: $colorPrimary100;
+	border-radius: 0px;
+	color: $colorPrimary100;
+	font-weight: bold;
+	font-family: Arial, sans-serif;
+	padding: 11px 15px;
+}
+
+.btn-default.active, .btn-default.active:active, .btn-default.active:hover, .btn-default.active:hover:active, .btn-default.active:focus,
+.btn-default:active, .btn-default:hover, .btn-default:hover:active, .btn-default:focus, .btn-default:active:focus{
+	background-color: $colorPrimary30;
+	border-color: $colorPrimary80;
+	border-radius: 0px;
+	color: $colorPrimary100;
+}
+
+.btn-default[disabled], .btn-default[disabled]:active, .btn-default[disabled]:hover, .btn-default[disabled]:hover:active, .btn-default[disabled]:active:focus{
+	background-color: transparent;
+	border-color: $colorPrimary30;
+	border-radius: 0px;
+	color: $colorPrimary30;
+}
+
+/* alternative secondary buttons */
+
+.btn-default-alt{
+	background-color: transparent;
+	border-color: $colorSecondary100;
+	border-radius: 0px;
+	color: $colorSecondary100;
+	font-weight: bold;
+	font-family: Arial, sans-serif;
+	padding: 12px 16px;
+}
+
+.btn-default-alt.active, .btn-default-alt.active:active, .btn-default-alt.active:hover, .btn-default-alt.active:hover:active, .btn-default-alt.active:focus,
+.btn-default-alt:active, .btn-default-alt:hover, .btn-default-alt:hover:active, .btn-default-alt:focus, .btn-default-alt:active:focus{
+	background-color: $colorSecondary30;
+	border-color: $colorSecondary80;
+	border-radius: 0px;
+	color: $colorSecondary100;
+}
+
+.btn-default-alt[disabled], .btn-default-alt[disabled]:active, .btn-default-alt[disabled]:hover, .btn-default-alt[disabled]:hover:active, .btn-default-alt[disabled]:active:focus{
+	background-color: transparent;
+	border-color: $colorSecondary30;
+	border-radius: 0px;
+	color: $colorSecondary30;
+}
+
+/* secondary buttons blue background */
+
+.dark-background{
+    
+    .btn-default{
+        background-color: transparent;
+        border-color: $colorPrimary100;
+        color: $colorPrimary100;
+    }
+
+    .btn-default.active, .btn-default.active:active, .btn-default.active:hover, .btn-default.active:hover:active,
+    .btn-default:active, .btn-default:hover, .btn-default:hover:active, .btn-default:active:focus{
+        background-color: transparent;
+        border-color: $colorPrimary80Solid;
+        color: $colorPrimary80Solid;
+    }
+
+    .btn-default[disabled], .btn-default[disabled]:active, .btn-default[disabled]:hover, .btn-default[disabled]:hover:active, .btn-default[disabled]:active:focus{
+        background-color: transparent;
+        border-color: $colorPrimary30;
+        color: $colorPrimary30;
+    }
+
+    .btn-default-alt{
+        background-color: transparent;
+        border-color: $colorForeground70;
+        color: $colorForeground70;
+    }
+
+    .btn-default-alt.active, .btn-default-alt.active:active, .btn-default-alt.active:hover, .btn-default-alt.active:hover:active,
+    .btn-default-alt:active, .btn-default-alt:hover, .btn-default-alt:hover:active, .btn-default-alt:active:focus{
+        background-color: transparent;
+        border-color: $colorForeground100;
+        color: $colorForeground100;
+    }
+
+    .btn-default-alt[disabled], .btn-default-alt[disabled]:active, .btn-default-alt[disabled]:hover, .btn-default-alt[disabled]:hover:active, .btn-default-alt[disabled]:active:focus{
+        background-color: transparent;
+        border-color: $colorForeground30;
+        color: $colorForeground30;
+    }
+}
+
+
+/* primary buttons */
+
+.btn-primary,
+.dark-background .btn-primary {
+  background-color: $colorPrimary100;
+  border: none;
+  border-radius: 0px;
+  font-weight: bold;
+  color: $colorForeground100;
+  font-family: Arial, sans-serif;
+}
+
+.btn-primary.active, .btn-primary.active:active, .btn-primary.active:hover, .btn-primary.active:hover:active,
+.btn-primary.active:focus,
+.btn-primary:active, .btn-primary:hover, .btn-primary:hover:active, .btn-primary:active:focus, .btn-primary:focus{
+  background-color: $colorPrimary80;
+  color: $colorForeground100;
+  border: none;
+}
+
+.btn-primary[disabled], .btn-primary[disabled]:active, .btn-primary[disabled]:hover, .btn-primary[disabled]:hover:active, .btn-primary[disabled]:active:focus{
+  background-color: $colorPrimary30;
+  color: $colorForeground100;
+}
+
+/* alternative primary buttons */
+
+.btn-primary-alt{
+  background-color: $colorSecondary100;
+  color: $colorForeground100;
+  border: none;
+  border-radius: 0px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+.btn-primary-alt.active, .btn-primary-alt.active:active, .btn-primary-alt.active:hover, .btn-primary-alt.active:hover:active,
+.btn-primary-alt.active:focus,
+.btn-primary-alt:active, .btn-primary-alt:hover, .btn-primary-alt:hover:active, .btn-primary-alt:focus, .btn-primary-alt:active:focus{
+  background-color: $colorSecondary80;
+  color: $colorForeground100;
+}
+
+.btn-primary-alt[disabled], .btn-primary-alt[disabled]:active, .btn-primary-alt[disabled]:hover, .btn-primary-alt[disabled]:hover:active, .btn-primary-alt[disabled]:active:focus{
+  background-color: $colorSecondary30;
+  color: $colorForeground100;
+}
+
+/* primary buttons blue background */
+
+.dark-background{
+
+  .btn-primary.active, .btn-primary.active:active, .btn-primary.active:hover, .btn-primary.active:hover:active,
+  .btn-primary.active:focus,
+  .btn-primary:active, .btn-primary:hover, .btn-primary:hover:active, .btn-primary:active:focus, .btn-primary:focus{
+    background-color: $colorPrimary80Solid;
+    color: $colorForeground100;
+  }
+
+  .btn-primary[disabled], .btn-primary[disabled]:active, .btn-primary[disabled]:hover, .btn-primary[disabled]:hover:active, .btn-primary[disabled]:active:focus{
+    background-color: $colorPrimary30;
+    color: $colorForeground30;
+  }
+
+  .btn-primary-alt{
+    background-color: $colorBackgroundSolid;
+    color: $colorSecondary100;
+    border: none;
+  }
+
+  .btn-primary-alt.active, .btn-primary-alt.active:active, .btn-primary-alt.active:hover, .btn-primary-alt.active:hover:active, .btn-primary-alt.active:focus,
+  .btn-primary-alt:active, .btn-primary-alt:hover, .btn-primary-alt:hover:active, .btn-primary-alt:focus, .btn-primary-alt:active:focus{
+    background-color: $colorForeground100;
+    color: $colorSecondary100;
+    border: none;
+  }
+
+  .btn-primary-alt[disabled], .btn-primary-alt[disabled]:active, .btn-primary-alt[disabled]:hover, .btn-primary-alt[disabled]:hover:active, .btn-primary-alt[disabled]:active:focus{
+    background-color: $colorForeground30;
+    border-color: $colorForeground30;
+    color: $colorSecondary100;
+  }
+}
+
+
+/* tertiary buttons */
+
+.btn-link{
+	background-color: transparent;
+	border: none;
+	color: $colorPrimary100;
+	font-weight: bold;
+	font-family: Arial, sans-serif;
+	text-decoration: none;
+}
+
+.btn-link:before, .btn-link-alt:before{
+    font-family: FontAwesome;
+    content: "\f105";
+    padding-right: 5px;
+}
+
+.btn-link.active, .btn-link.active:active, .btn-link.active:hover, .btn-link.active:hover:active, .btn-link.active:focus,
+.btn-link:active, .btn-link:hover, .btn-link:hover:active, .btn-link:focus, .btn-link:active:focus{
+	background-color: transparent;
+	border: none;
+	color: $colorPrimary70;
+	font-weight: bold;
+	font-family: Arial, sans-serif;
+	text-decoration: none;
+}
+
+.btn-link[disabled], .btn-link[disabled]:active, .btn-link[disabled]:hover, .btn-link[disabled]:hover:active, .btn-link[disabled]:active:focus{
+	background-color: transparent;
+	border: none;
+	color: $colorPrimary30;
+	font-weight: bold;
+	font-family: Arial, sans-serif;
+	text-decoration: none;
+}
+
+/* alternative tertiary buttons */
+
+.btn-link-alt{
+	background-color: transparent;
+	border: none;
+	color: $colorSecondary100;
+	font-weight: bold;
+	font-family: Arial, sans-serif;
+	text-decoration: none;
+}
+
+.btn-link-alt.active, .btn-link-alt.active:active, .btn-link-alt.active:hover, .btn-link-alt.active:hover:active, .btn-link-alt.active:focus,
+.btn-link-alt:active, .btn-link-alt:hover, .btn-link-alt:hover:active, .btn-link-alt:focus, .btn-link-alt:active:focus{
+	background-color: transparent;
+	border: none;
+	color: $colorSecondary70;
+}
+
+.btn-link-alt[disabled], .btn-link-alt[disabled]:active, .btn-link-alt[disabled]:hover, .btn-link-alt[disabled]:hover:active, .btn-link-alt[disabled]:active:focus{
+	background-color: transparent;
+	border: none;
+	color: $colorSecondary30;
+}
+
+/* tertiary buttons blue background */
+
+.dark-background{
+    .btn-link{
+        background-color: transparent;
+        color: $colorPrimary100;
+    }
+
+    .btn-link.active, .btn-link.active:active, .btn-link.active:hover, .btn-link.active:hover:active, .btn-link.active:focus,
+    .btn-link:active, .btn-link:hover, .btn-link:hover:active, .btn-link:focus, .btn-link:active:focus{
+        background-color: transparent;
+        color: $colorPrimary70;
+    }
+
+    .btn-link[disabled], .btn-link[disabled]:active, .btn-link[disabled]:hover, .btn-link[disabled]:hover:active, .btn-link[disabled]:active:focus{
+        background-color: transparent;
+        color: $colorPrimary30;
+    }
+    
+    .btn-link-alt{
+        background-color: transparent;
+        color: $colorForeground70;
+    }
+
+    .btn-link-alt.active, .btn-link-alt.active:active, .btn-link-alt.active:hover, .btn-link-alt.active:hover:active, .btn-link-alt.active:focus,
+    .btn-link-alt:active, .btn-link-alt:hover, .btn-link-alt:hover:active, .btn-link-alt:focus, .btn-link-alt:active:focus{
+        background-color: transparent;
+        color: $colorForeground100;
+    }
+
+    .btn-link-alt[disabled], .btn-link-alt[disabled]:active, .btn-link-alt[disabled]:hover, .btn-link-alt[disabled]:hover:active, .btn-link-alt[disabled]:active:focus{
+        background-color: transparent;
+        color: $colorForeground30;
+    }
+}
+
+/* special buttons (info,warning,danger,success) */
+
+.btn-info{
+    background-color: $colorInfo100;
+    border: none;
+    border-radius: 0px;
+}
+
+.btn-info.active, .btn-info.active:active, .btn-info.active:hover, .btn-info.active:focus, .btn-info.active:hover:active, 
+.btn-info:active, .btn-info:hover, .btn-info:focus, .btn-info:hover:active, .btn-info:active:focus{
+    background-color: $colorInfo80;
+    border: none;
+}
+
+.btn-info[disabled], .btn-info[disabled]:active, .btn-info[disabled]:hover, .btn-info[disabled]:focus, .btn-info[disabled]:hover:active, .btn-info[disabled]:active:focus{
+    background-color: $colorInfo30;
+    border: none;
+}
+
+.btn-warning{
+    background-color: $colorWarning100;
+    border: none;
+    border-radius: 0px;
+}
+
+.btn-warning.active, .btn-warning.active:active, .btn-warning.active:hover, .btn-warning.active:focus, .btn-warning.active:hover:active, 
+.btn-warning:active, .btn-warning:hover, .btn-warning:focus, .btn-warning:hover:active, .btn-warning:active:focus{
+    background-color: $colorWarning80;
+    border: none;
+}
+
+.btn-warning[disabled], .btn-warning[disabled]:active, .btn-warning[disabled]:hover, .btn-warning[disabled]:focus, .btn-warning[disabled]:hover:active, .btn-warning[disabled]:active:focus{
+    background-color: $colorWarning30;
+    border: none;
+}
+
+.btn-success{
+    background-color: $colorSuccess100;
+    border: none;
+    border-radius: 0px;
+}
+
+.btn-success.active, .btn-success.active:active, .btn-success.active:hover, .btn-success.active:focus, .btn-success.active:hover:active, 
+.btn-success:active, .btn-success:hover, .btn-success:focus, .btn-success:hover:active, .btn-success:active:focus{
+    background-color: $colorSuccess80;
+    border: none;
+}
+
+.btn-success[disabled], .btn-success[disabled]:active, .btn-success[disabled]:hover, .btn-success[disabled]:focus, .btn-success[disabled]:hover:active, .btn-success[disabled]:active:focus{
+    background-color: $colorSuccess30;
+    border: none;
+}
+
+.btn-danger{
+    background-color: $colorDanger100;
+    border: none;
+    border-radius: 0px;
+}
+
+.btn-danger.active, .btn-danger.active:active, .btn-danger.active:hover, .btn-danger.active:focus, .btn-danger.active:hover:active, 
+.btn-danger:active, .btn-danger:hover, .btn-danger:focus, .btn-danger:hover:active, .btn-danger:active:focus{
+    background-color: $colorDanger80;
+    border: none;
+}
+
+.btn-danger[disabled], .btn-danger[disabled]:active, .btn-danger[disabled]:hover, .btn-danger[disabled]:focus, .btn-danger[disabled]:hover:active, .btn-danger[disabled]:active:focus{
+    background-color: $colorDanger30;
+    border: none;
+}
+
+
+.chevron-bottom{
+	width: 8px;
+	height: 8px;
+	border-bottom: 2px solid $colorTertiary60;
+	border-left: 2px solid $colorTertiary60;
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 35%;
+	right: 10px;
+}
+
+.chevron-top{
+	width: 8px;
+	height: 8px;
+	border-top: 2px solid $colorTertiary60;
+	border-right: 2px solid $colorTertiary60;
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 45%;
+	right: 10px;
+}
+
+.dark-background{
+    .chevron-bottom{
+        border-bottom: 2px solid $colorForeground60;
+        border-left: 2px solid $colorForeground60;
+    }
+
+    .chevron-top{
+        border-top: 2px solid $colorForeground60;
+        border-right: 2px solid $colorForeground60;
+    }
+}
+
+/* toggle switch */
+
+input.toggle-switch:empty ~ .toggle-switch-bar{
+    height: 24px;
+    line-height: 24px;
+}
+
+input.toggle-switch:empty ~ .toggle-switch-bar::before {
+	border: none !important;
+	background-color: $colorTertiary40;
+    width: 46px;
+    height: 24px;
+}
+
+input.toggle-switch:empty ~ .toggle-switch-bar::after {
+	background-color: $colorForeground100;
+	border: 1px solid $colorForeground100;
+    height: 20px;
+    left: 2px;
+    top: 2px;
+    width: 20px;
+}
+
+input.toggle-switch:checked ~ .toggle-switch-bar::after{
+    left: 24px;
+}
+
+input.toggle-switch:checked ~ .toggle-switch-bar::before {
+	background-color: $colorPrimary100;
+	border: none !important;
+}
+
+input.toggle-switch:focus ~ .toggle-switch-bar::before {
+	border-color: transparent !important;
+	-webkit-box-shadow:none !important;
+	box-shadow:none !important;
+}
+
+
+/* gw buttons */
+.gw-btn {
+  padding: 0 5px;
+}
+
+
+/* inscript buttons begin */
+
+.button {
+  //@extend .btn;
+  @include button-variant-alt(#fff, $color1, #F16000);
+  @include button-size(12px, 22px, 14px, $line-height-base, $btn-border-radius-base);
+  @include font-smoothing();
+  white-space: normal;
+  position: relative;
+  -webkit-appearance: none;
+  height: 45px;
+  margin-bottom: 2px;
+
+  @media (max-width: $screen-sm-max) {
+    padding: 10.5px 23px;
+  }
+
+  span {
+    position: relative;
+  }
+
+  .fa {
+    font-size: rem(15);
+    margin-right: 5px;
+
+    &--icon-left {
+      margin-right: 2px;
+      margin-left: -6px;
+      font-size: rem(17);
+    }
+
+    &.pull-right {
+      margin-top: 5px;
+    }
+  }
+
+  &--brand {
+    @include button-variant-alt(#fff, $brand-primary, #F16000);
+  }
+
+  &--secondary {
+    @include button-variant-alt(#fff, $color2, #002b56);
+    &:hover, &:active, &:focus {
+      background-color: #315a83 !important;
+      border-color: #315a83 !important;
+    }
+  }
+
+  &--tertiary {
+    @include button-variant($color2, #E9EAEB, #dbdbdb);
+    font-size: rem(16);
+    border-width: 2px;
+    &:hover {
+      background-color: rgba(#003366, 0.2) !important;
+      border-color: #003366 !important;
+    }
+  }
+
+  &--border {
+    @include button-variant($color2, #ffffff, $color2);
+    border-width: 2px;
+    &:hover {
+      background-color: rgba(#003366, 0.2) !important;
+      border-color: #003366 !important;
+    }
+  }
+
+  &--block {
+    //@extend .btn-block;
+  }
+
+  &--wide {
+    width: 210px;
+    margin-bottom: 90px;
+  }
+
+  &--small {
+    min-width: 100px;
+  }
+
+}
+
+.button + .button {
+  margin-left: 5px;
+  @media (max-width: 480px) {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+/* inscipt buttons end */
+

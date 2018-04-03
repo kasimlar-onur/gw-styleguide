@@ -1,0 +1,182 @@
+/* designs for tables */
+
+.table {
+  &.table-list {
+    > tbody, > tfoot {
+      tr, tr:hover {
+        td {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+.table > thead > tr th, .table-striped > thead > tr th{
+    font-size: 1.4rem;
+}
+
+/*.table-striped > thead > tr > th, .table-striped > tbody > tr > th,*/ 
+.table > thead > tr > th, .table > tbody > tr > th{
+	border-top: none !important;
+	border-bottom: 1px solid $colorTertiary20 !important;
+    font-weight: bold;
+}
+
+.table > thead > tr{
+	color: $colorTertiary60;
+	background-color: $colorTertiary5;
+	font-size: 10px;
+	font-weight:bold;
+}
+
+thead tr th.sortable:hover{
+    color: $colorTertiary100;
+}
+
+.table > tbody > tr{
+	background-color: $colorForeground100;
+	font-size: 14px;
+	//border-bottom: 1px solid $colorTertiary20; todo remove this
+
+    [class^="gwicon-"], [class*=" gwicon-"] {
+      color: #b0b0b0;
+    }
+
+}
+
+.table > tbody > tr.selected{
+	background-color: $colorTertiary10;
+}
+
+.table > tbody > tr:hover {
+    //background-color: $colorTertiary5; todo remove this
+}
+
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td{
+	border-top: none !important;
+	///border-bottom: 1px solid $colorTertiary20 !important;
+	padding: 30px 20px;
+}
+
+.interactions i{
+    color: $colorTertiary60;
+    font-size: 18px;
+}
+
+/** Table Lists **/
+
+.table-list{
+    tbody{
+        tr{
+            td{
+                background-color: transparent;
+            }
+        }
+        
+        tr.active{
+            background-color: transparent;
+            
+            td{
+                background-color: $colorTertiary10;
+            }
+        }
+    }
+    
+    a, a:hover, a:focus{
+        color: $colorPrimary100;
+    }
+}
+
+/** Tables on Dark Background **/
+
+.dark-background{
+    .table > thead > tr th, .table-striped > thead > tr th{
+        font-size: 1.4rem;
+    }
+
+    /*.table-striped > thead > tr > th, .table-striped > tbody > tr > th,*/ 
+    .table > thead > tr > th, .table > tbody > tr > th{
+        border-top: none !important;
+        border-bottom: 1px solid $colorForeground20 !important;
+        font-weight: bold;
+    }
+    
+    .table > thead > tr{
+    	&>th{
+    		vertical-align: middle;  	
+    	}
+        color: $colorForeground70;
+        background-color: transparent;
+        font-size: 10px;
+        font-weight:bold;
+        border-top: 1px solid $colorForeground20;
+    }
+
+    .table > tbody > tr{
+        color: $colorForeground100;
+        background-color: $colorForeground10;
+        font-size: 14px;
+        //border-bottom: 1px solid $colorForeground20; todo remvoe this
+    }
+
+    .table > tbody > tr.selected{
+        background-color: $colorForeground20;
+    }
+
+    .table > tbody > tr:hover {
+        background-color: $colorForeground20;
+    }
+
+    .table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td{
+        border-top: none !important;
+        border-bottom: 1px solid $colorForeground20 !important;
+        padding: 30px 20px;
+    }
+
+    .interactions i{
+        color: $colorForeground40;
+        font-size: 18px;
+    }
+    
+    thead tr th.sortable:hover{
+        color: $colorForeground100;
+    }
+}
+
+/* sortable header elements */
+
+thead tr th.sortable::before{
+    font-family: FontAwesome;
+    content: "\f0dc";
+    padding-right: 5px;
+}
+
+.page-navigation {
+  text-align:  center;
+  margin-bottom: 20px;
+
+  a {
+    padding: 5px;
+
+    &:hover, &[data-selected="true"] {
+      color: $colorForeground100;
+      background: $colorPrimary100;
+      text-decoration: none;
+    }
+  }
+}
+
+.linked-table-td {
+  cursor: pointer;
+}
+
+.linked-tabled-icon {
+  padding: 0;
+}
+
+.linked-table {
+  tbody > tr {
+    cursor: pointer;
+  }
+}

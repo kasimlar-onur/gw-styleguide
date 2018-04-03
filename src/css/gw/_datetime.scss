@@ -1,0 +1,291 @@
+@import "colors";
+
+/* date picker */
+
+.input-group .form-control.trigger, .form-control.trigger{
+	padding-right: 10px;
+    padding-left: 25px;
+    color: $colorTertiary90 !important;
+    min-width: 289px;
+    border-bottom: 2px solid $colorTertiary60 !important;
+}
+
+.input-group .form-control.trigger:focus, .form-control.trigger:focus{
+	border-bottom: 2px solid $colorPrimary100 !important;
+}
+
+.datepicker::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: $colorTertiary90 !important;
+}
+
+.datepicker:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: $colorTertiary90 !important;
+}
+
+.datepicker::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: $colorTertiary90 !important;
+}
+
+.datepicker:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $colorTertiary90 !important;
+}
+
+.lfr-ddm-form-container .lfr-ddm-form-field-container .liferay-ddm-form-field-date .input-group-addon, .input-group-addon{
+	position: absolute;
+    background-color: transparent;
+    color: $colorTertiary90;
+    border: none;
+    top: 5px;
+}
+
+.input-group-addon{
+	left: 0px;
+}
+
+.dark-background{
+    .input-group .form-control.trigger, .form-control.trigger{
+        padding-right: 10px;
+        padding-left: 25px;
+        color: $colorForeground90 !important;
+        min-width: 289px;
+        border-bottom: 2px solid $colorForeground60 !important;
+    }
+    
+    .input-group .form-control.trigger:focus, .form-control.trigger:focus{
+        border-bottom: 2px solid $colorPrimary100 !important;
+    }
+
+    .datepicker::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        color: $colorForeground90 !important;
+    }
+
+    .datepicker:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: $colorForeground90 !important;
+    }
+
+    .datepicker::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: $colorForeground90 !important;
+    }
+
+    .datepicker:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $colorForeground90 !important;
+    }
+
+    .lfr-ddm-form-container .lfr-ddm-form-field-container .liferay-ddm-form-field-date .input-group-addon, .input-group-addon{
+        position: absolute;
+        background-color: transparent;
+        color: $colorForeground90;
+        border: none;
+        top: 5px;
+    }
+}
+
+/* date picker popover */
+
+.popover.bottom>.arrow, .popover.top>.arrow{
+	border: 1px solid transparent;
+	background-color: none;
+}
+.popover.bottom>.arrow:after{
+	border-bottom-color: transparent;
+	background-color: none;
+}
+.popover.top>.arrow:after{
+	border-bottom-color: transparent;
+	background-color: none;
+}
+
+.datepicker-popover.popover{
+	max-width: none;
+    background-color: $colorBackgroundSolid;
+    box-shadow: none;
+    border: none;
+    border-radius: 0px;
+    font-size: 12px;
+    font-family: Arial;
+    font-weight: lighter;
+    min-width: 289px;
+}
+
+.datepicker-popover{
+    .yui3-calendarnav-prevmonth, .yui3-calendarnav-prevmonth:hover{
+        width: 10px;
+        height: 10px;
+        margin-left: 0px;
+        border-left: 2px solid $colorTertiary90;
+        border-bottom: 2px solid $colorTertiary90;
+        border-right: 2px solid transparent;
+        border-top: 2px solid transparent;
+        transform: rotate(45deg);
+    }
+
+    .yui3-calendarnav-nextmonth, .yui3-calendarnav-nextmonth:hover{
+        width: 10px;
+        height: 10px;
+        margin-right: 0px; 
+        border-top: 2px solid $colorTertiary90;
+        border-right: 2px solid $colorTertiary90;
+        border-left: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        transform: rotate(45deg);
+    }
+
+    .yui3-calendar-header-label{
+        color: $colorTertiary90;
+        font-weight: normal;
+    }
+
+    .yui3-calendar-weekday{
+        color: $colorTertiary60;
+        font-weight: normal;
+    }
+
+    .yui3-calendar-day{
+        background-color: transparent;
+        color: $colorTertiary60;
+        border: none;
+        font-weight: normal;
+    }
+}
+
+.yui3-calendar-prevmonth-day, .yui3-calendar-nextmonth-day{
+    color: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+}
+
+.yui3-skin-sam .yui3-calendar-day-selected{
+    background-color: $colorPrimary100;
+    color: $colorForeground100;
+    font-weight: bold;
+}
+
+.yui3-skin-sam .yui3-calendar-day:hover{
+    background-color: $colorPrimary100;
+}
+
+/* alloy UI (non-LR custom) elements date/time picker */
+
+.datepicker{
+	min-width: 289px;
+	max-width: 289px;
+}
+
+.timepicker{
+	min-width: 150px !important;
+	max-width: 150px !important;
+}
+
+.timepicker-popover .popover-content{
+	background-color: $colorBackgroundSolid;
+}
+
+.timepicker-popover.popover{
+	box-shadow: none;
+    border-radius: 0px;
+    border: none;
+}
+
+.yui3-skin-sam{
+    .timepicker-popover{ 
+        .yui3-aclist-item{
+            background-color: $colorBackgroundSolid;
+            font-weight: normal;
+        }
+
+        .yui3-aclist-item-active{
+            color: $colorForeground100;
+            background-color: $colorPrimary100;
+            font-weight: bold;
+        }
+    }
+
+    .timepicker-popover{ 
+        .yui3-aclist-item:hover{
+            background-color: $colorPrimary100;
+            color: $colorForeground100;
+        }
+
+        .yui3-aclist-item-active:hover{
+            color: $colorForeground100;
+            background-color: $colorPrimary100;
+        }
+    }
+}
+
+.popover-dark{
+    background: $colorBackgroundSolidDark;
+    max-width: none;
+    background-color: $colorBackgroundSolidDark;
+    box-shadow: none;
+    border: none;
+    border-radius: 0px;
+    font-size: 12px;
+    font-family: Arial;
+    font-weight: lighter;
+    min-width: 289px;
+    
+    .yui3-calendar-content{
+        background-image: none;
+        border: none;
+    }
+    
+    .yui3-calendarnav-prevmonth, .yui3-calendarnav-prevmonth:hover{
+        width: 10px;
+        height: 10px;
+        margin-left: 0px;
+        border-left: 2px solid $colorForeground90;
+        border-bottom: 2px solid $colorForeground90;
+        border-right: 2px solid transparent;
+        border-top: 2px solid transparent;
+        transform: rotate(45deg);
+    }
+
+    .yui3-calendarnav-nextmonth, .yui3-calendarnav-nextmonth:hover{
+        width: 10px;
+        height: 10px;
+        margin-right: 0px; 
+        border-top: 2px solid $colorForeground90;
+        border-right: 2px solid $colorForeground90;
+        border-left: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        transform: rotate(45deg);
+    }
+
+    .yui3-calendar-header-label{
+        color: $colorForeground90;
+        font-weight: normal;
+    }
+
+    .yui3-calendar-weekday{
+        color: $colorForeground60;
+        font-weight: normal;
+    }
+
+    .yui3-calendar-day{
+        background-color: transparent;
+        color: $colorForeground60;
+        border: none;
+        font-weight: normal;
+    }
+    
+    .yui3-calendar-day-selected{
+        background-color: $colorPrimary100 !important;
+        color: $colorForeground100 !important;
+        font-weight: bold !important;
+    }
+
+    .yui3-calendar-day:hover{
+        background-color: $colorPrimary100;
+    }
+}
+
+/* media queries for mobile datetime pickers */
+
+@media(max-width: 991px){
+    .timepicker{
+        min-width: 289px !important;
+        max-width: 289px !important;
+    }
+}

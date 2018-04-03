@@ -1,0 +1,33 @@
+#contact-request-taglib {
+	
+	.existing-request-icon,  .non-existing-request-icon {
+		font-size: 30px;
+	}
+	
+	.existing-request-icon:hover,  .non-existing-request-icon:hover {
+		text-decoration: none;
+	}
+	
+	.existing-request-icon {
+		color: $colorPrimary100;
+	}
+	
+	.non-existing-request-icon {
+		color: $navigationMenuBackgroundDark;
+	}
+}
+
+.top-tabs > li.active > a, .top-tabs > li.active > a:hover, .top-tabs > li.active > a:focus {
+	color: $colorPrimary100 !important;
+}
+
+/*
+.top-tabs{
+	margin-bottom:20px;
+	&>li>a{
+	font-size: 14px;
+	color:  rgba(0, 0, 0, 0.4);
+	font-weight: bold;
+	}
+}
+*/

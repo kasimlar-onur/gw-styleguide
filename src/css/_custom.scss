@@ -1,0 +1,179 @@
+/* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
+
+/* inject:imports */
+/* endinject */
+
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+
+/* Fonts */
+@import "fonts/gwicon/style";
+
+/* Custom styles */
+@import "gw/colors";
+@import "gw/variables";
+@import "gw/base/list";
+@import "gw/header";
+@import "gw/base/mixins";
+@import "gw/buttons";
+@import "gw/navbars";
+@import "gw/dropdown";
+@import "gw/tables";
+@import "gw/links";
+@import "gw/footer";
+@import "gw/text";
+@import "gw/textfields";
+@import "gw/datetime";
+@import "gw/notifications";
+@import "gw/sidenav";
+@import "gw/breadcrumb";
+@import "gw/layouts";
+@import "gw/base/common";
+@import "gw/icons";
+@import "gw/inputs";
+@import "gw/lists";
+@import "gw/tooltip";
+@import "gw/m-nav-tabs";
+
+@import "gw/portlets/userPortlet";
+@import "gw/portlets/contactPortlet";
+@import "gw/portlets/contactRequestPortlet";
+@import "gw/portlets/taglib";
+@import "gw/portlets/filterTable";
+@import "gw/portlets/rssPortlet";
+@import "gw/portlets/statisticsPortlet";
+
+/* Decoator */
+@import "gw/gw_decorator";
+
+// Vendors
+@import "vendors/_jquery-ui.scss";
+@import "vendors/_c3.scss";
+
+
+// table inscript todo: merge with _table.scss
+@import "gw/base/table";
+
+//@import "gw/vendor/bootstrap";
+
+// filter navigation inscript
+@import "gw/m-filters";
+@import "gw/m-filters-nav";
+@import "gw/m-filter-results";
+
+// search inscript
+@import "gw/m-search";
+
+// section inscript
+@import "gw/m-section";
+
+// form inscript
+@import "gw/base/form";
+
+/* Tooltipster */
+@import "tooltipster/tooltipster.bundle.css";
+@import "tooltipster/tooltipster-sideTip-light.min.css";
+
+@import "gw/vendor/select2";
+
+// select inscript
+@import "gw/m-select";
+
+body,html{
+    font-family: Arial, Helvetica, sans-serif;
+    /*position: relative;*/
+    
+    .flipped{
+        position: relative;
+    }
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.dialog-iframe-root-node, .dialog-iframe-root-node .portal-popup, .dialog-iframe-root-node .portal-popup .flipped{
+    width: 100%;
+    height: 100%;
+}
+
+.dialog-with-footer .button-holder.dialog-footer{
+	position: absolute;
+}
+
+.portlet-topper{
+	background-color: $colorPrimary100;
+	border-color: $colorPrimary100;
+}
+
+#maincontent{
+    background-color: $navigationMenuBackground;
+  /* In Inscript theme the box shadow is removed */
+  /* todo remove this if not needed anylonger
+    -webkit-box-shadow: inset 0px 5px 4px -4px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: inset 0px 5px 4px -4px rgba(0, 0, 0, 0.35);
+    box-shadow: inset 0px 5px 4px -4px rgba(0, 0, 0, 0.35);
+  */
+}
+
+.dark-background{
+  background-color: $colorSecondary100;
+  color: $colorForeground100;
+}
+
+.portlet:hover > .portlet-content-editable { border-color: transparent; }
+
+.sticker-default {
+	background-color: $colorSecondary100;
+
+	@if variable-exists(sticker-primary-color) {
+		color: $colorForeground100;
+	}
+}
+
+.sticker-primary {
+	background-color: $colorPrimary100;
+
+	@if variable-exists(sticker-primary-color) {
+		color: $colorForeground100;
+	}
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+
+.background-transparent {
+  background-color: $navigationMenuBackground;
+}
+
+.margin-bottom-40 {
+  margin-bottom: 40px;
+  border-bottom: 1px solid $section-border;
+}
+
+fieldset {
+  border: 0;
+  margin: 0 1px;
+  padding: 0;
+}
+
+/* To be enabled when finally defined */
+/*
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+*/

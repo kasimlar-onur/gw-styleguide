@@ -1,0 +1,37 @@
+/* GWKP-12 Layout styling [arodriguez] */
+
+#maincontent{
+    .portlet-column {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .portlet-boundary {
+        padding-top: 11px;
+        padding-bottom: 11px;
+    }
+}
+
+/* borders for content */
+
+#content{
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+@media(max-width: 576px){
+    #content{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+.gebrueder-weiss-layout .portlet-barebone .portlet-content {
+    background-color: white;
+}

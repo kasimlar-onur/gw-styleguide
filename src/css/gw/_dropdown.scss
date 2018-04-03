@@ -1,0 +1,499 @@
+@import "colors";
+
+/* dropdown selects */
+
+
+.dropdown:not(.lfr-icon-menu) {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    .dropdown-menu > li > .checkbox > label > span::before{
+       position: absolute;
+       right: 5px;
+   }
+
+   .dropdown-menu > li > .checkbox > label{
+       margin-top: 0;
+   }
+}
+
+.dropdown {
+  .dropdown-toggle:focus {
+    outline-color: transparent;
+    text-decoration-color: transparent;
+  }
+}
+
+.gw-dropdown {
+  border-bottom: 1px solid $colorTertiary60;
+  z-index: 5;
+}
+
+.gw-dropdown.open {
+  border-bottom: 2px solid $colorPrimary100;
+  z-index: 6;
+}
+
+.dropdown-toggle{
+   color: $colorTertiary60;
+   padding-bottom: 6px;
+   padding-right: 5px;
+   font-weight: normal;
+}
+
+.dropdown-menu{
+   background-color: $colorBackgroundSolid;
+   border: none;
+   border-radius: 0px;
+   box-shadow: none;
+   font-size: 16px !important;
+   padding: 0;
+}
+
+.gw-dropdown-toggle, .gw-dropdown-toggle:focus, .gw-dropdown-toggle:active, .gw-dropdown-menu{
+   min-width: 220px;
+}
+
+.dropdown-menu > li > a, .dropdown-menu .inline-scroller > li > a, .dropdown-menu > li > .checkbox label{
+   color: $colorTertiary60 !important;
+   font-size: 16px !important;
+   font-weight: normal;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu .inline-scroller > li > a:hover, .dropdown-menu > li > .checkbox:hover{
+   background-color: $colorForeground40;
+   color: $colorPrimary100 !important;
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus{
+   background-color: $colorForeground40;
+   color: $colorPrimary100 !important;
+}
+
+.dropdown-menu > li > .checkbox{
+   margin: 0px;
+   padding-bottom: 10px;
+   height: 40px;
+}
+
+.dropdown-menu > li > .checkbox:hover{
+   background-color: $colorForeground40;
+   color: $colorPrimary100;
+}
+
+.dropdown-menu > li > .checkbox:hover label{
+   color: $colorPrimary100 !important;
+   font-size: 16px !important;
+}
+
+.dropdown-menu > li > .checkbox input[type="checkbox"]{
+   appearance:field;
+   -moz-appearance:field; /* Firefox */
+   -webkit-appearance:field; /* Safari and Chrome */
+   position: absolute;
+   right: 20px;
+   border: 2px solid $colorTertiary60;
+}
+
+.dropdown-menu > li > .checkbox label{
+   padding-left: 20px;
+   float: left;
+   overflow: hidden;
+   width: 100%;
+   height: 20px;
+   line-height: 20px;
+}
+
+.portlet-content-container .dropdown-menu > li > .checkbox label.gw-input:before {
+    position: absolute;
+    right: 20px;
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus{
+   background-color: $colorForeground40;
+   color: $colorPrimary100 !important;
+}
+
+
+/* blue background dropdown */
+
+.dark-background{
+
+  .gw-dropdown {
+    border-bottom: 1px solid $colorForeground70;
+  }
+
+  .gw-dropdown.open {
+    border-bottom: 2px solid $colorPrimary100;
+  }
+
+   .dropdown-toggle{
+       color: $colorForeground70 !important;
+       padding-bottom: 6px !important;
+       padding-top: 6px !important; 
+       padding-right: 5px;
+       font-weight: normal;
+   }
+
+   .dropdown-menu{
+       background-color: $colorMediumBlue;
+       border: none;
+       border-radius: 0px;
+       box-shadow: none;
+       font-size: 16px !important;
+   }
+
+   .gw-dropdown-toggle, .gw-dropdown-toggle:focus, .gw-dropdown-toggle:active, .gw-dropdown-menu{
+       min-width: 220px;
+   }
+
+   .dropdown-menu > li > a, .dropdown-menu .inline-scroller > li > a, .dropdown-menu > li > .checkbox label{
+       color: $colorForeground70 !important;
+       font-size: 16px !important;
+       font-weight: normal;
+   }
+
+   .dropdown-menu > li > a:hover, .dropdown-menu .inline-scroller > li > a:hover, .dropdown-menu > li > .checkbox:hover label{
+       background-color: $colorDarkBlue;
+       color: $colorPrimary100 !important;
+   }
+
+   .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus{
+       background-color: $colorDarkBlue;
+       color: $colorPrimary100 !important;
+   }
+
+   .dropdown{
+
+       .dropdown-menu > li > .checkbox > label > span::before{
+           position: absolute;
+           right: 5px;
+       }
+   }
+
+   .chevron-bottom{
+       border-bottom: 2px solid $colorForeground70;
+       border-left: 2px solid $colorForeground70;
+   }
+}
+
+.dropdown{
+
+   .chevron-bottom{
+       display: inherit;
+   }
+
+   .chevron-top{
+       display: none;
+   }
+}
+
+.open{
+   .chevron-bottom{
+       display: none;
+   }
+
+   .chevron-top{
+       display: inherit;
+   }
+
+   .dropdown-toggle{
+       border-bottom: none;
+   }
+}
+
+/** Flyout Dropdowns with arrow on top of menu **/
+
+.dropdown.dropdown-flyout > .dropdown-arrow {
+  left: 10%;
+}
+.dropdown.dropdown-flyout.dropdown-flyout-right > .dropdown-arrow {
+  left: 90%;
+}
+
+.dropdown-flyout{
+   border-bottom: none !important;
+
+   a, a:hover, a:focus {
+       font-size: 14px;
+       color: $colorTertiary90 !important;
+   }
+
+   ul > li > a{
+       font-weight: normal;
+       font-size: 14px;
+       color: $colorTertiary90 !important;
+   }
+
+   .dropdown-arrow{
+       bottom: -2px;
+   }
+
+   ul > li.check{
+     position: relative;
+
+     > a {
+       font-weight: bold;
+     }
+   }
+
+   ul > li.check:after{
+       font-family: FontAwesome;
+       content: "\f00c";
+       color: $colorTertiary90;
+       width: 20px;
+       height: 20px;
+       position: absolute;
+       top:  50%;
+       right: 10px;
+       transform: translateY(-50%);
+   }
+}
+
+.dropdown-flyout.open{
+   border-bottom: none !important;
+
+   > a{
+       color: $colorPrimary100 !important;
+
+       span{
+           color: $colorTertiary90 !important;
+       }
+   }
+}
+
+/** right aligned flyout dropdown **/
+
+.dropdown-flyout-right{
+   > a{
+       text-align: right;
+
+       i{
+         color: $colorTertiary90;
+         margin-right: 10px;
+         width: 24px;
+         text-align: center;
+       }
+   }
+}
+
+.caret-big {
+   border-top: 6px dashed;
+   border-top: 6px solid \9;
+   border-right: 6px solid transparent;
+   border-left: 6px solid transparent;
+   margin-bottom: 3px;
+}
+
+/** multilevel dropdown Flyout **/
+
+.multilevel{
+   .dropdown-submenu {
+       position: relative;
+   }
+
+   .dropdown-menu{
+       overflow: visible;
+   }
+
+   .dropdown-submenu>.dropdown-menu {
+       top: 0;
+       left: 100%;
+       margin-top: -6px;
+       margin-left: -1px;
+   }
+
+   .dropdown-submenu:after{
+       font-family: FontAwesome;
+       content: "\f0da";
+       color: $colorTertiary90;
+       width: 24px;
+       height: 24px;
+       position: absolute;
+       top:  50%;
+       right: 10px;
+       transform: translateY(-50%);
+   }
+
+   .dropdown-submenu:hover>.dropdown-menu {
+       display: block;
+   }
+
+   .dropdown-submenu>a:after {
+       display: block;
+       content: " ";
+       float: right;
+       width: 0;
+       height: 0;
+       margin-top: 5px;
+       margin-right: -10px;
+   }
+
+   .dropdown-submenu:hover>a:after {
+       border-left-color: #fff;
+   }
+
+   .dropdown-submenu.pull-left {
+       float: none;
+   }
+
+   .dropdown-submenu.pull-left>.dropdown-menu {
+       left: -100%;
+       margin-left: 10px;
+   }
+}
+    
+    
+/** Flyout Dropdowns on Blue Background **/
+
+.dark-background{
+    .dropdown-flyout{
+        border-bottom: none;
+
+        a.dropdown-toggle {
+          font-weight: normal;
+          font-size: 14px;
+          color: $colorForeground70 !important;
+          border-bottom: none;
+
+            &:hover i{
+                color: $colorForeground100 !important;
+            }
+        }
+
+        a.dropdown-toggle:active, a.dropdown-toggle:focus{
+            border-bottom: none !important;
+        }
+
+        ul > li > a{
+            font-weight: normal;
+            font-size: 14px;
+            color: $colorForeground70 !important;
+        }
+
+        ul > li.check{
+          position: relative;
+
+          > a {
+            font-weight: bold;
+          }
+        }
+
+        ul > li.check:after{
+            font-family: FontAwesome;
+            content: "\f00c";
+            color: $colorForeground70;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top:  50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+
+        ul li:hover ul{
+            visibility: visible;
+        }
+    }
+
+    .dropdown-flyout.open{
+        border-bottom: none !important;
+
+        .dropdown-arrow{
+            bottom: -2px;
+            border-bottom-color: $colorMediumBlue;
+        }
+
+        > a{
+            color: $colorPrimary100 !important;
+
+            span{
+                color: $colorForeground70 !important;
+            }
+        }
+    }
+
+    /** right aligned flyout dropdown **/
+
+    .dropdown-flyout-right{
+        > a{
+            text-align: right;
+
+            i{
+                color: $colorForeground100 !important;
+                margin-right: 10px;
+            }
+        }
+
+        .dropdown-arrow{
+            left: 90%;
+        }
+    }
+
+    .caret-big {
+        border-top: 6px dashed;
+        border-top: 6px solid \9;
+        border-right: 6px solid transparent;
+        border-left: 6px solid transparent;
+        margin-bottom: 3px;
+    }
+
+    /** multilevel menu **/
+
+    .multilevel{
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-menu{
+            overflow: visible;
+        }
+
+        .dropdown-submenu>.dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -6px;
+            margin-left: -1px;
+        }
+
+        .dropdown-submenu:after{
+            font-family: FontAwesome;
+            content: "\f0da";
+            color: $colorForeground70;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top:  50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+
+        .dropdown-submenu:hover>.dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-submenu>a:after {
+            display: block;
+            content: " ";
+            float: right;
+            width: 0;
+            height: 0;
+            margin-top: 5px;
+            margin-right: -10px;
+        }
+
+        .dropdown-submenu:hover>a:after {
+            border-left-color: #fff;
+        }
+
+        .dropdown-submenu.pull-left {
+            float: none;
+        }
+
+        .dropdown-submenu.pull-left>.dropdown-menu {
+            left: -100%;
+            margin-left: 10px;
+        }
+    }
+}

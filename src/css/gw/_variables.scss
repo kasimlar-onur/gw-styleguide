@@ -1,0 +1,75 @@
+// Colors
+$link-hover-decoration: underline;
+
+// Layout
+$border-radius-base: 0;
+$border-radius-large: 6px;
+$font-weight-base: 300;
+$font-weight-bold: 700;
+$section-margin: 40px;
+$margin-default: 30px;
+$outline-default: 1px dashed #ccc;
+
+// Grid
+/*
+$grid-gutter-width: 40px;
+$max-width: 1400px + $grid-gutter-width;
+$container-large-desktop: $max-width;
+$container-md: 100%;
+$container-sm: 750px;
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 1200px;
+$screen-lg: 1700px;
+*/
+$grid-float-breakpoint: $screen-md;
+
+// Typography
+$em-base: 10px;
+$font-family-base: "Arial", sans-serif;
+$font-size-base: 16px;
+$line-height-base: 1.4;
+
+// Headings
+$headings-font-family: "Arial", $font-family-base;
+$headings-font-weight: $font-weight-bold;
+$headings-line-height: 1.4;
+$font-size-h1: 5rem;
+$font-size-h2: 2.8rem;
+$font-size-h3: 2rem;
+$font-size-h4: 2rem;
+$font-size-h5: 1.6rem;
+$font-size-h6: 1.4rem;
+
+// Forms
+$input-border-radius: 0;
+$btn-border-radius-base: $input-border-radius;
+$btn-font-weight: $font-weight-bold;
+$input-height-base: 40px;
+
+// Header
+$header-height-after-breakpoint: 80px;
+$header-height-after-breakpoint-responsive: 80px;
+$navbar-padding-vertical: 20px;
+$navbar-padding-horizontal: 0;
+
+// Font Awesome
+$fa-li-width: 1.6em;
+
+// Font GW
+$icomoon-font-path: "../fonts/gwicon" !default;
+$gwicon-transport-land: "\e900";
+$gwicon-transport-sea: "\e909";
+$gwicon-transport-air: "\e90a";
+$gwicon-checkbox-checked: "\e901";
+$gwicon-checkbox-unchecked: "\e902";
+$gwicon-warehouse-blank: "\e903";
+
+// Breadcrumbs
+$breadcrumb-separator: "/";
+$breadcrumb-padding-vertical: 0;
+$breadcrumb-padding-horizontal: 0;
+
+// Menu
+$nav-menu_width: 75px;
+$nav-menu_font-size: rem(16);

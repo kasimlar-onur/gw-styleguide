@@ -1,0 +1,37 @@
+.m-nav-tabs {
+  padding: 0;
+  margin: 0;
+  &__item {
+    float: none;
+    display: block;
+    padding-bottom: 0;
+  }
+  &__item.active {
+    position: relative;
+    &:after {
+      font-family: "fontAwesome";
+      font-size: 28px;
+      color: $color1;
+      content: '\f0da';
+      @include position(absolute, 10px -9px null null);
+    }
+    .m-nav-tabs__link {
+      background: $color1;
+      color: #ffffff;
+    }
+    &:hover {
+      background: $color1;
+    }
+  }
+  &__link {
+    display: block;
+    padding: 17px 25px;
+    color: $text-color;
+    font-size: rem(18);
+    &:hover {
+      color: $text-color;
+      padding: 17px 25px;
+      text-decoration: none;
+    }
+  }
+}

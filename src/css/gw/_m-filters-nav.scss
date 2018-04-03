@@ -1,0 +1,39 @@
+.m-filters-nav {
+  padding: 30px 55px 0;
+  border-bottom: 1px solid $border-color-2;
+
+  &__list {
+    @extend .list-unstyled;
+    margin-bottom: -2px !important;
+  }
+
+  &__item {
+    display: inline-block;
+    padding: 7px 15px 7px;
+    border: 1px solid transparent;
+    border-bottom: 2px solid transparent;
+
+    &.active {
+      border: 1px solid $border-color-2;
+      border-bottom: 2px solid #ffffff;
+
+      .m-filters-nav__link {
+        color: $color1;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  a:hover, .link-default:hover, a:focus, .link-default:focus {
+    text-decoration: none;
+  }
+
+  &__link {
+    font-size: rem(14);
+    font-weight: $font-weight-bold;
+    color: $grey-1;
+  }
+}

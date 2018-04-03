@@ -1,0 +1,168 @@
+@mixin font-smoothing() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin appearance($appearance: none) {
+  -webkit-appearance: $appearance;
+  -moz-appearance: $appearance;
+  appearance: $appearance;
+}
+
+// -------------------------------------------------------------------
+// Omega Reset for Bourbon Neat
+//
+// http://joshfry.me/notes/omega-reset-for-bourbon-neat
+// -------------------------------------------------------------------
+
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) {
+    margin-right: flex-gutter($grid-columns, $gutter);
+  }
+  &:nth-child(#{$nth}+1) {
+    clear: none
+  }
+}
+
+// -------------------------------------------------------------------
+// Outputs a media-query block for all media.
+//
+// Source: Neat media()
+// http://thoughtbot.github.io/neat-docs/latest/#media
+// -------------------------------------------------------------------
+
+@mixin media-all($query: $feature $value $columns, $total-columns: $grid-columns) {
+  @if length($query) == 1 {
+    @media all and ($default-feature: nth($query, 1)) {
+      $default-grid-columns: $grid-columns;
+      $grid-columns: $total-columns !global;
+      @content;
+      $grid-columns: $default-grid-columns !global;
+    }
+  } @else {
+    $loop-to: length($query);
+    $media-query: "all and ";
+    $default-grid-columns: $grid-columns;
+    $grid-columns: $total-columns !global;
+
+    @if is-not(is-even(length($query))) {
+      $grid-columns: nth($query, $loop-to) !global;
+      $loop-to: $loop-to - 1;
+    }
+
+    $i: 1;
+    @while $i <= $loop-to {
+      $media-query: $media-query + "(" + nth($query, $i) + ": " + nth($query, $i + 1) + ") ";
+
+      @if ($i + 1) != $loop-to {
+        $media-query: $media-query + "and ";
+      }
+
+      $i: $i + 2;
+    }
+
+    @media #{$media-query} {
+      @content;
+      $grid-columns: $default-grid-columns !global;
+    }
+  }
+}
+
+
+// Button variants (from Bootstrap)
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+@mixin button-variant-alt($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:focus,
+  &.focus {
+    outline: none;
+    color: $color;
+    background-color: lighten($background, 10%);
+    border-color: lighten($border, 25%);
+  }
+  &:hover {
+    color: $color;
+    background-color: lighten($background, 10%);
+    border-color: lighten($border, 12%);
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: lighten($background, 10%);
+    border-color: lighten($border, 12%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      outline: none;
+      color: $color;
+      background-color: lighten($background, 17%);
+      border-color: lighten($border, 25%);
+    }
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: $background;
+      border-color: $border;
+    }
+  }
+
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+// -------------------------------------------------------------------
+// Select2
+// -------------------------------------------------------------------
+
+@mixin m-form-control() {
+  display: block;
+  width: 100%;
+  height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  padding: 9px $padding-base-horizontal;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $input-color;
+  background-color: $input-bg;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid $input-border;
+  border-radius: $input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+}
+
+@mixin m-form-control-focus($color: $input-border-focus) {
+  $color-rgba: rgba(red($color), green($color), blue($color), .6);
+  border-color: $color;
+  outline: 0;
+}
+
+// -------------------------------------------------------------------
+// Placeholders
+// -------------------------------------------------------------------
+
+%button-reset {
+  padding: 0;
+  border: 0 none;
+  background-color: transparent;
+  line-height: 1;
+}

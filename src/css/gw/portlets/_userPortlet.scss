@@ -1,0 +1,75 @@
+#portlet_gwkp_user_profile_portlet {
+
+	.avatar {	
+	    margin: 0 auto;
+		height: 250px;
+		width: 250px;
+		background-position: center;
+		background-size: cover;
+		border-radius: 50%;
+		display: inline-block;
+	}
+	
+	.btn-group {
+		margin: 0 auto;
+	}
+
+	.user-profile-full-name {
+		font-size: 180%;  
+	}
+	
+	.user-profile-table {
+		width: 100%;
+		
+		i {
+	    	opacity: 0.25;
+		}		
+	}
+
+	.delete-logo {
+		display: none;
+	}
+
+	.edit-logo {
+		float: none !important;
+	}
+
+	.form-group{
+		margin-bottom:10px;
+	}
+
+	.last-form-group{
+		margin-top:20px;
+	}
+
+	.portlet-title-text, .portlet-title-editable{
+		display:none;
+	}
+
+	
+	label:nth-child(1){
+		margin-right:-13px;
+		margin-left:9px;
+	}
+
+	.mobile-phone{
+		margin-bottom:-20px;
+	}
+	
+	.image-editor{
+		margin-top: 50px;
+	}
+
+	.btn-primary {
+		margin-left: 0px !important;
+
+	}
+
+	@media (min-width: 768px) {
+		.icon-label {
+			text-align: right;
+			padding: 0;
+		}
+	}
+
+}

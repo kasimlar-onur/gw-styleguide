@@ -1,0 +1,141 @@
+#content{
+
+    .list-with-cards li{
+        padding: 0;
+    }
+
+    .list-with-cards li.list-group-heading{
+        padding: 15px;
+        border-bottom: 1px solid $colorTertiary10;
+        background-color: $colorForeground90;
+        color: $colorTertiary100;
+        font-size: 20px;
+        font-weight: bold;
+
+        .card-col-field {
+            width: 28px;
+            float: right;
+
+            a.dropdown-toggle{
+                min-width: 100%;
+                margin-top: 3px;
+
+                i.fa{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .list-with-cards li.list-group-heading:after{
+        background-color: transparent;
+    }
+
+    .list-with-cards li.list-group-item{
+        border-bottom: 1px solid $colorTertiary20;
+
+        h4{
+            color: $colorTertiary90;
+            font-weight: normal;
+            font-size: 16px;
+        }
+
+        p{
+            color: $colorTertiary60;
+            font-weight: normal;
+            font-size: 14px;
+        }
+
+        .card-col-field {
+            vertical-align: top;
+
+            i.fa{
+                margin-right: 15px;
+                margin-top: 15px;
+                color: $colorTertiary60;
+            }
+        }
+    }
+
+    .list-no-header{
+        li.list-group-item{
+            border: none;
+        }
+    }
+
+    .dark-background{
+        .list-with-cards {
+            box-shadow: none;
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+
+            li{
+                padding: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        .list-with-cards li.list-group-heading{
+            padding: 15px;
+            border: none;
+            background-color: $colorForeground10;
+            color: $colorForeground100;
+            font-size: 20px;
+            font-weight: bold;
+
+            .card-col-field {
+                width: 28px;
+                float: right;
+
+                a.dropdown-toggle{
+                    min-width: 100%;
+                    margin-top: 3px;
+                    padding-top: 0 !important;
+                    border: none;
+
+                    i.fa{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        .list-with-cards li.list-group-heading:after{
+            background-color: transparent;
+        }
+
+        .list-with-cards li.list-group-item{
+            background-color: $colorForeground10;
+            border: none;
+            border-top: 1px solid rgba(255,255,255,0.2);
+
+            h4{
+                color: $colorForeground100;
+                font-weight: normal;
+                font-size: 16px;
+            }
+
+            p{
+                color: $colorForeground70;
+                font-weight: normal;
+                font-size: 14px;
+            }
+
+            .card-col-field {
+                vertical-align: top;
+
+                i.fa{
+                    margin-right: 15px;
+                    margin-top: 15px;
+                    color: $colorForeground70;
+                }
+            }
+        }
+
+        .list-no-header{
+            li.list-group-item{
+                border: none;
+            }
+        }
+    }
+}

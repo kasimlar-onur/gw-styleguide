@@ -1,0 +1,244 @@
+input[type="radio"]{
+  margin-top: 4px !important;
+}
+
+.gw-checkbox input[type='checkbox'],
+.gw-radio input[type='radio'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  font-size: 1em;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.gw-input {
+  label {
+    padding-left: 0;
+    font-size: $font-size-base;
+    line-height: 1.2em;
+    height: 20px;
+  }
+
+  .radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline {
+    margin-top: auto;
+  }
+
+  .gw-input-label{
+    font-size: 16px;
+    color: $colorTertiary90;
+
+    :hover:before {
+      opacity: 0.8;
+    }
+  }
+
+  input ~.gw-input-label:before{
+    display: inline-block;
+    content: " ";
+    letter-spacing: 5px;
+    font-size: 1.2em;
+    color: rgba(0, 0, 0, 0.4);
+
+  }
+
+  input[type='radio'] ~.gw-input-label:before {
+    font-family: FontAwesome;
+    content: "\f1db";
+  }
+
+  input[type='radio']:checked ~.gw-input-label:before {
+    content: "\f192";
+  }
+
+  input[type='checkbox'] ~.gw-input-label:before {
+    font-family: gwicon;
+    font-size: 1em;
+    content: "\e902";
+  }
+
+  input[type='checkbox']:checked ~.gw-input-label:before {
+    content: "\e901";
+  }
+
+  input:disabled ~.gw-input-label {
+    color: $colorTertiary40;
+  }
+  input:disabled ~.gw-input-label:before {
+    color: $colorTertiary10;
+  }
+
+  input:disabled ~ .gw-input-label:hover {
+    cursor: not-allowed;
+  }
+
+  input:disabled ~.gw-input-label:hover:before {
+    opacity: 1.0;
+  }
+
+  input:checked ~.gw-input-label:before {
+    color: $colorPrimary100;
+  }
+
+}
+
+.dark-background {
+  .gw-input {
+    .gw-input-label{
+      color: $colorForeground100;
+    }
+
+    .gw-input-label:before{
+      color: $colorForeground40;
+    }
+
+    input:disabled ~.gw-input-label {
+      color: $colorForeground50;
+    }
+    input:disabled ~.gw-input-label:before {
+        color: $colorForeground10;
+    }
+    input:checked ~.gw-input-label:before {
+      color: $colorPrimary100;
+    }
+  }
+
+  .dropdown-menu > li:hover .checkbox.gw-input label span {
+    color: $colorPrimary100;
+  }
+}
+
+.dropdown-menu > li > .checkbox.gw-input label {
+  line-height: 20px;
+  height: 40px;
+  padding: 8px 20px;
+  margin: 0px;
+
+  .gw-input-label {
+    color: $colorTertiary60;
+  }
+}
+
+.dropdown-menu > li:hover .checkbox.gw-input span {
+  color: $colorPrimary100;
+}
+
+
+.dark-background .dropdown-menu > li > .checkbox.gw-input label  {
+  .gw-input-label {
+    color: $colorForeground70;
+  }
+}
+
+.dropdown-menu > li:hover .checkbox.gw-input span {
+  color: $colorPrimary100;
+}
+
+/* File Uploader */
+
+.file-upload{
+    .file-upload-upper{
+        position: relative;
+        overflow: auto;
+        min-height: 60px;
+        width: 100%;
+
+        .btn-default{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 1;
+        }
+
+        .file-upload-container-right{
+            padding-left: 140px;
+            float: right;
+            width: 100%;
+            position: relative;
+
+            i{
+                color: $colorTertiary60;
+                font-size: 16px;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+            }
+
+            label.no-file{
+                color: $colorTertiary60;
+                padding-top: 0px;
+                font-size: 14px !important;
+                margin-top: 16px !important;
+                line-height: 22px;
+            }
+
+            label.file-chosen{
+                margin-bottom: 8px;
+                margin-top: 0px !important;
+                padding-top: 0px;
+                color: $colorPrimary100 !important;
+                font-size: 14px !important;
+
+                span{
+                    margin-left: 0.4em;
+                }
+            }
+
+            .progress{
+                box-shadow: none;
+                moz-box-shadow: none;
+                webkit-box-shadow: none;
+                background-color: $colorTertiary20;
+                margin-top: 12px;
+                margin-bottom: 2px;
+            }
+
+            .progress-bar{
+                background-color: $colorPrimary100 !important;
+                box-shadow: none;
+                -webkit-box-shadow: none;
+                -ms-box-shadow: none;
+            }
+        }
+    }
+
+    .file-upload-text{
+        font-size: 12px !important;
+        color: $colorTertiary60;
+    }
+}
+
+[contenteditable=true]:empty:before{
+  content: attr(placeholder);
+}
+
+.dark-background{
+    .file-upload{
+        .file-upload-upper{
+            .file-upload-container-right{
+                i{
+                    color: $colorForeground70;
+                }
+
+                .no-file{
+                    padding-top: 0px;
+                    color: $colorForeground70;
+                }
+
+                .progress{
+                    background-color: $colorForeground20;
+                }
+            }
+
+        }
+        .file-upload-text{
+            color: $colorForeground60;
+        }
+    }
+}

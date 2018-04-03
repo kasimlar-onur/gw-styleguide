@@ -1,0 +1,414 @@
+@import "colors";
+
+#gwkp_footer {
+	
+	color: $colorForeground100;
+	width: 100%;
+	max-width: none !important;
+	font-size: 12px;
+	padding-top: 45px;
+
+	.button--tertiary:hover {
+		background-color: #e9eaeb
+	}
+
+	.container-fluid-1280 {
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 40px;
+	}
+
+	.gwkp-small-footer {
+		background-color: $colorBackgroundFooterDark;
+		padding: 17px 30px 17px 0;
+		margin-top: 38px;
+		.container-fluid-1280 {
+			//padding-top: 6px;
+			//margin-left: 10px;
+		}
+	}
+
+
+	.chevron {
+		border-bottom: 2px solid $colorForeground60;
+		border-left: 2px solid $colorForeground60;
+		float: right;
+		margin-left: 5px;
+		position: static;
+	}
+	
+	.chevron:hover, .chevron:active, .chevron:focus {
+		color: $colorPrimary80;
+		text-decoration: none;
+	}
+
+ 	a {
+		color: $colorForeground100;
+	}
+
+	a.secondary {
+		color: $colorForeground70;
+	}
+	
+	h2 {
+		font-size: 14px;
+		font-weight: bold;
+	}
+
+	.footer-navigation {
+		font-size: 11px;
+
+		h2 {
+			font-size: 1.8rem;
+			font-weight: bold;
+
+			a {
+				font-weight: bold;
+			}
+		}
+
+		ul a {
+
+		}
+
+	}
+
+	.gwkp_col-20 {
+		width: 25%;
+		max-width: 25%;
+		float: left;
+		padding-left: 12px;
+		padding-right: 12px;
+		margin-bottom: 30px;
+	}
+	
+	
+	small {
+		background-color: #002347;
+		width: 100%;
+    	position: absolute;
+    	margin: 0;
+    	padding-top: 8px;
+    	padding-bottom: 8px;
+	    left: 0;
+	    right: 0;
+		color: $colorForeground100;
+		font-size: 12px;
+		height: 48px;
+	}
+	
+	.unstyled {
+		list-style-type: none;
+		padding-left: 0;
+		margin-bottom: 0px;
+	}
+	
+	li {
+		padding-left: 0;
+   		padding-bottom: 10px;
+		font-size: 16px;
+	}
+	
+	.gwkp_row_contact {
+		margin-bottom: 30px;
+		margin-top: 30px;
+	}
+	
+	.gwkp_left {
+		float: left;
+	}
+	
+	.gwkp_copy_right {
+		float: left;
+		padding-left: 30px;
+		font-size: 16px;
+	}
+	
+	.gwkp_logo {
+		float: left;
+	}
+	
+	.gwkp_right {
+		float: right;
+		margin-right: 10px;
+
+        a {
+			margin-left: 7px;
+			text-decoration:none;
+
+			i {
+            	font-size: 24px;
+		 	}
+		}
+	}
+	
+	.gwkp_language_right {
+		padding-top: 0;
+		float: right;
+		margin-top: -5px;
+		margin-right: 10px;
+
+		.form-group {
+			margin-bottom: 0px;
+
+			select#footerLangFm[name="languageId"] {
+
+				.taglib-language-option {
+					padding-left: 0px;
+					background-image: none;
+				}
+
+				border: none;
+
+			}
+
+			select#fm[name="languageId"]:focus {
+				border-bottom: none !important;
+			}
+		}
+
+		.gw-dropdown {
+			border: none;
+			//width: 70px !important;
+
+			a {
+				min-width: 0;
+			}
+
+			ul {
+				min-width: 0;
+			}
+
+			.chevron-bottom {
+				top: 28%;
+				margin-right: -20px
+			}
+
+			.chevron-top {
+				margin-right: -20px
+			}
+		}
+	}
+		
+	.gwkp_clear {
+		clear: both;
+	}
+	
+	.gwkp_footer_icon {
+		font-family: 'fontawesome' !important;
+		font-size: 24px;
+		padding-right: 4px;
+		text-decoration: none;
+	}
+	
+	.gwkp_imprint_links_mobile {
+		display: none;
+	}
+	
+	.gwkp_imprint_links {
+		font-size: 16px;
+		a {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+
+	.gwkp_bottom_container_left {
+		padding-top:10px;
+		padding-bottom: 10px;
+		float: left;
+	}
+
+	.gwkp_contact_portlet {
+		
+		div {		
+			padding: 0;
+			line-height: 32px;
+			color: #b0b8c5;
+			font-size: 16px;
+		}
+		
+		.portlet {
+			margin: 0;
+			margin-bottom: -10px;			
+		}
+		
+		.portlet-content {
+			background-color: $colorSecondary0;
+			border: none;
+			padding: 0;
+			margin: 0;
+			
+			.portlet-title-text {
+				display: none;
+			}
+			
+			.user-profile-image {
+				display: none;
+			}
+			
+			.contact_function_display {
+				display: none;
+			}
+			
+			.gwkp-contact-account-manager {
+				display: none;
+			}
+			
+			
+			.gwkp-contact-country-display {
+				display: none;
+			}
+			
+			.gwkp-contact-phone {
+				margin-top: 10px;
+			}
+			
+			.gwkp-footer-btn-contact{
+				background-color: $colorBackgroundSolid;
+    			color: $colorSecondary100;
+				margin-left: 0 !important;
+				padding: 15px;
+				width: 250px;
+
+				&:hover {
+					font-weight: bold;
+				}
+			}
+		}
+	}	
+	
+	.gwkp_contact_block {
+		.gwkp-footer-btn-contact{
+			background-color: $colorBackgroundSolid;
+			color: $colorSecondary100;
+
+			a{
+				color: $colorSecondary100;
+				text-decoration: none;
+			}
+			a:hover {
+				font-weight: bold;
+			}
+		}
+		padding-bottom: 90px;
+	}
+	
+	@media (max-width: 768px) and (min-width: 481px) {
+			
+		.gwkp_contact_block {
+				float:left;
+		}
+			
+		.gwkp_imprint_links_mobile {
+				display: none;
+		}
+			
+	}
+
+	@media (max-width: 576px) {
+		small {
+			height: 100px;
+		}
+	}
+
+	@media (min-width: 768px) and (max-width: 992px) {
+		.gwkp_contact_block {
+			float:none;
+		}
+
+		.gwkp-user-contact-information-details {
+			float: left;
+		}
+
+		.user-contact-action {
+			float:right !important;
+
+			.button-holder {
+				margin-top: -30px;
+				float: right;
+				margin-right: 10px;
+			}
+		}
+
+		.user-contact-button {
+			float:right;
+		}
+		
+		.gwkp_contact_logged_out{
+			float: left;
+		}
+	}
+
+	@media (max-width: 767px) {
+		.gwkp_contact_block {
+			width:100%;
+		}
+
+		.user-contact-button {
+			width:100%;
+		}
+
+		.gwkp_right {
+			float: none;
+			margin-top: 40px;
+			margin-left: -7px;
+		}
+	}
+
+	@media (max-width: 480px) {
+			
+		.gwkp_left {
+			float: none;
+		}
+		
+		.gwkp_right {
+			float: none;
+			margin-top: 40px;
+		}
+		
+		.gwkp_footer_line {
+			display:none;
+		}
+			
+		.gwkp_logo {
+			margin-bottom: 30px;
+			float:none;
+		}
+		
+		.gwkp_imprint_links {
+			display: none;
+		}
+			
+		.gwkp_imprint_links_mobile {
+			background-color: $colorBackgroundFooterDark;
+			padding-left: 40px;
+			display: block;
+			height: 52px;
+			padding-top: 13px;
+
+			a {
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		}
+			
+		.social_icons{
+		
+		}
+			
+		.container-fluid-1280 {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+
+	.gwkp_contact_header h2 {
+		color: $colorForeground100;
+		font-size: 1.8rem;
+	}
+
+	.gwkp_contact_logged_out .gwkp_contact p {
+		color: $colorForeground100;
+	}
+}

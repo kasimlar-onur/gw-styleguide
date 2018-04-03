@@ -1,0 +1,18 @@
+.icon-asterisk {
+  color: inherit !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+}
+
+.icon-asterisk::before {
+  content: '*' !important;
+}
+
+.empty-icon {
+  color: $colorForeground100 !important;
+  text-shadow: 0 0 5px $colorInfo100;
+}
+
+.icon-link {
+  cursor: pointer;
+}

@@ -1,0 +1,42 @@
+.gw-portlet-decorate .portlet-content {
+  background: #FFF;
+  border: none;
+  padding: 0;
+
+  .gw-portlet-header, .gw-portlet-body {
+    border: none;
+    word-wrap: break-word;
+  }
+
+  .gw-portlet-header {
+    padding: 20px 40px 0;
+    height: 74px;
+    border-bottom: 1px solid $section-border;
+
+    .back-section {
+      float:right;
+      width: 100px;
+
+      span {
+        line-height: 26px;
+        float: right;
+      }
+
+      i {
+        float: right;
+      }
+    }
+
+  }
+
+  .header-separator {
+    height: 20px;
+    background-color: $navigationMenuBackground;
+  }
+
+  .separator-20 {
+    height: 20px;
+    background-color: $navigationMenuBackground;
+  }
+
+}

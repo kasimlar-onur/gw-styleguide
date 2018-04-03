@@ -1,0 +1,41 @@
+#gwkp-rss-portlet {
+
+  .search-iterator {
+
+    .table-responsive {
+      display: none;
+    }
+
+  }
+
+  .entry-thumb-nail {
+    max-width: 200px;
+  }
+
+  .top-buffer {
+    margin-top: 40px;
+  }
+
+  h4 a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  .thumb-nail, .rss-content {
+    min-width: 200px;
+  }
+}
+
+#gwkp-rss-portlet-edit {
+
+  .top-buffer {
+    margin-top: 15px;
+  }
+
+  .rss-links-area {
+    resize: none;
+    height: 150px;
+    margin-bottom: 30px;
+  }
+
+}

@@ -1,0 +1,321 @@
+body {
+  font-weight: $font-weight-base;
+  font-size: rem(16);
+}
+
+a {
+  font-weight: 300;
+
+  &:hover {
+    color: $color1;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+p {
+  margin-bottom: $margin-default / $line-height-base;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+ul,
+ol {
+  margin-bottom: $margin-default;
+  padding-left: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-bottom: round($margin-default / $headings-line-height);
+  word-wrap: break-word;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -webkit-hyphens: none;
+  hyphens: none;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h1, .h1 {
+  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif !important;
+  font-weight: bold;
+
+  @media (max-width: $screen-sm-max) {
+    font-size: rem(42);
+  }
+
+  @media (max-width: $screen-xs-max) {
+    font-size: rem(32);
+  }
+
+}
+
+h3, .h3 {
+  font-weight: 400;
+}
+
+h6, .h6 {
+  margin-bottom: round($margin-default / 2);
+}
+
+img {
+  //@include img-responsive();
+}
+
+label {
+  font-weight: 400;
+}
+
+strong {
+  i {
+    margin-right: 3px;
+    vertical-align: sub;
+  }
+}
+
+button:focus{
+  outline: 0;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.link-default {
+  @extend a;
+}
+
+// Hide tabbable panes to start, show them when `.active` (Bootstrap)
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}
+
+.f-weight-normal {
+  font-weight: $font-weight-base;
+}
+
+.breadcrumb {
+/*  @include media($tablet-max) {
+    display: none;
+  } todo: apply this
+  */
+  &:last-child {
+    margin-bottom: $line-height-computed;
+  }
+}
+
+// -------------------------------------------------------------------
+// Helper classes
+// -------------------------------------------------------------------
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.small-lpadding {
+  padding-left: 15px;
+}
+
+.border {
+  border: 2px solid #ebebeb;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.disable-transition {
+  transition: none !important;
+}
+
+strong,
+b,
+th,
+.text-bold {
+  font-weight: $font-weight-bold;
+}
+
+.text-normal {
+  font-weight: $font-weight-base;
+}
+
+.text-bigger {
+  font-size: 110%;
+}
+
+.text-smaller {
+  font-size: rem(14);
+}
+
+.link-regular {
+  font-weight: inherit;
+  font-family: inherit;
+}
+
+a[href^=mailto] {
+  @extend .link-regular;
+}
+
+.title {
+  @extend .h2;
+  margin: 0 0 25px;
+}
+
+.margin-default {
+  &,
+  &:first-child,
+  &:last-child {
+    margin-bottom: $margin-default;
+  }
+  &.m-section--no-bmargin {
+    margin-bottom: 0;
+  }
+}
+
+.brand-color {
+  color: $brand-primary;
+}
+
+.color2 {
+  color: $color2;
+}
+
+.circle {
+  font-size: rem(12);
+  display: block;
+  background: $color2;
+  color: #ffffff;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 18px;
+
+  &--top-right {
+    @include position(absolute, -5px 4px null null);
+  }
+}
+
+.color-green {
+  color: $green;
+}
+
+.color-yellow {
+  color: $yellow;
+}
+
+.color-red {
+  color: $red;
+}
+
+.color-grey-1 {
+  color: $grey-1;
+}
+
+.color-grey-light {
+  color: $grey-light;
+}
+
+.font-small {
+  font-size: rem(12);
+}
+
+.overlay {
+  z-index: -1;
+  @include position(fixed, 0 0 0 0);
+
+  &.is-visible {
+    z-index: 9;
+    background-color: #000000;
+    opacity: 0.1;
+  }
+}
+
+[data-scroll-to] {
+  cursor: pointer;
+}
+
+[data-show] {
+  max-height: 0;
+  overflow: hidden;
+  @include transition(.3s max-height linear);
+  border-bottom-color: $body-bg !important;
+
+  &.is-opened {
+    max-height: 999px;
+    border-bottom-color: $section-border !important;
+  }
+}
+@media (min-width: $screen-md-min)  {
+  .wrapper {
+    //@extend .clearfix; todo: apply
+    position: relative;
+
+    &:before {
+      @include position(absolute, 0 null 0 0);
+      content: '';
+      display: block;
+      width: 70px;
+      background-color: $nav-menu_bg;
+      @include transition(.3s width linear);
+    }
+
+    &.menu-is-opened {
+      &:before {
+        width: 235px;
+
+        @media (max-width: $screen-md-max) {
+          width: 215px;
+        }
+      }
+    }
+  }
+}
+
+.link-icon {
+  &:hover {
+    .fa {
+      color: $color1;
+    }
+  }
+}
+
+.icon-to-top {
+  @include position(absolute, -2px null null 0);
+  .fa {
+    margin-left: -12px !important;
+  }
+}
+
+.icon-to-bottom {
+  @include position(absolute, 3px null null 0);
+  .fa {
+    margin-left: -12px !important;
+  }
+}

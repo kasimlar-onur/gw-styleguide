@@ -1,0 +1,61 @@
+/* Linkstyling */
+
+a, a:hover, a:focus {
+	color: $colorPrimary100;
+//font-weight: normal;
+}
+
+.link-with-icon{
+    font-size: 14px !important;
+}
+
+a:hover, a.active{
+    text-decoration: none;
+}
+
+a[disabled]{
+    text-decoration: underline;
+    color: $colorPrimary30;
+}
+
+a.link-with-icon{
+    font-size: 14px;
+}
+
+#content{
+    a[disabled] i{
+        color: $colorTertiary30;
+    }
+
+    a i{
+        // todo remove this
+        //color: $colorTertiary60;
+        //font-size: 24px !important;
+        //margin-right: 0.2em;
+    }
+}
+
+
+.dark-background{
+    a, a:hover{
+        color: $colorPrimary100;
+        font-weight: normal;
+
+        i{
+            color: $colorForeground70 !important;
+        }
+    }
+    
+    a[disabled]{
+        text-decoration: underline;
+        color: $colorPrimary30;
+        
+        i{
+            color: $colorForeground30 !important;
+        }
+    }
+}
+
+.open > a {
+    outline-color: transparent;
+}

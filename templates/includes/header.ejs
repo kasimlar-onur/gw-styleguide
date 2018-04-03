@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Lexicon - <%= title %></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="<%= rootPath %>/css/atlas-font-awesome.css" />
+	<link rel="stylesheet" href="<%= rootPath %>/scss/highlightjs/github.css" />
+	<link rel="stylesheet" href="<%= rootPath %>/css/main.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="<%= rootPath %>/js/bootstrap.js"></script>
+	<script src="<%= rootPath %>/js/collapsible-search.js"></script>
+	<script src="<%= rootPath %>/js/side-navigation.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header class="row" id="headerTopBar">
+			<div class="container">
+				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
+
+				<button type="button" class="animated-toggle navbar-toggle">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<h4 class="title"><a href="<%= rootPath %>">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v<%= version %></span></h4>
+
+				<% include site_config %>
+			</div>
+		</header>
+
+		<section class="container main-nav-container">
+			<% include navigation %>

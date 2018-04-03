@@ -1,0 +1,9 @@
+.m-search {
+  @include position(absolute, -8px null null -370px);
+  display: none;
+  width: 360px;
+
+  &.is-opened {
+    display: block;
+  }
+}

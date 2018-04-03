@@ -1,0 +1,143 @@
+$colorInfo: #B9C1C6;
+$colorWarning: #FF6600;
+$colorError: #FF2400;
+$colorSuccess: #00C853;
+
+$colorPrimary100: #FF6600;
+$colorPrimary80: rgba(#FF6600, 0.8);
+$colorPrimary70: rgba(#FF6600, 0.7);
+$colorPrimary60: rgba(#FF6600, 0.6);
+$colorPrimary40: rgba(#FF6600, 0.4);
+$colorPrimary30: rgba(#FF6600, 0.3);
+$colorPrimary10: rgba(#FF6600, 0.1);
+$colorPrimary80Solid: #ff8433;
+$colorSecondary100: #003366;
+$colorSecondary95: rgba(#003366, 0.95);
+$colorSecondary80: rgba(#003366, 0.8);
+$colorSecondary70: rgba(#003366, 0.7);
+$colorSecondary60: rgba(#003366, 0.6);
+$colorSecondary40: rgba(#003366, 0.4);
+$colorSecondary30: rgba(#003366, 0.3);
+$colorSecondary10: rgba(#003366, 0.1);
+$colorSecondary0: rgba(#003366, 0.0);
+$colorTertiary100: #000000;
+$colorTertiary90: rgba(#000000,0.9);
+$colorTertiary80: rgba(#000000,0.8);
+$colorTertiary60: rgba(#000000,0.6);
+$colorTertiary50: rgba(#000000,0.5);
+$colorTertiary40: rgba(#000000,0.4);
+$colorTertiary30: rgba(#000000,0.3);
+$colorTertiary20: rgba(#000000,0.2);
+$colorTertiary10: rgba(#000000,0.1);
+$colorTertiary5: rgba(#000000,0.05);
+$colorCollapseButton: #e9eaeb;
+$colorForeground100: rgba(255, 255, 255, 1.0);
+$colorForeground90: rgba(255, 255, 255, 0.9);
+$colorForeground80: rgba(255, 255, 255, 0.8);
+$colorForeground70: rgba(255, 255, 255, 0.7);
+$colorForeground60: rgba(255, 255, 255, 0.6);
+$colorForeground50: rgba(255, 255, 255, 0.5);
+$colorForeground40: rgba(255, 255, 255, 0.4);
+$colorForeground30: rgba(255, 255, 255, 0.3);
+$colorForeground20: rgba(255, 255, 255, 0.2);
+$colorForeground10: rgba(255, 255, 255, 0.1);
+$colorForeground5: rgba(255, 255, 255, 0.05);
+$colorBackgroundSolid: #ebebeb;
+$colorBackgroundSolidDark: #194675;
+/* colors for the main navigation menu and header dropdowns */
+$navigationMenuBackground: #f2f2f2;
+$navigationMenuBackgroundDark: #dddddd;
+$navigationMenuBackgroundCollapseButton: #5f6060;
+/* extra colors for the dropdowns with blue background */
+$colorDarkBlue: #173f6a;
+$colorMediumBlue: #194675;
+/* warning, danger, info and success colors */
+$colorInfo100: rgba(#B9C1C6, 1.0);
+$colorInfo80: rgba(#B9C1C6, 0.8);
+$colorInfo30: rgba(#B9C1C6, 0.3);
+$colorDanger100: rgba(#FF2400, 1.0);
+$colorDanger80: rgba(#FF2400, 0.8);
+$colorDanger30: rgba(#FF2400, 0.3);
+$colorWarning100: rgba(#FF6600, 1.0);
+$colorWarning80: rgba(#FF6600, 0.8);
+$colorWarning30: rgba(#FF6600, 0.3);
+$colorSuccess100: rgba(#00C853, 1.0);
+$colorSuccess80: rgba(#00C853, 0.8);
+$colorSuccess30: rgba(#00C853, 0.3);
+/* footer bottom color */
+$colorBackgroundFooterDark: #002347;
+$border-color-primary: rgba(185, 193, 198, 0.8);
+$border-color-secondary: rgba(0, 0, 0, 0.2);
+$colorTextBlack: #000;
+$colorIconHover: #FF2400;
+/*color for dropdown opened in modal*/
+$colorModalDropdownOpened:#FF6600;
+$gwButtonBackground:#F2F2F2;
+$gwButtonHover:#F8F8F8;
+$overviewTableBorderColor:  #c2c2c2;
+
+
+/* Inscript variables */
+// Colors
+$color1: #FF6600;
+$color2: #003366;
+$color3: #343434;
+$f-light-bg-secondary: lighten($color3, 60%);
+$f-light-bg-disabled:  lighten($color3, 30%);
+$f-dark-bg-secondary:  #b0b8c5;
+$f-dark-bg-disabled:   darken(#ffffff, 60%);
+$color4: #E9EAEB;
+$brand-primary: $color1;
+$text-color: $color3;
+$link-color: $color1;
+$link-hover-color: $color1;
+$link-hover-decoration: underline;
+$body-bg: #eff0f0;
+$text-muted: #96969d;
+$form-error: $color1;
+$green: #4ecd94;
+$yellow: #f9ce15;
+$red: #ff2400;
+$grey-1: #646464;
+$grey-light: #b0b0b0;
+
+
+$headings-color: $color3;
+$page-header-border-color: transparent;
+
+
+$input-border: #ececed;
+$input-bg: #ececed;
+$input-border-focus: darken($input-border, 20%);
+$input-height-base: 50px;
+
+
+$nav-link-hover-bg: transparent;
+
+// Breadcrumbs
+$breadcrumb-bg: transparent;
+$breadcrumb-color: $text-color;
+$breadcrumb-active-color: $color1;
+
+// Pagination
+$pagination-color: $text-color;
+$pagination-bg: transparent;
+$pagination-border: transparent;
+$pagination-active-color: $brand-primary;
+$pagination-active-bg: transparent;
+$pagination-active-border: transparent;
+$pagination-hover-color: $brand-primary;
+$pagination-hover-bg: transparent;
+$pagination-hover-border: transparent;
+$pagination-disabled-color: $brand-primary;
+$pagination-disabled-bg: transparent;
+$pagination-disabled-border: transparent;
+
+$section-border: #dddede;
+$border-color-2: #e0e0e0;
+
+// Menu
+$nav-menu_bg: $color3;
+$nav-menu_link-color: #ffffff;
+
+$selected-nav-item: #494949;

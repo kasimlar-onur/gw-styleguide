@@ -1,0 +1,94 @@
+#gwkp_user_contact_portlet { 
+	
+	.user-profile-image {
+		height:130px;
+		width: 130px;
+		background-position: center;
+		background-size: cover;
+		/* 		border-radius: 50%; */
+		display: inline-block;
+		float: right;
+	}
+
+	.phoneMobile {
+		display: none;
+	}
+	
+	.gwkp_contact-btn{
+		margin-left: 0px !important;
+		margin-top: 20px !important;
+		
+	}
+	
+	.gwkp-contact-phone{
+		margin-top: 10px;
+	}
+	
+
+	@media ( max-width : 768px) {
+		.phoneDesktop {
+			display: none;
+		}
+		.phoneMobile {
+			display: inline;
+		}
+	}
+	
+	@media ( max-width : 768px) {
+		.user-profile-image{
+			height:110px;
+			width: 110px;
+		}
+	}
+
+	.user-contact-action {
+		padding: 0;
+		float: none;
+
+		.user-contact-button {
+			margin-left: 0 !important;
+			
+			a{
+			color: $colorSecondary100;
+            font-weight: bold;
+			text-decoration: none;
+		}
+		}
+	}
+}
+
+.gwkp-required-star{
+	font-size: 40px;
+    vertical-align: -webkit-baseline-middle;
+    color: $colorPrimary100;
+	
+}
+
+#gkwp-contact-add-portlet {
+
+	.form-elem-100 {
+		width: 100%;
+	}
+	
+	.request-form-property {
+		margin-top: 15px;
+	}
+	
+	.request-form-submit {
+		padding-top: 15px;
+		padding-bottom: 60px;
+		padding-left: 92%;
+	}
+
+	.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+		border: none;
+	}
+
+	label{
+		line-height: 16px;
+	}
+
+	#gwkp-add-request-invoice-nr-field{
+		display:inline;
+	}
+}

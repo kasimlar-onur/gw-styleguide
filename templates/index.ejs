@@ -1,0 +1,19 @@
+<% include includes/header %>
+
+	<div class="col-md-8" id="mainContent">
+		<h1 class="page-title" id="beginContent" tabindex="-1">
+			<%= heading || title %>
+
+			<%
+			if (subHeading) {
+			%>
+				<small><%= subHeading %></small>
+			<%
+			}
+			%>
+		</h1>
+
+		<%- contents %>
+	</div>
+
+<% include includes/footer %>

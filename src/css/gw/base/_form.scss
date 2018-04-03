@@ -1,0 +1,459 @@
+.form-control {
+ // @include placeholder($text-color);
+  font-weight: 400;
+  font-size: rem(14);
+  padding: $padding-base-vertical 0 $padding-base-vertical 15px;
+  background-clip: padding-box;
+  box-shadow: none;
+  background: transparent;
+  border: 1px solid $border-color-2;
+  color: $text-color;
+  height: 45px;
+  position: relative;
+  z-index: 3;
+
+  &--alt {
+    height: 40px;
+    background: #ffffff;
+    border: none;
+  }
+
+  .trigger {
+    width: inherit !important;
+  }
+
+  &--big {
+    font-size: 30px;
+    border-bottom-width: 2px;
+    padding-bottom: 15px;
+  }
+
+  &--textarea-big {
+    height: 200px !important;
+    padding-top: 10px;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:disabled {
+    background: #ffffff;
+    color: $f-light-bg-disabled;
+
+   // @include placeholder($f-light-bg-disabled);
+  }
+
+  &--padding {
+    padding-top: 5px;
+  }
+
+  &::-ms-clear {
+    display: none;
+  }
+
+  &:active, &:focus, &--has-value {
+    //@include placeholder($color3);
+    border-bottom: 1px solid $color1;
+    border-color: #b8b8bb;
+
+    /*
+    &+label, &+ul+label {
+      color: $color1;
+      top: -10px;
+      font-size: 13px;
+      @include transition(.3s all ease-in-out);
+    }
+    */
+  }
+
+}
+
+
+label {
+  @include transition(.3s all ease-in-out);
+}
+
+/* Checkbox */
+.fa-checkbox-custom {
+  position: relative;
+  padding-left: 35px;
+  line-height: 1.9;
+  float: left;
+
+  &__input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+
+    &:focus + .fa-checkbox-custom__icon-state {
+      border-color: $input-border-focus;
+    }
+
+    &:checked + .fa-checkbox-custom__icon-state {
+      background: $color1;
+      border-color: $color1;
+      border-radius: 4px;
+    }
+
+    &:checked + .fa-checkbox-custom__icon-state:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      margin-top: -8px;
+      margin-left: -4px;
+      width: 9px;
+      height: 12px;
+      border: solid #ffffff;
+      border-width: 0 3px 3px 0;
+      content: "";
+      transform: rotate(45deg);
+      transform-origin: 50% 50%;
+    }
+
+    &:disabled + .fa-checkbox-custom__icon-state, &:disabled + .fa-checkbox-custom__icon-state + .fa-checkbox-custom__label {
+      color: lighten(#000000, 80%);
+      border-color: lighten(#000000, 80%);
+    }
+  }
+
+  &__icon-state {
+    position: relative;
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: -36px;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid $border-color-2;
+    border-radius: 4px;
+    background-color: #ffffff;
+    vertical-align: text-bottom;
+
+    &--alt {
+      border-color: $border-color-2;
+      background-color: transparent;
+    }
+
+    &__vertical-middle {
+      position: absolute;
+      margin-top: -12.5px;
+      top: 50%;
+    }
+  }
+
+  &__label {
+    font-weight: $font-weight-base;
+
+    &--small {
+      font-size: rem((strip-units($font-size-base) - 1));
+    }
+    &--white {
+      color: #ffffff;
+    }
+  }
+}
+
+/* Radio */
+.fa-radio-custom {
+  position: relative;
+  padding-left: 35px;
+  line-height: 1;
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+
+    &:focus + .fa-radio-custom__icon-state {
+      border-color: $input-border-focus;
+    }
+
+    &:checked + .fa-radio-custom__icon-state {
+      border-color: $color1;
+    }
+
+    &:checked + .fa-radio-custom__icon-state:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      margin-top: -4px;
+      margin-left: -4px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $brand-primary;
+      border-color: $color1;
+      content: "";
+    }
+
+    &:disabled + .fa-radio-custom__icon-state, &:disabled + .fa-radio-custom__icon-state + .fa-radio-custom__label {
+      color: lighten(#000000, 80%);
+      border-color: lighten(#000000, 80%);
+    }
+
+  }
+
+  &__icon-state {
+    position: relative;
+    display: inline-block;
+    margin-right: 1px;
+    margin-left: -35px;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid lighten(#000000, 60%);
+    border-radius: 50%;
+    background-color: transparent;
+    vertical-align: bottom;
+
+    &--alt {
+      border-color: #6685a3;
+      background: transparent;
+    }
+  }
+
+  &__label {
+    &--white {
+      color: #ffffff;
+    }
+  }
+}
+
+.m-form {
+  //@extend .clearfix;
+
+  &__group {
+    @extend .form-group;
+    position: relative;
+    display: inline-block;
+    float: left;
+    margin: 0 10px 0 0;
+
+    &__label {
+      @include position(absolute, 10px null null 0);
+      z-index: 2;
+      .fa {
+        margin-right: 10px;
+      }
+      &--white {
+        color: #ffffff;
+        border-bottom-color: #ffffff;
+      }
+      &--text-normal {
+       text-transform: none;
+      }
+    }
+
+    &--rmargin-big {
+      margin-right: 40px;
+    }
+
+    &--margin {
+      margin-bottom: 20px;
+    }
+
+    &--width {
+    //  width: 21.25%;
+    }
+
+    &--full {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    &--right {
+      float: right;
+
+      @media (max-width: 1700px) {
+        margin-top: 10px;
+      }
+
+      @media (max-width: 1260px) {
+      }
+    }
+
+    &--right-alt {
+      @media (max-width: 1700px) {
+        float: right;
+      }
+    }
+
+    &--margin-disabled {
+      margin-bottom: 0px;
+    }
+
+    &--margin-top {
+      margin-top: $margin-default;
+    }
+
+    &--half-margin-top {
+       margin-top: $margin-default / 2;
+    }
+
+    &--separate {
+      &:not(:first-child) {
+        padding-top: $form-group-margin-bottom;
+        border-top: 1px solid #d7d7d7;
+      }
+    }
+
+    &--inline {
+        display: inline-block;
+        margin: 0 7px 10px 0;
+
+        .form-control {
+            display: inline-block;
+        }
+    }
+    &--special {
+      @media (max-width: $screen-sm-min) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__group--no-padding {
+    @extend .m-form__group;
+    margin: 0 0 0 0;
+  }
+
+  &--margin-top-50 {
+    margin-top: 50px;
+  }
+
+  &--b-padding {
+    @media (min-width: $screen-sm-min) {
+      padding-bottom: 62px;
+    }
+  }
+
+  &__label {
+    font-weight: $font-weight-base;
+  }
+
+  &__row {
+    &--tpadding {
+      padding-top: 13px;
+    }
+  }
+
+  &--special {
+    @media (max-width: $screen-sm-max) {
+      padding-top: 10px;
+    }
+  }
+
+}
+
+@-moz-document url-prefix() {
+  .fa-select-custom {
+    &__select {
+      padding-left: 8px;
+    }
+  }
+}
+
+.select-custom {
+  @extend .form-control;
+  background-color: #ffffff;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 12px;
+
+  &__icon {
+    @include position(absolute, 50% 15px null null);
+    @include transform(translateY(-50%));
+    font-size: rem(18);
+  }
+
+  &__list {
+    list-style-type: none;
+    list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7); // FIX bug on IE 11 with list style https://stackoverflow.com/questions/20356311/internet-explorer-11-ignores-list-stylenone-on-the-first-load
+    padding: 10px 0;
+    margin: 0;
+    @include position(absolute, 43px -1px null -1px);
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-top-color: $color1;
+    display: none;
+  }
+
+  &__item {
+    padding: 10px 0 10px 15px;
+
+    &:active, &:hover, &:focus {
+      cursor: url(../images/icon-arrows.png), move;
+    }
+
+    &__name {
+      vertical-align: middle;
+    }
+
+    &__icon {
+      float: right;
+      margin-right: 15px;
+      color: #b0b0b0;
+
+      .fa {
+        margin-right: 0;
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: $red;
+      }
+    }
+
+    &.show-radio-button:before {
+      content: '\25CF';
+      font-size: 10px;
+      display: inline-block;
+      border: 2px solid #bbbbbb;
+      color: transparent;
+      border-radius: 50%;
+      width: 18px;
+      text-align: center;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    &.sortable-chosen, &.is-active {
+      font-weight: bold;
+
+      &:before {
+        content: '\25CF';
+        font-size: 10px;
+        display: inline-block;
+        border: 2px solid $color1;
+        color: $color1;
+        border-radius: 50%;
+        width: 18px;
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+
+    &:hover {
+      background-color: #e1e8eb;
+    }
+  }
+
+  &.is-active {
+    z-index: 999;
+    .select-custom__icon {
+      .fa {
+        @include transform(rotate(180deg));
+      }
+    }
+    .select-custom__list {
+      display: block;
+    }
+  }
+}
+
+.sortable-chosen {
+  cursor: url(../images/icon-arrows.png), move !important;
+}

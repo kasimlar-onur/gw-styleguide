@@ -1,0 +1,129 @@
+.m-section {
+  @include clearfix;
+  position: relative;
+  margin-bottom: $section-margin;
+  background-color: #fff;
+  border-bottom: 1px solid $section-border;
+
+  &--padding {
+    padding: ($grid-gutter-width / 2) $grid-gutter-width 0;
+  }
+
+  &--no-bmargin {
+    margin-bottom: 0;
+  }
+
+  &--bmargin-small {
+    margin-bottom: 20px;
+  }
+
+  &--bmargin-big {
+    margin-bottom: 130px;
+  }
+
+  &--no-border {
+    border-bottom: none;
+  }
+
+  &--blank {
+    background-color: transparent;
+    border: none;
+  }
+
+  &--bg-color-white {
+    background: #ffffff;
+  }
+
+  &__back-link {
+    @include position(absolute, 30px 40px null null);
+
+    .fa {
+      font-size: rem(22);
+      color: $grey-1;
+      vertical-align: -2px;
+      margin-right: 7px;
+    }
+  }
+
+  &__title {
+    font-weight: $font-weight-bold;
+    font-size: rem(14);
+    color: $grey-1;
+    margin-bottom: 18px;
+
+    .fa {
+      color: #b0b0b0;
+      font-size: rem(20);
+      margin-right: 12px;
+      vertical-align: bottom;
+    }
+
+    &--big {
+      font-size: rem(20);
+      margin-bottom: 12px;
+    }
+  }
+
+  &__header {
+    padding: 17px 40px 0;
+    border-bottom: 2px solid #e6e7e8;
+    margin-bottom: $margin-default;
+
+    &--bg-alt {
+      background-color: #f6f6f6;
+    }
+  }
+
+  &__body {
+    padding: 0 40px 20px;
+    border-bottom: 1px solid #dddede;
+
+    &--b-padding {
+      padding-bottom: 40px;
+    }
+  }
+
+  &__cover {
+    font-size: rem(14);
+    font-weight: 800;
+    color: #ffffff;
+    padding: 25px 40px;
+    background-color: $color1;
+    height: 37vh;
+  }
+
+  &__content {
+    padding: 30px 20px 35px 20px;
+
+    &--special {
+      padding-top: 15px;
+      padding-bottom: 0;
+    }
+
+    &--mbottom {
+      margin-bottom: $margin-default;
+    }
+
+    & + .m-section__content {
+      border-top: 0;
+    }
+  }
+
+  &__scroll-to {
+    font-size: rem(24);
+    color: $grey-1;
+    @include position(absolute, 50% 40px null null);
+    @include transform(translateY(-50%));
+    @include transition(color .2s linear);
+    cursor: pointer;
+
+    &:hover {
+      color: $color1;
+    }
+  }
+
+  &__footer {
+    position: relative;
+    padding: 40px;
+  }
+}
