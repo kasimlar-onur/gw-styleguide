@@ -50,6 +50,13 @@ This section has a couple of options that can be leveraged for different purpose
 ### Build the static files
 Run `gulp build` to generate the static files.
 
+
+### Add new styles (for Inscript) 
+For addding new styles only change the CSS in folder `gw-styleguide/src/css/gw/`. All the other files are either default liferay theme files or third-partly components (like bourbon) which must not be changed without any agreement in team.
+For Inscript Components we have created a new Page "Inscript" in section components. For adding new elements into this page just put the into the file `gw-styleguide/src/content/inscript.html`. 
+
+
+
 ### View the files
 The generated files are placed into the `build/` directory.
 Sass files in the `.scss` format are generated to CSS, Markdown files with the extension of `.md` are generated to HTML, and HTML files have one bit of processing applied, which is that HTML inside of triple ticks is escaped, like so:
@@ -58,10 +65,6 @@ Sass files in the `.scss` format are generated to CSS, Markdown files with the e
 	<div>Foo</div>
 
     ```
-
-### Add new styles 
-For addding new styles only change the CSS in folder "gw-clay-ui/src/css/gw/". All the other files are either default liferay theme files or third-partly components (like bourbon) which must not be changed without any agreement in team.
-
 
 
 ### File Heading Options
