@@ -2,6 +2,11 @@
   padding: 0 40px 30px;
   border-bottom: 1px solid #e0e0e0;
 
+  &__list {
+    padding: 0;
+    margin: 0;
+  }
+
   &__item {
     list-style: none;
     display: inline-block;
@@ -34,7 +39,6 @@
     &__content {
       background-color: #f6f6f6;
       margin-right: 10px;
-      width: 370px;
       margin-bottom: 10px;
     }
 
@@ -97,7 +101,7 @@
   }
 
   &__dropdown {
-    margin: 10px 0 0;
+    margin: 0;
     padding: 0;
     display: none;
   }

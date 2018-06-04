@@ -5,6 +5,27 @@
   background-color: #fff;
   border-bottom: 1px solid $section-border;
 
+
+  &--scroll-mobile-disabled {
+    position: relative;
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      overflow: hidden;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+
+  &--scroll-mobile-enabled {
+    position: relative;
+    @media (max-width: $screen-sm-max) {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+
   &--padding {
     padding: ($grid-gutter-width / 2) $grid-gutter-width 0;
   }

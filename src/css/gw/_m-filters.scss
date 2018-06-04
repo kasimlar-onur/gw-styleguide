@@ -9,4 +9,12 @@
     padding-left: 60px !important;
     float: none !important;
   }
+
+  input[type="text"] {
+    border-bottom: 1px solid #e0e0e0 !important;
+
+    &:focus {
+      border-bottom-color: $brand-primary !important;
+    }
+  }
 }

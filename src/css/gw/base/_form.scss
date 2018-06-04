@@ -1,12 +1,12 @@
 .form-control {
- // @include placeholder($text-color);
+  @include placeholder($text-color);
   font-weight: 400;
   font-size: rem(14);
   padding: $padding-base-vertical 0 $padding-base-vertical 15px;
   background-clip: padding-box;
   box-shadow: none;
   background: transparent;
-  border: 1px solid $border-color-2;
+  border: 1px solid $border-color-2 !important;
   color: $text-color;
   height: 45px;
   position: relative;
@@ -55,8 +55,9 @@
 
   &:active, &:focus, &--has-value {
     //@include placeholder($color3);
-    border-bottom: 1px solid $color1;
-    border-color: #b8b8bb;
+    border-color: #b8b8bb !important;
+    border-bottom: 1px solid $color1 !important;
+    @include placeholder($text-color);
 
     /*
     &+label, &+ul+label {
@@ -79,6 +80,7 @@ label {
 .fa-checkbox-custom {
   position: relative;
   padding-left: 35px;
+  padding-top: 10px;
   line-height: 1.9;
   float: left;
 
@@ -222,7 +224,7 @@ label {
 }
 
 .m-form {
-  //@extend .clearfix;
+  @include clearfix();
 
   &__group {
     @extend .form-group;
@@ -255,7 +257,7 @@ label {
     }
 
     &--width {
-    //  width: 21.25%;
+      width: 21.25%;
     }
 
     &--full {
@@ -359,7 +361,7 @@ label {
   @extend .form-control;
   background-color: #ffffff;
   position: relative;
-  display: inline-block;
+  display: block;
   vertical-align: middle;
   padding-top: 12px;
 
@@ -407,7 +409,7 @@ label {
       }
     }
 
-    &.show-radio-button:before {
+    &:before {
       content: '\25CF';
       font-size: 10px;
       display: inline-block;

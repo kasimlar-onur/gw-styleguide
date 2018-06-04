@@ -1,0 +1,175 @@
+.table-v1 {
+  position: relative;
+  z-index: 1;
+  border-bottom: 1px solid $table-border-color;
+  font-size: 14px;
+  margin-bottom: 0;
+
+  @media (max-width: $screen-sm-max) {
+    max-width: none;
+    //overflow-x: scroll;
+    //-webkit-overflow-scrolling: touch;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    border: none !important;
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    width: 1200px;
+  }
+
+  &--full-mobile {
+    @media (max-width: $screen-sm-max) {
+      width: 1200px;
+
+      .table-v1 {
+        &__td, &__th {
+          display: table-cell !important;
+          padding-top: 14px;
+          padding-bottom: 14px;
+
+          &:first-child {
+            padding-left: 15px !important;
+          }
+        }
+        &__row {
+          display: table-row !important;
+          border-bottom: none !important;
+        }
+      }
+    }
+  }
+
+  &--full-mobile-alt {
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      width: 1200px;
+    }
+  }
+
+  &__row {
+    &--text-grey {
+      color: $grey-1;
+    }
+    &--bg-grey {
+      background-color: #f6f6f6 !important;
+    }
+
+    &:not(:first-child):nth-child(odd) {
+      background-color: #f6f6f6;
+    }
+
+    &:first-child {
+      border-bottom: 2px solid #e6e7e8;
+    }
+
+    &:not(.tabel-v1__row--hover-disabled):hover {
+      background-color: #e1e8eb;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      &--hidden-xs {
+        display: none !important;
+      }
+    }
+  }
+
+  &__thead {
+    position: static !important;
+
+    .table-v1__row {
+      position: static !important;
+    }
+  }
+
+  &__td, &__th {
+    padding: 20px;
+    max-height: 70px;
+    vertical-align: middle;
+
+    &:first-child {
+      padding-left: 35px
+    }
+  }
+
+  &__th {
+    span {
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    span[class^=icon-] {
+      margin-right: 0;
+      margin-left: 10px;
+      display: none;
+
+      &:first-child {
+        display: inline-block;
+      }
+    }
+
+    &:hover {
+      .table-v1__icon--second {
+        opacity: 1;
+      }
+    }
+
+    &--text-right {
+      text-align: right;
+    }
+  }
+
+  &__icon {
+    font-size: 19px;
+  }
+
+  &__interaction-link {
+    font-size: rem(22);
+    line-height: 1;
+    color: #b0b0b0;
+
+    .fa {
+      margin-right: 10px;
+    }
+
+    &:hover {
+      color: #b0b0b0;
+    }
+
+    &--active {
+      color: $color1;
+
+      &:hover {
+        color: $color1;
+      }
+    }
+  }
+
+  &__field-name, &__icon  {
+    display: inline-block;
+    position: relative;
+  }
+
+  &__icon {
+    @include position(absolute, 0 -16px null null);
+
+    [data-sort-icon] {
+      display: none !important;
+
+      &.is-visible {
+        display: inline-block !important;
+      }
+    }
+
+    &--second {
+      opacity: 0;
+      @include position(absolute, 0 -32px null null);
+
+    }
+  }
+
+  &__status-icon {
+    line-height: 1;
+    font-size: rem(21);
+  }
+}

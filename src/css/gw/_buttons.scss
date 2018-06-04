@@ -457,6 +457,8 @@ input.toggle-switch:focus ~ .toggle-switch-bar::before {
   -webkit-appearance: none;
   height: 45px;
   margin-bottom: 2px;
+  display: inline-block;
+  vertical-align: middle;
 
   @media (max-width: $screen-sm-max) {
     padding: 10.5px 23px;
@@ -466,11 +468,11 @@ input.toggle-switch:focus ~ .toggle-switch-bar::before {
     position: relative;
   }
 
-  .fa {
+  span[class^=icon-] {
     font-size: rem(15);
     margin-right: 5px;
 
-    &--icon-left {
+    &.icon-left {
       margin-right: 2px;
       margin-left: -6px;
       font-size: rem(17);
@@ -506,6 +508,7 @@ input.toggle-switch:focus ~ .toggle-switch-bar::before {
   &--border {
     @include button-variant($color2, #ffffff, $color2);
     border-width: 2px;
+    border-style: solid;
     &:hover {
       background-color: rgba(#003366, 0.2) !important;
       border-color: #003366 !important;

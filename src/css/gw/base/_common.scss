@@ -272,6 +272,17 @@ a[href^=mailto] {
     border-bottom-color: $section-border !important;
   }
 }
+
+[data-show-mobile] {
+  @media (min-width: $screen-sm-min) {
+    max-height: none;
+  }
+
+  &.is-opened {
+    margin-bottom: 0 !important;
+  }
+}
+
 @media (min-width: $screen-md-min)  {
   .wrapper {
     //@extend .clearfix; todo: apply
@@ -317,5 +328,23 @@ a[href^=mailto] {
   @include position(absolute, 3px null null 0);
   .fa {
     margin-left: -12px !important;
+  }
+}
+
+.inscript-container {
+  width: 1440px;
+  margin-left: -200px;
+
+  @media (max-width: $screen-sm-max - 1) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+span[class^=icon-] {
+  &.reverse {
+    &::before {
+      @include rotateY(-180deg);
+    }
   }
 }

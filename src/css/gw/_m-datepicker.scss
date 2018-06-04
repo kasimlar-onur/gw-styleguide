@@ -1,0 +1,16 @@
+.m-datepicker {
+  @include position(absolute, 0 0 null 0);
+  z-index: 5;
+  background-color: #ffffff;
+  display: none;
+
+  @media (max-width: $screen-xs-max) {
+    display: block;
+    position: static;
+    width: 75%;
+  }
+
+  &.is-visible {
+    display: block;
+  }
+}

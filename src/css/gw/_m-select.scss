@@ -62,7 +62,7 @@
 
       &:after {
         @include position(absolute, 16px 15px null null);
-        font-family: "fontAwesome";
+        font-family: "fontawesome-alloy";
         font-size: rem(18);
         content: "\f107";
         color: $text-color;
@@ -82,6 +82,7 @@
         }
 
         &__rendered {
+          font-weight: 400;
           padding-left: 0;
           color: $text-color;
           visibility: hidden;
@@ -169,7 +170,7 @@
       }
       &:after {
         @include position(absolute, 14px 15px null null);
-        font-family: "fontAwesome";
+        font-family: "fontawesome-alloy";
         font-size: 18px;
         content: "\f106";
         margin-top: -3px;

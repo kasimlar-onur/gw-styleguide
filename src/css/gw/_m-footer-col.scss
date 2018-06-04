@@ -1,0 +1,45 @@
+.m-footer-col {
+  margin-bottom: 30px;
+  background-color: $color2;
+
+  &__content {
+
+  }
+
+  &__heading {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 0;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    color: #b0b8c5;
+    padding-bottom: 10px;
+
+    &:first-child {
+      padding-top: 10px;
+    }
+
+    span[class^=icon-] {
+      width: 22px;
+      text-align: left;
+      display: inline-block;
+    }
+  }
+
+  &__link {
+    color: inherit;
+    font-weight: 300;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}

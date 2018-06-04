@@ -1,0 +1,15 @@
+.m-social-media {
+
+  &__item {
+    color: #b0b8c5;
+
+    span[class^=icon-] {
+      font-size: 25px;
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: #e6e6e6;
+    }
+  }
+}

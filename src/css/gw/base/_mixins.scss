@@ -9,6 +9,17 @@
   appearance: $appearance;
 }
 
+// Placeholder text
+@mixin placeholder($color: $input-color-placeholder) {
+  // Firefox
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+  }
+  &:-ms-input-placeholder { color: $color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
+}
+
 // -------------------------------------------------------------------
 // Omega Reset for Bourbon Neat
 //
@@ -165,4 +176,16 @@
   border: 0 none;
   background-color: transparent;
   line-height: 1;
+}
+
+// -------------------------------------------------------------------
+// clearfix
+// -------------------------------------------------------------------
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
 }

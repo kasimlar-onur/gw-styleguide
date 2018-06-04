@@ -1,0 +1,44 @@
+.m-info-modal {
+  @include position(absolute, 0 0 0 0);
+  background-color: rgba(#000, 0.8);
+  z-index: 14;
+  height: 100%;
+  display: none;
+
+  @media (max-width: $screen-sm-max) {
+    display: block;
+  }
+
+  &__content {
+    @include position(absolute, 15px null null 50%);
+    text-align: center;
+    color: #ffffff;
+    @include transform(translateX( -50%));
+    @include transition(.2s transform linear);
+    min-width: 70%;
+  }
+
+  &__icon {
+    display: inline-block;
+  }
+
+  &__close {
+    @include position(absolute, 0 0 null null);
+    display: inline-block;
+    text-align: center;
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  &.fade-out {
+    @include transition(.4s height linear .1s, .4s opacity linear .1s);
+    height: 0;
+    opacity: 0;
+
+    .m-info-modal__content {
+      @include transform(translate(-50%, -100%));
+    }
+  }
+}

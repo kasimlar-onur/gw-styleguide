@@ -1,0 +1,37 @@
+.m-modal {
+  @include clearfix;
+  position: relative;
+  margin-bottom: $section-margin;
+  background-color: #fff;
+  border-bottom: 1px solid $section-border;
+
+  &__header {
+    background-color: #f6f6f6;
+    padding: 0 40px;
+    height: 60px;
+    border-bottom: 2px solid #e6e7e8;
+    margin-bottom: $margin-default;
+  }
+
+  &__title {
+    font-weight: $font-weight-bold;
+    font-size: 20px;
+    color: $grey-1;
+    margin-bottom: 0;
+    line-height: 60px;
+  }
+
+  &__content {
+    background-color: #ffffff;
+  }
+
+  &__body {
+    padding: 0 40px 40px;
+    border-bottom: 1px solid #dddede;
+  }
+
+  &__text {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+}
