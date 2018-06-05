@@ -218,7 +218,7 @@ a[href^=mailto] {
   line-height: 18px;
 
   &--top-right {
-    @include position(absolute, -5px 4px null null);
+    @include position(absolute, -5px -5px null null);
   }
 }
 
@@ -251,7 +251,7 @@ a[href^=mailto] {
   @include position(fixed, 0 0 0 0);
 
   &.is-visible {
-    z-index: 9;
+    z-index: 3;
     background-color: #000000;
     opacity: 0.1;
   }

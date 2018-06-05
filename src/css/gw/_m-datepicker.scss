@@ -4,10 +4,20 @@
   background-color: #ffffff;
   display: none;
 
+  .form-control[readonly] {
+    background-color: #ffffff;
+  }
+
   @media (max-width: $screen-xs-max) {
     display: block;
     position: static;
     width: 75%;
+
+    .input-group {
+      input {
+        margin-bottom: 0 !important;
+      }
+    }
   }
 
   &.is-visible {

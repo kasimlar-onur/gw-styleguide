@@ -13,8 +13,7 @@
     }
 
     @media (max-width: $screen-xs-max) {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
+      overflow: hidden;
     }
   }
 

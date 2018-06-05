@@ -472,7 +472,7 @@
 
         $(modalInfoId).modal('toggle');
         $(modalInfoId).on('hidden.bs.modal', function () {
-          $parent.parents().find('.m-section').removeClass('m-section--scroll-mobile-disabled').addClass('m-section--scroll-mobile-enabled');
+          $parent.parents('.m-section--scroll-mobile-disabled').removeClass('m-section--scroll-mobile-disabled').addClass('m-section--scroll-mobile-enabled');
           $this.parent().addClass('fade-out');
           setTimeout(removeModal, 500);
         });
@@ -508,7 +508,7 @@
     app.initSearch();
     app.initInfoModal();
     app.initResponsiveTables();
-    // app.initDatepicker();
+    app.initDatepicker();
   });
 
   $(window).on('resize', function () {

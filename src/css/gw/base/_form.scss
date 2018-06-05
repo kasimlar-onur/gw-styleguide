@@ -225,6 +225,7 @@ label {
 
 .m-form {
   @include clearfix();
+  position: relative;
 
   &__group {
     @extend .form-group;
@@ -232,6 +233,11 @@ label {
     display: inline-block;
     float: left;
     margin: 0 10px 0 0;
+    z-index: 4;
+
+    @media (max-width: $screen-xs-max) {
+      margin-right: 0;
+    }
 
     &__label {
       @include position(absolute, 10px null null 0);
@@ -244,12 +250,20 @@ label {
         border-bottom-color: #ffffff;
       }
       &--text-normal {
-       text-transform: none;
+        text-transform: none;
       }
     }
 
     &--rmargin-big {
       margin-right: 40px;
+
+      @media (max-width: $screen-sm-max) {
+        margin-right: 10px;
+      }
+
+      @media (max-width: $screen-xs-max) {
+        margin-right: 0;
+      }
     }
 
     &--margin {
@@ -280,10 +294,14 @@ label {
       @media (max-width: 1700px) {
         float: right;
       }
+
+      @media(max-width: $screen-sm-max) {
+        float: left;
+      }
     }
 
     &--margin-disabled {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
 
     &--margin-top {
@@ -291,7 +309,7 @@ label {
     }
 
     &--half-margin-top {
-       margin-top: $margin-default / 2;
+      margin-top: $margin-default / 2;
     }
 
     &--separate {
@@ -302,23 +320,67 @@ label {
     }
 
     &--inline {
-        display: inline-block;
-        margin: 0 7px 10px 0;
+      display: inline-block;
+      margin: 0 7px 10px 0;
 
-        .form-control {
-            display: inline-block;
-        }
+      .form-control {
+        display: inline-block;
+      }
     }
+
     &--special {
       @media (max-width: $screen-sm-min) {
         margin-bottom: 15px;
       }
     }
-  }
 
-  &__group--no-padding {
-    @extend .m-form__group;
-    margin: 0 0 0 0;
+    &--mobile-cl {
+      @media (max-width: $screen-sm-max) {
+        clear: left;
+      }
+    }
+
+    &--mobile-margin {
+      @media (max-width: $screen-sm-max) {
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: $screen-xs-max) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &--mobile-width {
+      @media (max-width: $screen-sm-max) {
+        width: 43%;
+      }
+
+      @media (max-width: $screen-xs-max) {
+        width: 100%;
+      }
+    }
+
+    &--mobile-width-small {
+      @media (max-width: $screen-sm-max) {
+        width: 60px;
+        margin-right: 0;
+
+        .button {
+          width: 100%;
+          text-align: center;
+          padding: 10.5px 5px;
+        }
+      }
+      @media (max-width: $screen-xs-max) {
+
+      }
+    }
+
+    &--mobile-as {
+      @media (max-width: $screen-xs-max) {
+        @include position(absolute, 55px 0 null null);
+      }
+    }
   }
 
   &--margin-top-50 {

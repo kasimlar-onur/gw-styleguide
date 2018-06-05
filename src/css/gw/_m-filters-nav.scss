@@ -2,6 +2,10 @@
   padding: 30px 55px 0;
   border-bottom: 1px solid $border-color-2;
 
+  @media (max-width: $screen-xs-max) {
+    display: none;
+  }
+
   &__list {
     @extend .list-unstyled;
     margin-bottom: -2px !important;

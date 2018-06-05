@@ -93,6 +93,7 @@
   }
 
   &__th {
+    display: table-cell !important;
     span {
       cursor: pointer;
       display: inline-block;

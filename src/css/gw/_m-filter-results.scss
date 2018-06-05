@@ -2,9 +2,14 @@
   padding: 0 40px 30px;
   border-bottom: 1px solid #e0e0e0;
 
+  @media (max-width: $screen-xs-max) {
+    display: none;
+  }
+
   &__list {
     padding: 0;
     margin: 0;
+    list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7); // FIX bug on IE 11 with list style https://stackoverflow.com/questions/20356311/internet-explorer-11-ignores-list-stylenone-on-the-first-load
   }
 
   &__item {

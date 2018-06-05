@@ -1,0 +1,23 @@
+.row {
+  &--reduce-gutter {
+    margin-right: floor(($grid-gutter-width / -4));
+    margin-left: ceil(($grid-gutter-width / -4));
+
+    & > [class*="col-"] {
+      padding-right: floor(($grid-gutter-width / 4));
+      padding-left: ceil(($grid-gutter-width / 4));
+    }
+  }
+
+  &--reduce-gutter-mobile {
+    @media (max-width: $screen-xs-max) {
+      margin-right: -5px;
+      margin-left: -5px;
+
+      & > [class*="col-"] {
+        padding-right: 5px;
+        padding-left: 5px;
+      }
+    }
+  }
+}

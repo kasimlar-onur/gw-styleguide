@@ -19,6 +19,7 @@
   }
 
   &__row {
+    @include clearfix();
     @extend .row;
     position: relative;
     height: inherit;
@@ -81,7 +82,7 @@
         }
 
         @media (max-width: $screen-xs-max) {
-          margin-right: 5px;
+          margin-right: 15px;
         }
       }
 

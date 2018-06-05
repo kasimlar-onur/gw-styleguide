@@ -49,12 +49,14 @@
 @import "vendors/_jquery-ui.scss";
 @import "vendors/_c3.scss";
 @import "gw/vendor/basictable";
+@import "gw/vendor/bootstrap-datepicker";
 
 
 // table inscript todo: merge with _table.scss
 @import "gw/base/mixins";
 @import "gw/base/table";
 @import "gw/base/overrides";
+@import "gw/base/grid";
 
 //@import "gw/vendor/bootstrap";
 
