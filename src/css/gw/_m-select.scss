@@ -84,7 +84,7 @@
         &__rendered {
           padding-left: 0;
           color: $text-color;
-          visibility: hidden;
+          //visibility: hidden;
         }
 
         &__arrow {
@@ -242,6 +242,13 @@
   }
 }
 
+.selection-hidden {
+  .select2-selection {
+    &__rendered {
+      visibility: hidden !important;
+    }
+  }
+}
 
 .select2-close-mask {
   border: 0;
@@ -288,7 +295,7 @@
     top: 0 !important;
     border: 1px solid #e0e0e0;
     border-top: none;
-    width: 367px !important;
+    width: 387px !important;
     padding-top: 10px;
     padding-bottom: 10px;
 
@@ -366,4 +373,18 @@
 
     }
   }
+}
+
+.taglib-search-toggle .toggle-advanced {
+  top: 12px;
+}
+
+.form-search .input-group.advanced-search .search-query {
+  width: 300px;
+  padding-left: 50px;
+  margin-right: 10px;
+}
+
+.advanced-search.input-group {
+  width: min-content;
 }

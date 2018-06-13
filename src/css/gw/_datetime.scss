@@ -7,11 +7,10 @@
     padding-left: 25px;
     color: $colorTertiary90 !important;
     min-width: 289px;
-    border-bottom: 2px solid $colorTertiary60 !important;
 }
 
 .input-group .form-control.trigger:focus, .form-control.trigger:focus{
-	border-bottom: 2px solid $colorPrimary100 !important;
+	border-bottom: 1px solid $colorPrimary100 !important;
 }
 
 .datepicker::-webkit-input-placeholder { /* WebKit, Blink, Edge */
@@ -108,6 +107,7 @@
 }
 
 .datepicker-popover{
+    z-index: 8 !important;
     .yui3-calendarnav-prevmonth, .yui3-calendarnav-prevmonth:hover{
         width: 10px;
         height: 10px;
@@ -145,6 +145,7 @@
         color: $colorTertiary60;
         border: none;
         font-weight: normal;
+        outline-color: transparent !important;
     }
 }
 
@@ -161,7 +162,7 @@
     font-weight: bold;
 }
 
-.yui3-skin-sam .yui3-calendar-day:hover{
+.yui3-skin-sam .yui3-calendar-day:not(.yui3-calendar-selection-disabled):hover{
     background-color: $colorPrimary100;
 }
 
@@ -287,5 +288,15 @@
     .timepicker{
         min-width: 289px !important;
         max-width: 289px !important;
+    }
+}
+
+.yui3-skin-sam{
+    .yui3-calendar-selection-disabled{
+        color: $datepickerDisable !important;
+        &:hover{
+            background-color: transparent !important;
+
+        }
     }
 }

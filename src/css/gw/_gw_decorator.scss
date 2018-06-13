@@ -9,7 +9,7 @@
   }
 
   .gw-portlet-header {
-    padding: 20px 40px 0;
+    padding: 18px 40px 0;
     height: 74px;
     border-bottom: 1px solid $section-border;
 
@@ -26,6 +26,14 @@
         float: right;
       }
     }
+    h2{
+      &.portlet-title-text{
+        font-weight: bold;
+        line-height: 1.4;
+        color: $color3;
+        font-size: 28px;
+      }
+    }
 
   }
 
@@ -40,3 +48,4 @@
   }
 
 }
+

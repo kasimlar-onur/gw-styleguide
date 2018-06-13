@@ -39,11 +39,10 @@ input[type="color"].form-control,
 input[type="number"].form-control,
 input[type="email"].form-control,
 input[type="url"].form-control{
-    border-bottom: 1px solid $colorTertiary40;
     //font-size: 16px;
     //font-weight: bold;
     color: $colorTertiary90;
-    margin-bottom: 11px;
+   // margin-bottom: 11px;
     padding-top: 8px;
     padding-bottom: 8px;
     line-height: 16px;
@@ -56,7 +55,7 @@ input.form-control[type="color"]:focus,
 input.form-control[type="number"]:focus,
 input.form-control[type="email"]:focus,
 input.form-control[type="url"]:focus{
-    border-bottom: 2px solid $colorPrimary100;
+    border-bottom: 1px solid $colorPrimary100;
     padding-bottom: 7px;
 }
 

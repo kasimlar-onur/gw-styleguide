@@ -1,5 +1,5 @@
 .form-control {
- // @include placeholder($text-color);
+  @include placeholder($text-color);
   font-weight: 400;
   font-size: rem(14);
   padding: $padding-base-vertical 0 $padding-base-vertical 15px;
@@ -42,7 +42,7 @@
     background: #ffffff;
     color: $f-light-bg-disabled;
 
-   // @include placeholder($f-light-bg-disabled);
+    @include placeholder($f-light-bg-disabled);
   }
 
   &--padding {
@@ -222,7 +222,7 @@ label {
 }
 
 .m-form {
-  //@extend .clearfix;
+  @extend .clearfix;
 
   &__group {
     @extend .form-group;
@@ -384,10 +384,6 @@ label {
   &__item {
     padding: 10px 0 10px 15px;
 
-    &:active, &:hover, &:focus {
-      cursor: url(../images/icon-arrows.png), move;
-    }
-
     &__name {
       vertical-align: middle;
     }
@@ -454,6 +450,6 @@ label {
   }
 }
 
-.sortable-chosen {
+.sortable-chosen, .sortable {
   cursor: url(../images/icon-arrows.png), move !important;
 }

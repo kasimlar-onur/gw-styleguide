@@ -1,6 +1,7 @@
 body {
   font-weight: $font-weight-base;
   font-size: rem(16);
+  font-family:$font-family-base;
 }
 
 a {
@@ -289,7 +290,7 @@ a[href^=mailto] {
     &.menu-is-opened {
       &:before {
         width: 235px;
-
+        z-index: 9;
         @media (max-width: $screen-md-max) {
           width: 215px;
         }
