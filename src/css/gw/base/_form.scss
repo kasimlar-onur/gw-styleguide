@@ -1,16 +1,40 @@
 .form-control {
- // @include placeholder($text-color);
+  @include placeholder($text-color);
   font-weight: 400;
   font-size: rem(14);
   padding: $padding-base-vertical 0 $padding-base-vertical 15px;
   background-clip: padding-box;
   box-shadow: none;
   background: transparent;
-  border: 1px solid $border-color-2;
+  border: 1px solid $border-color-2 !important;
   color: $text-color;
   height: 45px;
   position: relative;
   z-index: 3;
+
+  @media (max-width: $screen-xs-max) {
+    margin-bottom: 0 !important;
+  }
+
+  &__icon {
+    @include position(absolute, 12px null null null);
+    z-index: 4;
+    line-height: 1.4;
+
+    &--left {
+      left: 16px;
+      right: auto;
+    }
+
+    &--right {
+      left: auto;
+      right: 16px;
+    }
+
+    &--grey {
+      color: $grey-1;
+    }
+  }
 
   &--alt {
     height: 40px;
@@ -31,6 +55,10 @@
   &--textarea-big {
     height: 200px !important;
     padding-top: 10px;
+  }
+
+  &--icon-left {
+    padding-left: 55px;
   }
 
   &:focus {
@@ -55,8 +83,9 @@
 
   &:active, &:focus, &--has-value {
     //@include placeholder($color3);
-    border-bottom: 1px solid $color1;
-    border-color: #b8b8bb;
+    border-color: #b8b8bb !important;
+    border-bottom: 1px solid $color1 !important;
+    @include placeholder($text-color);
 
     /*
     &+label, &+ul+label {
@@ -79,21 +108,23 @@ label {
 .fa-checkbox-custom {
   position: relative;
   padding-left: 35px;
-  line-height: 1.9;
+  padding-top: 0;
   float: left;
+  cursor: pointer;
+  margin-bottom: 0;
 
   &__input[type="checkbox"] {
     position: absolute;
     opacity: 0;
+    z-index: -1;
 
     &:focus + .fa-checkbox-custom__icon-state {
-      border-color: $input-border-focus;
+      border-color: $grey-light;
     }
 
     &:checked + .fa-checkbox-custom__icon-state {
-      background: $color1;
+      background: #ffffff;
       border-color: $color1;
-      border-radius: 4px;
     }
 
     &:checked + .fa-checkbox-custom__icon-state:after {
@@ -101,11 +132,11 @@ label {
       top: 50%;
       left: 50%;
       display: block;
-      margin-top: -8px;
-      margin-left: -4px;
-      width: 9px;
-      height: 12px;
-      border: solid #ffffff;
+      margin-top: -5px;
+      margin-left: -2px;
+      width: 5px;
+      height: 9px;
+      border: solid $color1;
       border-width: 0 3px 3px 0;
       content: "";
       transform: rotate(45deg);
@@ -121,18 +152,17 @@ label {
   &__icon-state {
     position: relative;
     display: inline-block;
-    margin-right: 5px;
+    margin-right: 8px;
     margin-left: -36px;
     padding: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid $border-color-2;
-    border-radius: 4px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid $grey-light;
     background-color: #ffffff;
-    vertical-align: text-bottom;
+    vertical-align: top;
 
     &--alt {
-      border-color: $border-color-2;
+      border-color: $grey-light;
       background-color: transparent;
     }
 
@@ -145,12 +175,106 @@ label {
 
   &__label {
     font-weight: $font-weight-base;
+    vertical-align: top;
 
     &--small {
       font-size: rem((strip-units($font-size-base) - 1));
     }
     &--white {
       color: #ffffff;
+    }
+
+    &__icon {
+      color: $text-color;
+      font-size: 16px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    &__text {
+      color: $text-color;
+      display: inline-block;
+      line-height: 1.2;
+      padding: 0 0 10px 10px;
+
+      @media (max-width: $screen-sm-max) {
+        max-width: calc(100% - 25px);
+      }
+    }
+
+    &__subtext {
+      display: block;
+      clear: both;
+      color: $grey-1;
+      padding-left: 20px;
+    }
+  }
+}
+
+/* Checkbox yes/no */
+.fa-checkbox-status {
+  width: 40px;
+  height: 21px;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 0;
+  padding-top: 0;
+
+  &__input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+
+    &:focus + .fa-checkbox-status__label{
+
+    }
+
+    &:checked + .fa-checkbox-status__label {
+      background: $brand-primary;
+
+    }
+
+    &:checked + .fa-checkbox-status__label:after {
+      @include transform(translateX(19px));
+    }
+
+    &:checked ~ .fa-checkbox-status__text:after {
+      content: 'yes';
+    }
+
+  }
+
+  &__label {
+    @include position(absolute, 0 0 0 0 );
+    background-color: #949595;
+    border-radius: 10px;
+
+    &:after {
+      content: '';
+      @include position(absolute, 2px null null 2px);
+      width: 17px;
+      height: 17px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      @include transition(.3s all ease-in-out);
+
+    }
+  }
+
+  &__text {
+    &:after {
+      content: 'no';
+      @include position(relative, null null null 50px);
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $grey-1;
+
+      @media (max-width: $screen-xs - 1) {
+        position: static;
+        display: block;
+        text-align: center;
+        padding-top: 25px;
+      }
     }
   }
 }
@@ -221,8 +345,53 @@ label {
   }
 }
 
+/* Radio icon */
+.fa-radio-icon-custom {
+  position: relative;
+  margin-right: 15px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+
+    &:focus + .fa-radio-icon-custom__icon-state {
+      border-color: $input-border-focus;
+    }
+
+    &:checked + .fa-radio-icon-custom__icon-state {
+      border-color: $color1;
+    }
+
+    &:checked + .fa-radio-icon-custom__icon-state:before {
+      color: $brand-primary;
+    }
+
+    &:disabled + .fa-radio-icon-custom__icon-state {
+      color: lighten(#000000, 80%);
+      border-color: lighten(#000000, 80%);
+    }
+
+  }
+
+  &__icon-state {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    width: 20px;
+    height: 25px;
+    background-color: transparent;
+    vertical-align: bottom;
+  }
+
+}
+
 .m-form {
-  //@extend .clearfix;
+  @include clearfix();
+  position: relative;
 
   &__group {
     @extend .form-group;
@@ -230,6 +399,11 @@ label {
     display: inline-block;
     float: left;
     margin: 0 10px 0 0;
+    z-index: 4;
+
+    @media (max-width: $screen-xs-max) {
+      margin-right: 0;
+    }
 
     &__label {
       @include position(absolute, 10px null null 0);
@@ -242,20 +416,81 @@ label {
         border-bottom-color: #ffffff;
       }
       &--text-normal {
-       text-transform: none;
+        text-transform: none;
+      }
+    }
+
+    &__label-inline {
+      display: inline-block;
+      width: 200px;
+      font-size: 14px;
+
+      @media (max-width: $screen-xs-max) {
+        width: 100%;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      &~ .m-form__group__field-inline {
+        font-size: 14px;
+        display: inline-block !important;
+        width: calc(100% - 270px) !important;
+        line-height: 45px;
+        vertical-align: middle;
+
+        @media (max-width: $screen-xs-max) {
+          width: calc(100% - 35px) !important;
+
+          .button + .button {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    &__input-icon {
+      position: relative;
+    }
+
+    &__popover {
+      display: inline-block;
+      color: $grey-1;
+
+      .button {
+        color: $grey-1;
+      }
+    }
+
+    &__text-right {
+      text-align: right;
+
+      @media (max-width: $screen-xs-max) {
+        text-align: left;
       }
     }
 
     &--rmargin-big {
       margin-right: 40px;
+
+      @media (max-width: $screen-sm-max) {
+        margin-right: 10px;
+      }
+
+      @media (max-width: $screen-xs-max) {
+        margin-right: 0;
+      }
     }
 
     &--margin {
       margin-bottom: 20px;
     }
 
+    &--margin-mid {
+      margin-bottom: 40px;
+    }
+
     &--width {
-    //  width: 21.25%;
+      width: 21.25%;
     }
 
     &--full {
@@ -278,10 +513,14 @@ label {
       @media (max-width: 1700px) {
         float: right;
       }
+
+      @media(max-width: $screen-sm-max) {
+        float: left;
+      }
     }
 
     &--margin-disabled {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
 
     &--margin-top {
@@ -289,7 +528,7 @@ label {
     }
 
     &--half-margin-top {
-       margin-top: $margin-default / 2;
+      margin-top: $margin-default / 2;
     }
 
     &--separate {
@@ -300,23 +539,86 @@ label {
     }
 
     &--inline {
-        display: inline-block;
-        margin: 0 7px 10px 0;
+      display: inline-block;
+      margin: 0 7px 10px 0;
 
-        .form-control {
-            display: inline-block;
-        }
+      .form-control {
+        display: inline-block;
+      }
     }
+
     &--special {
       @media (max-width: $screen-sm-min) {
         margin-bottom: 15px;
       }
     }
-  }
 
-  &__group--no-padding {
-    @extend .m-form__group;
-    margin: 0 0 0 0;
+    &--mobile-cl {
+      @media (max-width: $screen-sm-max) {
+        clear: left;
+      }
+    }
+
+    &--mobile-margin {
+      @media (max-width: $screen-sm-max) {
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: $screen-xs-max) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &--mobile-width {
+      @media (max-width: $screen-sm-max) {
+        width: 43%;
+      }
+
+      @media (max-width: $screen-xs-max) {
+        width: 100%;
+      }
+    }
+
+    &--mobile-width-small {
+      @media (max-width: $screen-sm-max) {
+        width: 60px;
+        margin-right: 0;
+
+        .button {
+          width: 100%;
+          text-align: center;
+          padding: 10.5px 5px;
+        }
+      }
+      @media (max-width: $screen-xs-max) {
+
+      }
+    }
+
+    &--mobile-as {
+      @media (max-width: $screen-xs-max) {
+        @include position(absolute, 55px 0 null null);
+      }
+    }
+
+    &--text-va {
+      line-height: 45px;
+    }
+
+    &--full-search {
+      width: 100%;
+      margin-right: 0;
+
+      .m-form__group__input-icon {
+        display: inline-block;
+        width: calc(100% - 75px);
+      }
+
+      .button {
+        vertical-align: bottom;
+        float: right;
+      }
+    }
   }
 
   &--margin-top-50 {
@@ -359,7 +661,7 @@ label {
   @extend .form-control;
   background-color: #ffffff;
   position: relative;
-  display: inline-block;
+  display: block;
   vertical-align: middle;
   padding-top: 12px;
 
@@ -407,7 +709,7 @@ label {
       }
     }
 
-    &.show-radio-button:before {
+    &:before {
       content: '\25CF';
       font-size: 10px;
       display: inline-block;

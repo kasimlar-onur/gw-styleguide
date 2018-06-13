@@ -1,0 +1,67 @@
+.m-box-list {
+  font-size: 14px;
+  background-color: #ffffff;
+  margin-bottom: $margin-default;
+
+  &__content {
+    padding: 0 40px 20px;
+    border-bottom: 1px solid #dddede;
+
+    @media (max-width: $screen-xs-max) {
+      padding: 0 15px 15px;
+    }
+  }
+
+  &__header {
+    padding: 17px 40px 0;
+    border-bottom: 2px solid #e6e7e8;
+    margin-bottom: 30px;
+
+    @media (max-width: $screen-xs-max) {
+      padding: 17px 15px 0;
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+    color: $grey-1;
+    margin-bottom: 18px;
+    line-height: 1;
+
+    i {
+      color: #b0b0b0;
+      font-size: 20px;
+      margin-right: 12px;
+      vertical-align: bottom;
+    }
+  }
+
+  &__list {
+    @extend .list-unstyled;
+
+    &__item {
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+      border-bottom: 1px solid #e0e0e0;
+
+      &__file {
+        margin-bottom: 10px;
+
+        i, span {
+          font-size: 16px;
+          margin-right: 5px;
+        }
+      }
+
+      &__date {
+        color: $grey-1;
+        margin: 0;
+      }
+
+      &__link {
+        color: $text-color;
+      }
+    }
+  }
+}

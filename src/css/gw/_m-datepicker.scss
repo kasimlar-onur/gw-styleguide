@@ -1,0 +1,35 @@
+.m-datepicker {
+  @include position(absolute, 0 0 null 0);
+  z-index: 5;
+  background-color: #ffffff;
+  display: none;
+
+  .form-control[readonly] {
+    background-color: #ffffff;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    display: block;
+    position: static;
+    width: 75%;
+
+    .input-group {
+      input {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+
+  &.is-visible {
+    display: block;
+  }
+
+  &--alt {
+    display: block;
+    position: static;
+
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+    }
+  }
+}

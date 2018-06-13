@@ -1,0 +1,48 @@
+.m-pagination {
+  @media (max-width: $screen-xs - 1) {
+    display: none;
+  }
+
+  &__item {
+    font-weight: 300;
+    margin-right: 5px;
+    display: inline;
+
+    &:first-child {
+
+      .m-pagination__link {
+        margin-left: 0;
+        border-radius: 0;
+      }
+    }
+
+    &.active {
+      .m-pagination__link {
+        background: $brand-primary;
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__link {
+    font-weight: inherit;
+    color: $brand-primary;
+    float: none;
+    padding: 2px 4px;
+  }
+
+  &__arrow {
+    color: $brand-primary;
+    background: none;
+    border: none;
+  }
+
+  &--mobile {
+    display: none;
+
+    @media (max-width: $screen-xs - 1) {
+      display: inline-block;
+      text-align: left;
+    }
+  }
+}

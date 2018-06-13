@@ -18,8 +18,18 @@ a[disabled]{
     color: $colorPrimary30;
 }
 
-a.link-with-icon{
+a.link-with-icon {
     font-size: 14px;
+
+    i {
+        margin-right: 10px;
+    }
+
+    &:hover {
+        .fa {
+            color: $color1;
+        }
+    }
 }
 
 #content{

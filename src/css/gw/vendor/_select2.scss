@@ -480,3 +480,117 @@
 
 .select2-container--classic.select2-container--open .select2-dropdown {
   border-color: #5897fb; }
+
+.select2-container--open {
+  border-bottom: 1px solid $color1;
+}
+
+.select2-container--form-control {
+  .select2-dropdown {
+    top: 0 !important;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+
+    &:before {
+      content: '';
+      @include position(absolute, 0 0 null 73px);
+      height: 1px;
+      background-color: #e0e0e0;
+    }
+  }
+
+  @media (min-width: $screen-sm-min) {
+    &:not(.top-fixed) {
+      .select2-dropdown {
+        width: 367px !important;
+      }
+    }
+  }
+
+  .select2-results__option {
+    font-size: rem(14);
+    background: #ffffff;
+    color: $text-color;
+    padding: 10px 0 10px 42px;
+    position: relative;
+
+    &:before {
+      content: '\25CF';
+      @include position(absolute, 10px null null 15px);
+      font-size: 7px;
+      color: #ffffff;
+      text-align: center;
+      vertical-align: middle;
+      display: block;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      border: 2px solid $border-color-2;
+      padding-top: 2px;
+    }
+
+    &[aria-selected=true] {
+      font-weight: bold;
+      background-color: #ffffff;
+      position: relative;
+
+      &:before {
+        @include position(absolute, 10px null null 15px);
+        content: '\25CF';
+        color: $color1;
+        border-color: $color1;
+      }
+    }
+  }
+}
+
+.select2-container.color-alt {
+  .select2-results__option {
+    background: #194675;
+    color: #99b5c8;
+    &[aria-selected=true] {
+      background-color: #163f69;
+      color: $color1;
+    }
+  }
+}
+
+
+.select2-container.top-fixed {
+  .select2-dropdown {
+    top: -1px !important;
+    border-top: 1px solid $color1 !important;
+    border-radius: 0;
+    &:before {
+      display: none;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      //width: 600px !important;
+    }
+  }
+
+  &.full-width {
+    @media (max-width: $screen-xs-max) {
+      width: auto;
+    }
+  }
+}
+
+.select2-container.mobile-fixed-width {
+  .select2-dropdown {
+
+    @media (max-width: $screen-xs-max) {
+      width: 320px !important;
+    }
+
+    @media (max-width: $screen-xs - 1) {
+      width: 280px !important;
+    }
+  }
+}
+

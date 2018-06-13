@@ -457,6 +457,8 @@ input.toggle-switch:focus ~ .toggle-switch-bar::before {
   -webkit-appearance: none;
   height: 45px;
   margin-bottom: 2px;
+  display: inline-block;
+  vertical-align: middle;
 
   @media (max-width: $screen-sm-max) {
     padding: 10.5px 23px;
@@ -466,11 +468,11 @@ input.toggle-switch:focus ~ .toggle-switch-bar::before {
     position: relative;
   }
 
-  .fa {
+  span[class^=icon-] {
     font-size: rem(15);
     margin-right: 5px;
 
-    &--icon-left {
+    &.icon-left {
       margin-right: 2px;
       margin-left: -6px;
       font-size: rem(17);
@@ -483,6 +485,17 @@ input.toggle-switch:focus ~ .toggle-switch-bar::before {
 
   &--brand {
     @include button-variant-alt(#fff, $brand-primary, #F16000);
+  }
+
+  &--brand-alt {
+    @include button-variant-alt($brand-primary, #fff, $brand-primary);
+    border-width: 2px;
+
+    &:hover {
+      background-color: $brand-primary;
+      border-color: $brand-primary;
+      color: #ffffff;
+    }
   }
 
   &--secondary {
@@ -506,9 +519,21 @@ input.toggle-switch:focus ~ .toggle-switch-bar::before {
   &--border {
     @include button-variant($color2, #ffffff, $color2);
     border-width: 2px;
+    border-style: solid;
     &:hover {
       background-color: rgba(#003366, 0.2) !important;
       border-color: #003366 !important;
+    }
+  }
+
+  &--border-alt {
+    @include button-variant(#ffffff, $color2, #ffffff);
+    border: 2px solid #ffffff;
+
+    &:hover {
+      background-color: #ffffff;
+      border-color: #ffffff;
+      color: $color2;
     }
   }
 
@@ -525,6 +550,12 @@ input.toggle-switch:focus ~ .toggle-switch-bar::before {
     min-width: 100px;
   }
 
+  &--xxs-margin {
+    @media (max-width: $screen-xs - 1) {
+      margin-bottom: 10px;
+    }
+  }
+
 }
 
 .button + .button {
@@ -533,6 +564,12 @@ input.toggle-switch:focus ~ .toggle-switch-bar::before {
     margin-left: 0;
     margin-top: 10px;
   }
+}
+
+.popover-button {
+  background: #ffffff;
+  box-shadow: none;
+  border: none;
 }
 
 /* inscipt buttons end */

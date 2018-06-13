@@ -33,8 +33,20 @@
     @include transition(.3s width linear, .3s min-height linear);
     z-index: 1;
 
+    @media (max-width: $screen-sm-max) {
+        @include position(absolute, 0 0 null null);
+        float: none;
+        margin-right: 0;
+        max-height: 0;
+        overflow: hidden;
+        width: 0;
+    }
+
     &__list {
         //@extend .list-unstyled;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
     }
 
     &__item {
@@ -64,6 +76,10 @@
             font-size: rem(16);
             visibility: hidden;
 
+            @media (max-width: $screen-sm-max) {
+                top: 9px;
+            }
+
             &--alt {
                 font-size: rem(14);
                 font-weight: 400;
@@ -86,6 +102,10 @@
                 fill: $color1
             }
         }
+
+        @media (max-width: $screen-sm-max) {
+            padding: 9px 0;
+        }
     }
 
     &.is-opened {
@@ -93,6 +113,15 @@
 
         @media (max-width: $screen-md-max) {
             width: 215px !important;
+        }
+
+        @media (max-width: $screen-sm-max) {
+            padding-top: 20px;
+            width: 225px !important;
+            height: auto;
+            max-height: 100%;
+            bottom: 0;
+            z-index: 990;
         }
 
         ul li:hover {
@@ -121,6 +150,10 @@
             img {
                 max-width: 100%;
                 height: auto;
+            }
+
+            @media (max-width: $screen-sm-max) {
+                display: none;
             }
         }
     }
@@ -167,6 +200,10 @@
             display: block;
             padding: 27px 0;
             max-height: 80px;
+
+            @media (max-width: $screen-sm-max) {
+                padding: 9px 0;
+            }
 
             &--active {
                 color: $color1;
@@ -838,6 +875,6 @@
 
 @media(max-width: 992px){
     #maincontent{
-        padding-left: 0px;
+        padding-left: 0;
     }
 }

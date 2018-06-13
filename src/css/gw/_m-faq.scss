@@ -1,0 +1,90 @@
+.m-faq {
+  background-color: #ffffff;
+  padding: 40px;
+  @include clearfix();
+
+  @media (max-width: $screen-xs-max) {
+    padding: 20px;
+  }
+
+  &__nav {
+    width: 380px;
+    float: left;
+
+    @media (max-width: $screen-md-max) {
+      width: 200px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      float: none;
+      width: 100%;
+    }
+
+    &__list {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+
+      &__item {
+        position: relative;
+        color: $text-color;
+        background-color: #f6f6f6;
+        padding-bottom: 0;
+
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+
+        &.active {
+          background-color: $brand-primary;
+          color: #ffffff;
+
+          &:after {
+            left: 100%;
+            top: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: #ffffff;
+            border-left-color: $brand-primary;
+            border-width: 10px;
+            margin-top: -10px;
+          }
+        }
+      }
+
+      &__link {
+        color: inherit;
+        position: relative;
+        font-size: 18px;
+        display: inline-block;
+        width: 380px;
+        min-height: 60px;
+        padding: 10px 20px;
+
+        @media (max-width: $screen-md-max) {
+          width: 200px;
+          min-height: 40px;
+        }
+
+        @media (max-width: $screen-sm-max) {
+          width: 100%;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: inherit;
+        }
+      }
+
+      &__link-inner {
+        @include position(absolute, 50% null null null);
+        @include transform(translateY(-50%));
+      }
+    }
+  }
+}

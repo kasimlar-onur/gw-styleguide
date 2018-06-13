@@ -1,0 +1,165 @@
+.m-header {
+  background-color: $color1;
+  position: relative;
+
+  &__container {
+    @extend .container-fluid !optional;
+    height: inherit;
+
+    @media (max-width: $screen-sm-max) {
+      @include position(absolute, 50% 0 null 0);
+      @include transform(translateY(-50%));
+      z-index: 991;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      left: 20px;
+      right: 20px;
+    }
+  }
+
+  &__row {
+    @include clearfix();
+    @extend .row;
+    position: relative;
+    height: inherit;
+  }
+
+  &__brand {
+    margin: 0 0 0 15px;
+    width: 60.3px;
+    float: left;
+    overflow: hidden;
+
+    img {
+      max-width: none;
+      width: 235px;
+    }
+
+    @media (min-width: $grid-float-breakpoint) {
+      width: 235px;
+      margin: 15px 0 0 15px;
+
+      img {
+        max-width: 100%;
+        height: 37px;
+      }
+    }
+
+    @media (max-width: $screen-xs-max) {
+      margin: 0;
+      width: 76px;
+
+      img {
+        width: 298px;
+        height: 47px;
+      }
+    }
+  }
+
+  &__aside {
+    text-align: right;
+    position: relative;
+    float: right;
+
+    @include position(absolute, 50% 20px null null);
+    @include transform(translateY(-50%));
+
+    @media (max-width: $screen-xs-max) {
+      right: 0;
+    }
+
+    &__item {
+      display: inline-block;
+      position: relative;
+      color: #ffffff;
+
+      &:not(:last-child) {
+        margin-right: 25px;
+
+        @media (max-width: $screen-sm-max) {
+          margin-right: 10px;
+        }
+
+        @media (max-width: $screen-xs-max) {
+          margin-right: 15px;
+        }
+      }
+
+      span[class^=icon-] {
+        font-size: 24px;
+      }
+
+      &:hover {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      &:active, &:focus {
+        color: #ffffff;
+      }
+
+      @media (max-width: 480px) {
+        .button__label {
+          display: none;
+        }
+      }
+
+      &--menu-toggle {
+        display: none;
+
+        &:before {
+          display: none;
+          top: 52px;
+          left: 50%;
+          border: solid transparent;
+          content: " ";
+          height: 0;
+          width: 0;
+          position: absolute;
+          pointer-events: none;
+          border-color: transparent;
+          border-top-color: $brand-primary;
+          border-width: 15px;
+          margin-left: -15px;
+        }
+
+        @media (max-width: $screen-sm-max) {
+          display: inline-block;
+
+          .fa {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__navbar-toggle {
+    @media (max-width: $grid-float-breakpoint-max) {
+      float: right;
+    }
+
+    @media (min-width: $grid-float-breakpoint) {
+      display: none;
+    }
+  }
+
+  &__aside-group {
+    @media (max-width: $grid-float-breakpoint-max) {
+      float: right;
+      width: 35%;
+    }
+  }
+
+  @media (min-width: $grid-float-breakpoint) {
+    height: $header-height-after-breakpoint;
+  }
+
+  @media (max-width: $grid-float-breakpoint+1) {
+    min-height: $header-height-after-breakpoint-responsive;
+  }
+  @media (max-width: 480px) {
+    min-height: 80px;
+  }
+}
+

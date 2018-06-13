@@ -1,0 +1,166 @@
+//
+// Modals
+// --------------------------------------------------
+
+.modal-dialog {
+  padding-top: 5%;
+  @media (min-width: $screen-lg-min) {
+    width: 805px;
+  }
+
+  &--container-width {
+    width: 1235px;
+    padding-top: 12.5%;
+    padding-left: 15px;
+
+    @media (max-width: 1240px ) {
+      width: 90%;
+      padding-left: 0;
+    }
+  }
+
+  &--alt {
+    width: 680px;
+
+    @media (max-width: $screen-xs-max) {
+      width: 90%;
+    }
+  }
+
+  &--small {
+    width: 450px;
+
+    @media (max-width: $screen-xs) {
+      width: 95%;
+    }
+  }
+
+  @media (max-width: $screen-xs) {
+
+    margin: 10px auto;
+
+    .button + .button {
+      margin-top: 0;
+    }
+  }
+}
+
+.modal-content {
+  box-shadow: none;
+  background: none;
+  border: none;
+  border-radius: 0;
+}
+
+.modal-backdrop.in {
+  opacity: 0.5;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: #ffffff;
+
+  .span {
+    &:hover {
+        color: $red !important;
+    }
+  }
+
+  &--right {
+    @include position(absolute, 15px 15px null null);
+    z-index: 9999;
+    color: $text-color;
+
+    @media (max-width: $screen-xs-max) {
+      top: 10px;
+      right: 10px;
+    }
+  }
+
+  &--right-alt-top {
+    top: 15px;
+  }
+
+  &--right-alt {
+    @include position(absolute, 35px 35px null null);
+  }
+
+  &--right-corner {
+    @include position(absolute, 10px 10px null null);
+    @media (min-width: $screen-sm-min) {
+      @include position(absolute, 35px 35px null null);
+    }
+  }
+
+  &--black {
+    color: $text-color;
+  }
+}
+
+.modal-title {
+  font-size: 20px !important;
+  margin: 0 0 25px 0;
+  text-align: left;
+}
+
+.modal-body {
+  background-color: #ffffff;
+  padding: 30px 40px;
+
+  &--no-padding {
+    padding: 0;
+  }
+
+  &--alt {
+    padding: 65px 40px;
+  }
+}
+
+.modal-backdrop--menu {
+  position: absolute;
+  z-index: 999;
+}
+
+.popover {
+  font-size: 14px;
+  padding: 15px 30px;
+  width: 500px;
+  max-width: 500px;
+  background-color: $brand-primary;
+  color: #ffffff;
+  border: none;
+  border-radius: 0;
+  text-align: left;
+  line-height: normal;
+  z-index: 9999;
+
+  @media (max-width: $screen-sm-max) {
+    width: 400px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    padding: 10px;
+    width: calc(100vw - 100px);
+  }
+
+  &.right {
+    .arrow {
+      border-right-color: $brand-primary !important;
+
+      &:after {
+        border-right-color: $brand-primary !important;
+      }
+    }
+  }
+
+  &.left {
+    .arrow {
+      border-left-color: $brand-primary !important;
+
+      &:after {
+        border-left-color: $brand-primary !important;
+      }
+    }
+  }
+}
