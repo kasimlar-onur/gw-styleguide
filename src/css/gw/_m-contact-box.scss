@@ -1,0 +1,82 @@
+.m-contact-box {
+  font-size: 14px;
+  position: relative;
+  border: 1px solid #e0e0e0;
+  padding: 25px 30px;
+  line-height: 22px;
+
+  @media (max-width: $screen-xs-max) {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: $font-weight-bold;
+  }
+
+  &__image {
+    float: right;
+
+    @media (max-width: $screen-xs-max) {
+      float: none;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    color: $text-color;
+  }
+
+  &__hover {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    @include position(absolute, 0 0 0 0);
+    background-color: rgba(#000000, 0.6);
+    text-align: center;
+    @include transition(.3s opacity ease-in-out, .3s max-height ease-in-out);
+
+    &__content {
+      @include position(absolute, 50% null null 50%);
+      @include transform(translate(-50%, -50%));
+      min-width: 200px;
+    }
+  }
+
+  &__icon {
+    font-size: 26px;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 56px;
+    display: inline-block;
+
+    i, span {
+      margin-right: 0;
+    }
+
+    &:not(:last-child) {
+      margin-right: 6px;
+    }
+
+    &:hover {
+      color: $brand-primary;
+      border-color: $brand-primary;
+    }
+  }
+
+  &:hover {
+    .m-contact-box__hover {
+      max-height: 100%;
+      overflow: visible;
+      opacity: 1;
+
+      &__content {
+      }
+    }
+  }
+}

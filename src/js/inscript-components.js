@@ -193,7 +193,7 @@
           $('span.select2-container').addClass('color-alt');
         }
         if ($(this).hasClass('form-control--show-title')) {
-          $('span.select2-container').addClass('top-fixed full-width');
+          $('span.select2-container').addClass('top-fixed');
         }
         if ($(this).hasClass('form-control--mobile-fixed-width')) {
           $('span.select2-container').addClass('mobile-fixed-width');
@@ -343,37 +343,61 @@
     },
     initSort: function() {
       var $selectCustom = $('.select-custom'),
-        $selectCustomItem = $('.select-custom__item'),
-        sort = document.getElementById('sort'),
-        $icons = $('table th a');
+          $selectCustomItem = $('.select-custom__item'),
+          sort = document.getElementById('sort'),
+          $icons = $('table th a'),
+          noDragClass = 'select-custom--no-drag',
+          $body = $('body');
 
-      $selectCustom.on('click', function(event) {
+      function toggleTag (item) {
+        var tagsClass = 'select-custom__tags',
+          $tagName  = item.find('.fa-checkbox-custom__label').text(),
+          $tagId    = item.find('.fa-checkbox-custom__input').attr('id');
 
-        if ($('.overlay').length > 0) {
-          $selectCustom.toggleClass('is-active');
-          $('.overlay').removeClass('is-visible');
-          $('.overlay').remove();
+        // check if input is checked
+        if (item.find('.fa-checkbox-custom__input').is(':checked')) {
+
+          // check if tags container exists
+          if ( $('.' + tagsClass).length > 0) {
+            item.parents('.select-custom').parent().find('.' + tagsClass).append('<span class="select-custom__tag" data-tag="' + $tagId + '"><span class="select-custom__tag__remove"><i class="fa fa-close"></i></span>' + $tagName + '</span>');
+          } else {
+            item.parents('.select-custom').after('<div class="select-custom__tags"></div>');
+            item.parents('.select-custom').parent().find('.' + tagsClass).append('<span class="select-custom__tag" data-tag="' + $tagId + '"><span class="select-custom__tag__remove"><i class="fa fa-close"></i></span>' + $tagName + '</span>');
+          }
+
         } else {
-          $selectCustom.toggleClass('is-active');
-          $('body').append('<div class="overlay"></div>');
-          $('.overlay').addClass('is-visible');
+          item.parents('.select-custom').parent().find('.' + tagsClass + ' [data-tag="' + $tagId + '"]').remove();
         }
+      }
+
+      $body.on('click', '.select-custom__tag__remove', function () {
+        var $tag = $(this).parent().data('tag');
+
+        $('#' + $tag).removeAttr('checked');
+        $(this).parent().remove();
       });
 
-      $('body').on('click', '.overlay', function() {
+      $selectCustom.on('click', function() {
         $selectCustom.toggleClass('is-active');
-        $('.overlay').removeClass('is-visible');
-        $('.overlay').remove();
+        app.toggleOverlay();
+      });
+
+      $body.on('click', '.overlay', function() {
+        $selectCustom.removeClass('is-active');
       });
 
       $selectCustomItem.on('click', function() {
         var item = $(this).find('.select-custom__item__name'),
-          itemText = item.text();
+            $itemText = item.text();
 
         item.parent().siblings().removeClass('is-active');
         item.parent().addClass('is-active');
 
-        $('.select-custom__selected').html(itemText);
+        if ( !$(this).parents().hasClass(noDragClass)) {
+          $('.select-custom__selected').html($itemText);
+        } else {
+          toggleTag($(this));
+        }
       });
 
       $selectCustomItem.find('.select-custom__item__icon').
@@ -491,6 +515,159 @@
           rightArrow: '<span class="icon-angle-right"></span>'
         }
       });
+    },
+    initPortalFilters: function () {
+      var $filters = $('.m-portal-news__filters__list'),
+        $filterItem = $filters.find('.m-portal-news__filters__item'),
+        $items   = $('.m-portal-news__content__col');
+
+      $filterItem.find('.fa-checkbox-custom__input').on('click', function (e) {
+        var $this = $(this),
+          $checkbox = $this,
+          $category = $checkbox.val();
+        $checkbox.toggleClass('active');
+
+        if ( $checkbox.is(':checked')) {
+          resetFilters();
+          showFilteredItems($category);
+          $checkbox.prop('checked', true);
+        } else {
+          resetFilteredElements();
+          resetFilters();
+        }
+      });
+
+      function resetFilters () {
+        $.each($filterItem, function () {
+          var $this = $(this),
+            $checkbox = $this.find('.fa-checkbox-custom__input');
+
+          $checkbox.removeAttr('checked');
+        });
+      }
+
+      function showFilteredItems (category) {
+        $.each($items, function () {
+          var $this = $(this),
+            $itemCategory = $this.data('category');
+
+          if (category !== '0') {
+            if ($itemCategory !== category) {
+              $this.hide();
+            } else {
+              $this.show();
+            }
+          } else {
+            $this.show();
+          }
+        });
+      }
+
+      function resetFilteredElements () {
+        $.each($items, function () {
+          var $this = $(this);
+
+          if ($this.is(':hidden')) {
+            $this.show();
+          }
+        });
+      }
+    },
+    initNotificationsDropdown: function () {
+      var $note = $('.m-note'),
+          $btnOpen  = $('.js-open-note');
+
+      function changePosition (btnPosTop, btnPosLeft) {
+        var $btnPosTop = (btnPosTop ? btnPosTop : $btnOpen.offset().top);
+        var $btnPosLeft = (btnPosLeft ? btnPosLeft : $btnOpen.offset().left);
+
+        if (window.matchMedia('(max-width: 767px)').matches) {
+          $note.css({
+            top: $btnPosTop + 57,
+            left: 'auto',
+            right: 0
+          });
+        } else {
+          $note.css({
+            top: $btnPosTop + 57,
+            left: $btnPosLeft - ($note.innerWidth() - 60),
+            right: 'auto'
+          });
+        }
+      }
+
+      changePosition();
+
+      $btnOpen.on('click', function () {
+        var $btnPos = $(this).offset();
+
+        if (!$note.hasClass('is-visible')) {
+          $note.addClass('is-visible');
+
+          setTimeout(function () {
+            $note.addClass('fade-in');
+          }, 0);
+        } else {
+          $note.removeClass('fade-in');
+
+          $note.one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend",
+            function() {
+              $note.removeClass('is-visible');
+            });
+        }
+
+        app.toggleOverlay();
+        changePosition($btnPos.top, $btnPos.left);
+      });
+
+      $('body').on('click', '.overlay', function() {
+        $note.removeClass('fade-in');
+
+        setTimeout(function () {
+          $note.removeClass('is-visible');
+
+        }, 400);
+        app.toggleOverlay();
+      });
+
+      $(window).on('resize', function () {
+        changePosition();
+      });
+    },
+    toggleOverlay: function () {
+      if ($('.overlay').length > 0) {
+        $('.overlay').removeClass('is-visible');
+        $('.overlay').remove();
+      } else {
+        $('body').append('<div class="overlay"></div>');
+        $('.overlay').addClass('is-visible');
+      }
+    },
+    initNoteBar: function () {
+      var $noteBar = $('.m-note-bar'),
+          $menu    = $('.m-nav'),
+          $openMenu = $('.js-open-nav');
+
+      function changePosition () {
+        var $noteBarInner = $noteBar.find('.m-note-bar__inner');
+
+        $menu.one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend",
+          function() {
+            var $menuWidth = $menu.innerWidth();
+            $noteBarInner.css('padding-left', ($menuWidth + 40));
+          });
+      }
+
+      $openMenu.on('click', function () {
+        changePosition();
+      });
+    },
+    initBootstrapPopover: function () {
+      var placement = (window.matchMedia('(max-width:767px)').matches ? 'left' : 'right');
+
+      $('[data-toggle=popover]').popover({
+        placement: placement
+      });
     }
   };
 
@@ -509,6 +686,10 @@
     app.initInfoModal();
     app.initResponsiveTables();
     app.initDatepicker();
+    app.initPortalFilters();
+    app.initNotificationsDropdown();
+    app.initNoteBar();
+    app.initBootstrapPopover();
   });
 
   $(window).on('resize', function () {

@@ -23,4 +23,13 @@
   &.is-visible {
     display: block;
   }
+
+  &--alt {
+    display: block;
+    position: static;
+
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+    }
+  }
 }

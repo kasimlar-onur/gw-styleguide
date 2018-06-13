@@ -73,6 +73,14 @@
     @media (max-width: $screen-xs-max) {
       padding: 40px 20px;
     }
+
+    &--smaller {
+      width: 75%;
+
+      @media (max-width: $screen-xs-max) {
+        width: 100%;
+      }
+    }
   }
 
   .form-control {

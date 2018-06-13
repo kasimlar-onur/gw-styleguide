@@ -6,6 +6,10 @@
     @media (max-width: $screen-xs-max) {
       padding: 40px 15px 30px;
     }
+
+    &--small-b-padding {
+      padding-bottom: 10px;
+    }
   }
 
   &__fa-checkbox-filters {

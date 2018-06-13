@@ -487,6 +487,17 @@ input.toggle-switch:focus ~ .toggle-switch-bar::before {
     @include button-variant-alt(#fff, $brand-primary, #F16000);
   }
 
+  &--brand-alt {
+    @include button-variant-alt($brand-primary, #fff, $brand-primary);
+    border-width: 2px;
+
+    &:hover {
+      background-color: $brand-primary;
+      border-color: $brand-primary;
+      color: #ffffff;
+    }
+  }
+
   &--secondary {
     @include button-variant-alt(#fff, $color2, #002b56);
     &:hover, &:active, &:focus {
@@ -515,6 +526,17 @@ input.toggle-switch:focus ~ .toggle-switch-bar::before {
     }
   }
 
+  &--border-alt {
+    @include button-variant(#ffffff, $color2, #ffffff);
+    border: 2px solid #ffffff;
+
+    &:hover {
+      background-color: #ffffff;
+      border-color: #ffffff;
+      color: $color2;
+    }
+  }
+
   &--block {
     //@extend .btn-block;
   }
@@ -528,6 +550,12 @@ input.toggle-switch:focus ~ .toggle-switch-bar::before {
     min-width: 100px;
   }
 
+  &--xxs-margin {
+    @media (max-width: $screen-xs - 1) {
+      margin-bottom: 10px;
+    }
+  }
+
 }
 
 .button + .button {
@@ -536,6 +564,12 @@ input.toggle-switch:focus ~ .toggle-switch-bar::before {
     margin-left: 0;
     margin-top: 10px;
   }
+}
+
+.popover-button {
+  background: #ffffff;
+  box-shadow: none;
+  border: none;
 }
 
 /* inscipt buttons end */

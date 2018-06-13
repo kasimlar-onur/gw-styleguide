@@ -50,7 +50,7 @@
 @import "vendors/_c3.scss";
 @import "gw/vendor/basictable";
 @import "gw/vendor/bootstrap-datepicker";
-
+@import "gw/vendor/dropzone";
 
 // table inscript todo: merge with _table.scss
 @import "gw/base/mixins";
@@ -123,6 +123,41 @@
 // info modal inscript
 @import "gw/m-info-modal";
 
+// portal news inscript
+@import "gw/m-portal-news";
+
+// box inscript
+@import "gw/m-box";
+
+// box-list inscript
+@import "gw/m-box-list";
+
+// contact-box inscript
+@import "gw/m-contact-box";
+
+// faq inscript
+@import "gw/m-faq";
+
+// accordion inscript
+@import "gw/m-accordion";
+
+// chat inscript
+@import "gw/m-chat";
+
+// notifications inscript
+@import "gw/m-notifications";
+
+// notifications menu nscript
+@import "gw/m-notifications-menu";
+
+// notification-settings inscript
+@import "gw/m-notification-settings";
+
+// note-bar inscript
+@import "gw/m-note-bar";
+
+// notification-settings inscript
+@import "gw/m-user";
 
 /* Tooltipster */
 @import "tooltipster/tooltipster.bundle.css";

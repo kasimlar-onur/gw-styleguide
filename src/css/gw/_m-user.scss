@@ -1,0 +1,92 @@
+.m-user {
+  font-size: 14px;
+  padding: 35px 40px;
+  position: relative;
+
+  &__name {
+    font-size: 22px;
+    font-weight: $font-weight-bold;
+  }
+
+  &__details {
+    @extend .list-unstyled;
+    width: 410px;
+    padding: 25px 0 40px;
+
+    @media (max-width: $screen-xs - 1) {
+      width: 100%;
+    }
+
+    &__item {
+      @include clearfix();
+      padding: 0;
+      margin-bottom: 5px;
+
+      &--margin {
+        margin-bottom: 20px;
+      }
+
+      &__term {
+        font-weight: $font-weight-base;
+        color: $grey-1;
+        width: 40%;
+        float: left;
+
+        @media (max-width: $screen-xs-max) {
+          display: block;
+          width: 100%;
+          float: none;
+        }
+      }
+
+      &__value {
+        width: 60%;
+        float: left;
+
+        @media (max-width: $screen-xs-max) {
+          display: block;
+          width: 100%;
+          float: none;
+        }
+      }
+    }
+  }
+
+  &__picture {
+    @include position(absolute, 80px 140px null null);
+    display: inline-block;
+    text-align: center;
+
+    @media (max-width: $screen-sm-max) {
+      right: 20px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      top: 10px
+    }
+
+    @media (max-width: $screen-xs - 1) {
+      position: static;
+    }
+
+    &__link {
+      clear: both;
+      display: inline-block;
+
+      i, span {
+        margin-right: 10px;
+      }
+    }
+
+    img {
+      display: block;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+
+      @media (max-width: $screen-xs-max) {
+        width: 60px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
