@@ -1,0 +1,102 @@
+.m-contact-form {
+  background-color: #ffffff;
+
+  &__content {
+    padding: 0 40px 20px;
+    border-bottom: 1px solid #dddede;
+  }
+
+  &__header {
+    padding: 17px 40px 0;
+    border-bottom: 2px solid #e6e7e8;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+    color: $grey-1;
+    margin-bottom: 18px;
+    line-height: 1;
+
+    i {
+      color: #b0b0b0;
+      font-size: 20px;
+      margin-right: 12px;
+      vertical-align: bottom;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    padding-left: 15px;
+  }
+
+  &__form {
+    position: relative;
+  }
+
+  &__form-group {
+    position: relative;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    z-index: 4;
+  }
+
+  &__input,
+  &__textarea {
+    @include placeholder($text-color);
+    font-weight: 400;
+    font-size: rem(14);
+    padding: $padding-base-vertical 0 $padding-base-vertical 15px;
+    background-clip: padding-box;
+    box-shadow: none;
+    background: transparent;
+    border: 1px solid $border-color-2;
+    color: $text-color;
+    height: 45px;
+    position: relative;
+    z-index: 3;
+    -webkit-appearance: none;
+    width: 100%;
+    line-height: 14px;
+
+    @include transition(border-color ease-in-out 0.15s);
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &:disabled,
+    &[readonly] {
+      background-color: #ffffff;
+    }
+
+    &::-ms-clear {
+      display: none;
+    }
+
+    &:active, &:focus, &--has-value {
+      border-color: #b8b8bb;
+      border-bottom: 1px solid $color1;
+
+      &+label, &+ul+label {
+        color: $color1;
+        top: -10px;
+        font-size: 13px;
+        @include transition(.3s all ease-in-out);
+      }
+    }
+  }
+
+  &__textarea {
+    padding-top: 10px;
+    min-height: 200px;
+  }
+
+  &__button {
+
+  }
+}

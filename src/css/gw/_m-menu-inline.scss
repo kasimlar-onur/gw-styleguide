@@ -1,0 +1,60 @@
+// Inline menu
+.m-menu-inline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  //border-bottom: 1px solid $color4;
+  //padding-bottom: 10px;
+
+  @media (max-width: $screen-sm-max) {
+    margin-top: 10px;
+  }
+
+  &__item {
+    display: inline-block;
+    position: relative;
+    padding: 0 25px 10px;
+
+    &:after {
+      content: "";
+      background: transparent;
+      height: 3px;
+      @include position(absolute, null 0 0 0);
+    }
+
+    &--separator {
+      padding: 0 5px;
+      &:after {
+        content: "|";
+        color: $f-dark-bg-secondary;
+        @include position(absolute, null 0 0 -4px);
+        width: 1px;
+        height: auto;
+      }
+      &:first-child {
+        &:after {
+          @media (max-width: 480px) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1160px) {
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+
+  }
+
+  &__link {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

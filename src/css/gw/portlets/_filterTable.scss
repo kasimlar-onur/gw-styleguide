@@ -497,7 +497,7 @@ body {
 
 @media only screen and (max-width: 767px) {
 
-  table, thead, tbody, th, td, tr {
+  table, thead, tbody, th:not(.prev):not(.next):not(.dow):not(.datepicker-switch):not(.table-v1__th):not(.table-v2__th), td:not(.day):not(.table-v1__td):not(.table-v2__td), tr {
     display: block !important;
   }
   thead tr {

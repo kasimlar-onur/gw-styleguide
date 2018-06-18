@@ -1,0 +1,119 @@
+.m-chat {
+  background-color: #ffffff;
+  margin-bottom: $margin-default;
+
+  &__content {
+    padding: 0 40px 20px;
+    border-bottom: 1px solid #dddede;
+
+    @media (max-width: $screen-xs-max) {
+      padding: 0 15px 15px;
+    }
+  }
+
+  &__header {
+    padding: 17px 40px 0;
+    border-bottom: 2px solid #e6e7e8;
+    margin-bottom: 30px;
+
+    @media (max-width: $screen-xs-max) {
+      padding: 17px 15px 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+    color: $grey-1;
+    margin-bottom: 18px;
+    line-height: 1;
+
+    i {
+      color: #b0b0b0;
+      font-size: 20px;
+      margin-right: 12px;
+      vertical-align: bottom;
+    }
+  }
+
+  &__message {
+    font-size: 14px;
+    position: relative;
+    @include clearfix();
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e0e0e0;
+
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 15px;
+    }
+
+    &__body, &__image {
+      @include clearfix();
+      float: left;
+
+      @media (max-width: $screen-xs-max) {
+        float: none;
+      }
+    }
+
+    &__body {
+      padding: 0 0 30px 40px;
+      max-width: calc(100% - 80px);
+
+      @media (max-width: $screen-xs-max) {
+        padding: 15px 15px 15px 0;
+        max-width: 100%;
+      }
+    }
+
+    &__info {
+      &__date {
+        padding-left: 5px;
+        color: $grey-1;
+      }
+    }
+
+    &__image {
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    &--support {
+      .m-chat__message {
+        &__body {
+          padding: 0 40px 30px 0;
+
+          @media (max-width: $screen-xs-max) {
+            padding: 15px 15px 15px 0;
+          }
+        }
+
+        &__image {
+          float: right;
+
+          @media (max-width: $screen-xs-max) {
+            float: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__form {
+    &__textarea {
+      height: 200px !important;
+      margin-bottom: 20px !important;
+    }
+
+    &__button-container {
+      text-align: right;
+
+      @media (max-width: $screen-xs-max) {
+        text-align: left;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

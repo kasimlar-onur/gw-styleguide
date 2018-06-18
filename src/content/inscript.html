@@ -3,11 +3,2500 @@ title: Inscipt components
 section: Components
 ---
 
+<script src="/js/site/select2.js"></script>
+<script src="/js/site/Sortable.js"></script>
+<script src="/js/site/jquery.basictable.js"></script>
+<script src="/js/site/bootstrap-datepicker.js"></script>
+<script src="/js/site/bootstrap-datepicker.de.min.js"></script>
+<script src="/js/site/dropzone.js"></script>
+<script src="/js/inscript-components.js"></script>
+
 <div class="row row-spacing" id="badges">
-	<div class="col-md-12">
-		<h3>Inscript</h3>
+    <div class="col-md-12">
+        <h3>Inscript</h3>
 
-		<p>TODO: Put all Inscript components to this section </p>
-	</div>
+        <h4>Header</h4>
 
+        <div class="fake-container">
+            <header class="m-header">
+                <div class="m-header__container">
+                    <div class="m-header__row">
+                        <div class="m-header__brand">
+                            <a href="home.html">
+                                <img src="/images/GW-logo.svg" alt="GW logo" height="37">
+                            </a>
+                        </div>
+                        <div class="m-header__aside">
+                            <div class="m-search">
+                                <form action="#">
+                                    <input type="text" class="form-control form-control--alt"
+                                           placeholder="Suchbegriff eingeben...">
+                                </form>
+                            </div>
+                            <a href="#" class="m-header__aside__item" data-slide="search-field">
+                                <span class="icon-search icon-left"></span>
+                            </a>
+                            <a href="#" class="m-header__aside__item js-open-note">
+                                <span class="icon-bell fa--icon-left"></span>
+                                <span class="circle circle--top-right">1</span>
+                            </a>
+                            <a href="#" class="m-header__aside__item">
+                                <span class="icon-user-circle fa--icon-left"></span>
+                            </a>
+                            <a href="#" class="m-header__aside__item m-header__aside__item--menu-toggle js-open-nav">
+                                <span class="icon-bars icon-left"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="m-note">
+                <div class="m-note__header">
+                    <nav class="m-note__header-nav">
+                        <span class="m-note__header-nav__title">My Notifications</span>
+                        <ul class="m-note__header-nav__list">
+                            <li class="m-note__header-nav__item">
+                                <a class="m-note__header-nav__link" href="#">Mark all as read</a>
+                            </li>
+                            <li class="m-note__header-nav__item">
+                                <a class="m-note__header-nav__link" href="#">Settings</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <ul class="m-note__list">
+                    <li class="m-note__label">New</li>
+                    <li class="m-note__item m-note__item--read">
+                        <div class="m-note__item__icon">
+                            <i class="fa fa-calculator"></i>
+                        </div>
+                        <div class="m-note__item__text">
+                            Lorem ipsum dolor sit amet, consetetur ...
+
+                            <span class="m-note__item__subtext">vor 2 Stunden</span>
+                        </div>
+                    </li>
+                    <li class="m-note__label">Former</li>
+                    <li class="m-note__item">
+                        <div class="m-note__item__icon">
+                            <i class="fa fa-calculator"></i>
+                        </div>
+                        <div class="m-note__item__text">
+                            Lorem ipsum dolor sit amet, consetetur ...
+
+                            <span class="m-note__item__subtext">vor 2 Stunden</span>
+                        </div>
+                    </li>
+                    <li class="m-note__item m-note__item--read">
+                        <div class="m-note__item__icon">
+                            <i class="fa fa-calculator"></i>
+                        </div>
+                        <div class="m-note__item__text">
+                            Lorem ipsum dolor sit amet, consetetur ...
+
+                            <span class="m-note__item__subtext">vor 2 Stunden</span>
+                        </div>
+                    </li>
+                    <li class="m-note__item m-note__item--unread">
+                        <div class="m-note__item__icon">
+                            <i class="fa fa-calculator"></i>
+                        </div>
+                        <div class="m-note__item__text">
+                            Lorem ipsum dolor sit amet, consetetur ...
+
+                            <span class="m-note__item__subtext">vor 2 Stunden</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="m-note__footer">
+                    <button class="m-note__footer__button">View all</button>
+                </div>
+            </div>
+
+            <h4>Table v1</h4>
+            <table class="table-v1 table-responsive table--full-mobile-alt table-responsive--grey-bg">
+                <thead>
+                <tr class="table-v1__row table-v1__row--text-grey table-v1__row--bg-grey">
+                    <th class="table-v1__th text-center">Status</th>
+                    <th class="table-v1__th">Reference Number</th>
+                    <th class="table-v1__th text-center">Order Type</th>
+                    <th class="table-v1__th">Order Date</th>
+                    <th class="table-v1__th">Shipper Adress</th>
+                    <th class="table-v1__th">Consignee Adress</th>
+                    <th class="table-v1__th">Weight</th>
+                    <th class="table-v1__th text-center">Shipping Unit</th>
+                    <th class="text-center">Interaction</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="table-v1__row">
+                    <td class="table-v1__td text-center">
+                        <span class="table-v1__status-icon icon-circle color-green"></span>
+                    </td>
+                    <td class="table-v1__td">2017147862</td>
+                    <td class="table-v1__td text-center"><i class="fa icon-truck"></i></td>
+                    <td class="table-v1__td">03.08.2017</td>
+                    <td class="table-v1__td">Maeser Josef GmbH<br>
+                        AT 6850 Dornbrin
+                    </td>
+                    <td class="table-v1__td">Bauhaus - Depot<br>
+                        AT 6020 Innsbruck
+                    </td>
+                    <td class="table-v1__td">132.00</td>
+                    <td class="table-v1__td text-center">1</td>
+                    <td class="table-v1__td text-center">
+                        <a href="#" class="table-v1__interaction-link table__interaction-link">
+                            <span class="icon-comments"></span>
+                        </a>
+                        <a href="#" class="table-v1__interaction-link table__interaction-link" data-toggle="tooltip"
+                           title="Add to favorite">
+                            <span class="icon-star"></span>
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h4>Table v1 with sorting</h4>
+
+            <section class="m-section--scroll-mobile-disabled">
+                <table class="table-v1 table-v1--full-mobile table-responsive--grey-bg">
+                    <tbody>
+                    <tr class="table-v1__row table-v1__thead table-v1__row--text-grey table-v1__row--bg-grey">
+                        <th class="table-v1__th text-center">
+                     <span class="table-v1__field-name">Status
+                         <span class="table-v1__icon">
+                             <a class="color-grey-1" href="#">
+                                 <span class="icon-sort-numeric-desc" data-sort-icon="desc"></span>
+                                 <span class="icon-sort-numeric-asc" data-sort-icon="asc"></span>
+                             </a>
+                         </span>
+                         <span class="table-v1__icon table-v1__icon--second">
+                             <a class="color-grey-1 icon-to-top" href="#" data-sort="desc">
+                                 <span class=" icon-sort-asc" aria-hidden="true"></span>
+                             </a>
+                             <a class="color-grey-1 icon-to-bottom" href="#" data-sort="asc">
+                                 <span class="icon-sort-desc" aria-hidden="true"></span>
+                             </a>
+                         </span>
+                     </span>
+                        </th>
+                        <th class="table-v1__th">
+                     <span class="table-v1__field-name">Reference Number
+                         <span class="table-v1__icon">
+                             <a class="color-grey-1" href="#">
+                                 <span class="icon-sort-numeric-desc" data-sort-icon="desc"></span>
+                                 <span class="icon-sort-numeric-asc" data-sort-icon="asc"></span>
+                             </a>
+                         </span>
+                         <span class="table-v1__icon table-v1__icon--second">
+                             <a class="color-grey-1 icon-to-top" href="#" data-sort="desc">
+                                 <span class="icon-sort-asc" aria-hidden="true"></span>
+                             </a>
+                             <a class="color-grey-1 icon-to-bottom" href="#" data-sort="asc">
+                                 <span class="icon-sort-desc" aria-hidden="true"></span>
+                             </a>
+                         </span>
+                     </span>
+                        </th>
+                        <th class="table-v1__th text-center">
+                    <span class="table-v1__field-name">Order Type
+                        <span class="table-v1__icon">
+                            <a class="color-grey-1" href="#">
+                                <span class="icon-sort-numeric-desc" data-sort-icon="desc"></span>
+                                <span class="icon-sort-numeric-asc" data-sort-icon="asc"></span>
+                            </a>
+                        </span>
+                        <span class="table-v1__icon table-v1__icon--second">
+                            <a class="color-grey-1 icon-to-top" href="#" data-sort="desc">
+                                <span class="icon-sort-asc" aria-hidden="true"></span>
+                            </a>
+                            <a class="color-grey-1 icon-to-bottom" href="#" data-sort="asc">
+                                <span class="icon-sort-desc" aria-hidden="true"></span>
+                            </a>
+                        </span>
+                    </span>
+                        </th>
+                        <th class="table-v1__th">
+                      <span class="table-v1__field-name">Order Date
+                          <span class="table-v1__icon">
+                              <a class="color-grey-1" href="#">
+                                  <span class="icon-sort-numeric-desc" data-sort-icon="desc"></span>
+                                  <span class="icon-sort-numeric-asc" data-sort-icon="asc"></span>
+                              </a>
+                          </span>
+                          <span class="table-v1__icon table-v1__icon--second">
+                              <a class="color-grey-1 icon-to-top" href="#" data-sort="desc">
+                                  <span class="icon-sort-asc" aria-hidden="true"></span>
+                              </a>
+                              <a class="color-grey-1 icon-to-bottom" href="#" data-sort="asc">
+                                  <span class="icon-sort-desc" aria-hidden="true"></span>
+                              </a>
+                           </span>
+                      </span>
+                        </th>
+                        <th class="table-v1__th">
+                     <span class="table-v1__field-name">Shipper Adress
+                         <span class="table-v1__icon">
+                             <a class="color-grey-1" href="#">
+                                 <span class="icon-sort-alpha-desc" data-sort-icon="desc"></span>
+                                 <span class="icon-sort-alpha-asc" data-sort-icon="asc"></span>
+                             </a>
+                         </span>
+                         <span class="table-v1__icon table-v1__icon--second">
+                             <a class="color-grey-1 icon-to-top" href="#" data-sort="desc">
+                                 <span class="icon-sort-asc" aria-hidden="true"></span>
+                             </a>
+                             <a class="color-grey-1 icon-to-bottom" href="#" data-sort="asc">
+                                 <span class="icon-sort-desc" aria-hidden="true"></span>
+                             </a>
+                         </span>
+                      </span>
+                        </th>
+                        <th class="table-v1__th">
+                     <span class="table-v1__field-name">Consignee Adress
+                         <span class="table-v1__icon">
+                             <a class="color-grey-1" href="#">
+                                 <span class="icon-sort-alpha-desc" data-sort-icon="desc"></span>
+                                 <span class="icon-sort-alpha-asc" data-sort-icon="asc"></span>
+                             </a>
+                         </span>
+                         <span class="table-v1__icon table-v1__icon--second">
+                             <a class="color-grey-1 icon-to-top" href="#" data-sort="desc">
+                                 <span class="icon-sort-asc" aria-hidden="true"></span>
+                             </a>
+                             <a class="color-grey-1 icon-to-bottom" href="#" data-sort="asc">
+                                 <span class="icon-sort-desc" aria-hidden="true"></span>
+                             </a>
+                         </span>
+                     </span>
+                        </th>
+                        <th class="table-v1__th">
+                     <span class="table-v1__field-name">Weight
+                         <span class="table-v1__icon">
+                             <a class="color-grey-1" href="#">
+                                 <span class="icon-sort-numeric-desc" data-sort-icon="desc"></span>
+                                 <span class="icon-sort-numeric-asc" data-sort-icon="asc"></span>
+                             </a>
+                         </span>
+                         <span class="table-v1__icon table-v1__icon--second">
+                             <a class="color-grey-1 icon-to-top" href="#" data-sort="desc">
+                                 <span class="icon-sort-asc" aria-hidden="true"></span>
+                             </a>
+                             <a class="color-grey-1 icon-to-bottom" href="#" data-sort="asc">
+                                 <span class="icon-sort-desc" aria-hidden="true"></span>
+                             </a>
+                         </span>
+                     </span>
+                        </th>
+                        <th class="table-v1__th text-center">
+                    <span class="table-v1__field-name">Shipping Unit
+                        <span class="table-v1__icon">
+                            <a class="color-grey-1" href="#">
+                                <span class="icon-sort-numeric-desc" data-sort-icon="desc"></span>
+                                <span class="icon-sort-numeric-asc" data-sort-icon="asc"></span>
+                            </a>
+                        </span>
+                        <span class="table-v1__icon table-v1__icon--second">
+                            <a class="color-grey-1 icon-to-top" href="#" data-sort="desc">
+                                <span class="icon-sort-asc" aria-hidden="true"></span>
+                            </a>
+                            <a class="color-grey-1 icon-to-bottom" href="#" data-sort="asc">
+                                <span class="icon-sort-desc" aria-hidden="true"></span>
+                            </a>
+                        </span>
+                    </span>
+                        </th>
+                        <th class="table-v1__th text-center">Interaction</th>
+                    </tr>
+                    <tr class="table-v1__row">
+                        <td class="table-v1__td text-center">
+                            <span class="table-v1__status-icon icon-circle color-green"></span>
+                        </td>
+                        <td class="table-v1__td">2017147862</td>
+                        <td class="table-v1__td text-center"><span class="icon-truck"></span></td>
+                        <td class="table-v1__td">03.08.2017</td>
+                        <td class="table-v1__td">Maeser Josef GmbH<br>
+                            AT 6850 Dornbrin
+                        </td>
+                        <td class="table-v1__td">Bauhaus - Depot<br>
+                            AT 6020 Innsbruck
+                        </td>
+                        <td class="table-v1__td">132.00</td>
+                        <td class="table-v1__td text-center">1</td>
+                        <td class="table-v1__td text-center">
+                            <a href="#" class="table-v1__interaction-link">
+                                <span class="icon-comments"></span>
+                            </a>
+                            <a href="#" class="table-v1__interaction-link table-v1__interaction-link--active"
+                               data-toggle="tooltip"
+                               title="Add to favorite">
+                                <span class="icon-star"></span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="table-v1__row">
+                        <td class="table-v1__td text-center">
+                            <span class="table-v1__status-icon icon-circle color-green"></span>
+                        </td>
+                        <td class="table-v1__td">2017147862</td>
+                        <td class="table-v1__td text-center"><i class="fa icon-truck"></i></td>
+                        <td class="table-v1__td">03.08.2017</td>
+                        <td class="table-v1__td">Maeser Josef GmbH<br>
+                            AT 6850 Dornbrin
+                        </td>
+                        <td class="table-v1__td">Bauhaus - Depot<br>
+                            AT 6020 Innsbruck
+                        </td>
+                        <td class="table-v1__td">132.00</td>
+                        <td class="table-v1__td text-center">1</td>
+                        <td class="table-v1__td text-center">
+                            <a href="#modalRequest" data-toggle="modal"
+                               class="table-v1__interaction-link table-v1__interaction-link--active">
+                                <span class="icon-comments"></span>
+                            </a>
+                            <span class="table__interaction-link" data-toggle="tooltip" title="ad to favorit">
+                        <span class="icon-star"></span>
+                    </span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="m-info-modal">
+                    <div class="m-info-modal__content">
+                        <div class="m-info-modal__icon">
+                            <img src="/images/icon-move.png" alt="Icon move">
+                        </div>
+                        <div class="m-info-modal__text">
+                            Navigate to the left or right<br>
+                            with your finger to see<br>
+                            more details of this table.
+                        </div>
+                    </div>
+                    <div class="m-info-modal__close">
+                        <span class="icon-remove"></span>
+                    </div>
+                </div>
+            </section>
+
+            <h4>Table v2</h4>
+
+            <table class="table-v2">
+                <tr class="table-v2__row tabel-v2__row--hover-disabled table-v2__row--bg-white table-v2__row--text-grey">
+                    <th class="table-v2__th">Order details</th>
+                    <th class="table-v2__th table-v2__th--text-right"><span
+                            class="table-v2__icon icon-fire color-red"></span></th>
+                </tr>
+                <tr class="table-v2__row">
+                    <td class="table-v2__td">Customer Reference Number</td>
+                    <td class="table-v2__td">2017147862</td>
+                </tr>
+                <tr class="table-v2__row">
+                    <td class="table-v2__td">GW Reference Number</td>
+                    <td class="table-v2__td">LAU123456</td>
+                </tr>
+                <tr class="table-v2__row">
+                    <td class="table-v2__td">Premium</td>
+                    <td class="table-v2__td">Premium Service Name</td>
+                </tr>
+                <tr class="table-v2__row">
+                    <td class="table-v2__td">Shipper Adress</td>
+                    <td class="table-v2__td">Maeser Josef GmbH, AT 6850 Dornbrin</td>
+                </tr>
+                <tr class="table-v2__row">
+                    <td class="table-v2__td">Consignee Address</td>
+                    <td class="table-v2__td">Bauhaus - Depot, AT 6020 Innsbruck</td>
+                </tr>
+                <tr class="table-v2__row">
+                    <td class="table-v2__td">Incoterm</td>
+                    <td class="table-v2__td">DDU</td>
+                </tr>
+                <tr class="table-v2__row">
+                    <td class="table-v2__td">Weight</td>
+                    <td class="table-v2__td">132,00 kg</td>
+                </tr>
+                <tr class="table-v2__row">
+                    <td class="table-v2__td">Cube</td>
+                    <td class="table-v2__td">0,00</td>
+                </tr>
+                <tr class="table-v2__row">
+                    <td class="table-v2__td">Shipping Unit</td>
+                    <td class="table-v2__td table-v2__td--hidden-xs">
+                        3 <a href="#section1" class="js-open-content" data-toggle="collapse">Show
+                        Details</a>
+                    </td>
+                    <td class="table-v2__td table-v2__td--visible-xs">
+                        3 <a href="#section2" class="js-open-content" data-toggle="collapse">Show
+                        Details</a>
+                    </td>
+                </tr>
+            </table>
+
+            <div id="section1" class="collapse">
+                <table class="table-v1">
+                    <tr class="table-v1__row table-v1__row--bg-white table-v1__row--text-grey">
+                        <th class="table-v1__th">Barcode</th>
+                        <th class="table-v1__th">Description</th>
+                        <th class="table-v1__th">Date / Time</th>
+                    </tr>
+                    <tr class="table-v1__row">
+                        <td class="table-v1__td">0012544875748578547</td>
+                        <td class="table-v1__td">Loaded Hohenems</td>
+                        <td class="table-v1__td">25.10.2017 - 14:43</td>
+                    </tr>
+                    <tr class="table-v1__row">
+                        <td class="table-v1__td">0012544875748578547</td>
+                        <td class="table-v1__td">Loaded Hohenems</td>
+                        <td class="table-v1__td">25.10.2017 - 14:43</td>
+                    </tr>
+                    <tr class="table-v1__row">
+                        <td class="table-v1__td">0012544875748578547</td>
+                        <td class="table-v1__td">Loaded Hohenems</td>
+                        <td class="table-v1__td">25.10.2017 - 14:43</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="section2" class="collapse">
+                <table class="table-v1 table-responsive table-responsive--alt">
+                    <thead>
+                    <tr class="table-v1__row table-v1__row--bg-white table-v1__row--text-grey">
+                        <th class="table-v1__th">Barcode</th>
+                        <th class="table-v1__th">Description</th>
+                        <th class="table-v1__th">Date / Time</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="table-v1__row">
+                        <td class="table-v1__td">0012544875748578547</td>
+                        <td class="table-v1__td">Loaded Hohenems</td>
+                        <td class="table-v1__td">25.10.2017 - 14:43</td>
+                    </tr>
+                    <tr class="table-v1__row">
+                        <td class="table-v1__td">0012544875748578547</td>
+                        <td class="table-v1__td">Loaded Hohenems</td>
+                        <td class="table-v1__td">25.10.2017 - 14:43</td>
+                    </tr>
+                    <tr class="table-v1__row">
+                        <td class="table-v1__td">0012544875748578547</td>
+                        <td class="table-v1__td">Loaded Hohenems</td>
+                        <td class="table-v1__td">25.10.2017 - 14:43</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <h4>Panel</h4>
+        <div class="m-panel">
+            <h2 class="m-panel__title">Order Detail</h2>
+            <a href="#" class="m-panel__link"><i class="icon-circle-arrow-left"></i>Back</a>
+        </div>
+
+        <h4>Link with icon</h4>
+        <a class="link-with-icon" href="#"><i class="icon-fire"></i>Link with icon</a>
+
+        <h4>Contact form</h4>
+        <div class="m-contact-form">
+            <header class="m-contact-form__header">
+                <h2 class="m-contact-form__title">
+                    <i class="icon-envelope"></i> Headline
+                </h2>
+            </header>
+            <div class="m-contact-form__content">
+                <form class="m-contact-form__form" action="">
+                    <div class="m-contact-form__form-group">
+                        <input type="text" class="m-contact-form__input" placeholder="To">
+                    </div>
+                    <div class="m-contact-form__form-group">
+                        <p class="m-contact-form__text">From <a class="color-grey-light"
+                                                                href="mailto:mygw@gw-world.com">mygw@gw-world.com</a>
+                        </p>
+                    </div>
+                    <div class="m-contact-form__form-group">
+                        <textarea class="m-contact-form__textarea" placeholder="Message"></textarea>
+                    </div>
+                    <div class="m-contact-form__form-group">
+                        <div class="text-right">
+                            <button type="submit" class="button button--brand button--small">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <h4>Table with cover</h4>
+
+        <div class="m-table-with-cover">
+            <div class="m-table-with-cover__cover">
+                Status Information
+
+                <div class="m-table-with-cover__status-image">
+                    <div class="m-table-with-cover__status-image__item m-table-with-cover__status-image__item--small">
+                        <i class="icon-home"></i>
+                    </div>
+                    <div class="m-table-with-cover__status-image__item m-table-with-cover__status-image__item--big m-table-with-cover__status-image__item--border">
+                        <i class="icon-truck"></i>
+                    </div>
+                    <div class="m-table-with-cover__status-image__item m-table-with-cover__status-image__item--small">
+                        <i class="icon-home"></i>
+                    </div>
+                </div>
+
+                <div class="m-table-with-cover__status-info">
+                    <ul class="m-table-with-cover__status-info__list">
+                        <li class="m-table-with-cover__status-info__item completed">
+                            <span class="m-table-with-cover__status-info__item__icon"></span>Order Recieved
+                        </li>
+                        <li class="m-table-with-cover__status-info__item completed">
+                            <span class="m-table-with-cover__status-info__item__icon"></span>Outbound process in
+                            progress
+                        </li>
+                        <li class="m-table-with-cover__status-info__item completed">
+                            <span class="m-table-with-cover__status-info__item__icon"></span>Outbound process
+                            completed
+                        </li>
+                        <li class="m-table-with-cover__status-info__item completed">
+                            <span class="m-table-with-cover__status-info__item__icon"></span>Transferred vendor
+                        </li>
+                        <li class="m-table-with-cover__status-info__item">
+                            <span class="m-table-with-cover__status-info__item__icon"></span>Order completed
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="m-table-with-cover__show-details">
+                    <span class="js-open-content" data-content="table3">Show Details</span>
+                </div>
+            </div>
+            <div data-show="table3" data-show-mobile="true">
+                <table class="table-v1 table-responsive table-responsive--alt">
+                    <tr class="table-v1__row table-v1__row--hidden-xs table-v1__row--bg-white table-v1__row--text-grey">
+                        <th class="table-v1__th">Status</th>
+                        <th class="table-v1__th">Location</th>
+                        <th class="table-v1__th">Date / Time</th>
+                    </tr>
+                    <tr class="table-v1__row">
+                        <td class="table-v1__td">Outbound process in progress</td>
+                        <td class="table-v1__td">Lauterach</td>
+                        <td class="table-v1__td">25.10.2017 - 14:43</td>
+                    </tr>
+                    <tr class="table-v1__row">
+                        <td class="table-v1__td">Outbound process compeated</td>
+                        <td class="table-v1__td">Lauterach</td>
+                        <td class="table-v1__td">25.10.2017 - 14:43</td>
+                    </tr>
+                    <tr class="table-v1__row">
+                        <td class="table-v1__td">Transfered to vendor</td>
+                        <td class="table-v1__td">Lauterach</td>
+                        <td class="table-v1__td">25.10.2017 - 14:43</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <h4>Menu inline</h4>
+
+        <ul class="m-menu-inline">
+            <li class="m-menu-inline__item m-menu-inline__item--separator">
+                <a href="" class="m-menu-inline__link">Impressum</a>
+            </li>
+            <li class="m-menu-inline__item m-menu-inline__item--separator">
+                <a href="" class="m-menu-inline__link">Newsroom</a>
+            </li>
+            <li class="m-menu-inline__item m-menu-inline__item--separator">
+                <a href="" class="m-menu-inline__link">Kontakt</a>
+            </li>
+        </ul>
+
+        <h4>Footer col</h4>
+
+        <div class="row">
+            <div class="m-footer-col col-md-6">
+                <div class="m-footer-col__content">
+                    <h3 class="m-footer-col__heading">Calculation</h3>
+
+                    <ul class="m-footer-col__list">
+                        <li class="m-footer-col__item"><a class="m-footer-col__link" href="#">Overview</a></li>
+                        <li class="m-footer-col__item"><a class="m-footer-col__link" href="#">Transport Price</a>
+                        </li>
+                        <li class="m-footer-col__item"><a class="m-footer-col__link" href="#">Transit Time</a></li>
+                        <li class="m-footer-col__item"><a class="m-footer-col__link" href="#">CO2 Calculator</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="m-footer-col col-md-6">
+                <div class="m-footer-col__content">
+                    <h3 class="m-footer-col__heading">Calculation</h3>
+
+                    <ul class="m-footer-col__list">
+                        <li class="m-footer-col__item"><span class="icon-cloud"></span>Overview</li>
+                        <li class="m-footer-col__item"><span class="icon-cloud"></span>Transport Price</li>
+                        <li class="m-footer-col__item"><span class="icon-cloud"></span>Transit Time</li>
+                        <li class="m-footer-col__item"><span class="icon-cloud"></span>CO2 Calculator</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h4>Social media</h4>
+
+        <div class="m-social-media">
+            <a class="m-social-media__item" href="#" target="_blank"><i class="icon-facebook"></i></a>
+            <a class="m-social-media__item" href="#" target="_blank"><i class="icon-cloud"></i></a>
+            <a class="m-social-media__item" href="#" target="_blank"><i class="icon-cloud"></i></a>
+            <a class="m-social-media__item" href="#" target="_blank"><i class="icon-cloud"></i></a>
+            <a class="m-social-media__item" href="#" target="_blank"><i class="icon-cloud"></i></a>
+        </div>
+
+        <h4>Breadcrumb</h4>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb__item"><a class="breadcrumb__link" href="#"><i class="fa fa-home"></i>Home</a>
+            </li>
+            <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Orders</a></li>
+            <li class="breadcrumb__item active">Overview</li>
+        </ol>
+
+        <h4>Sidenav</h4>
+
+        <nav class="m-nav">
+            <ul class="m-nav__list">
+                <li class="m-nav__item m-nav__item--submenu">
+                    <a href="#" class="m-nav__link">
+                        <i class="m-nav__link__icon icon-cloud"></i>
+                        <span class="m-nav__link__text">Calculation</span>
+                    </a>
+                    <ul class="m-nav__submenu">
+                        <li class="m-nav__submenu__item m-nav__submenu__item--no-border m-nav__submenu__item--margin m-nav__submenu__item--disabled">
+                            <span class="m-nav__submenu__text">Calculation</span>
+                        </li>
+                        <li class="m-nav__submenu__item">
+                            <a href="#" class="m-nav__submenu__link">Overview</a>
+                        </li>
+                        <li class="m-nav__submenu__item">
+                            <a href="#" class="m-nav__submenu__link">Transport Price</a>
+                        </li>
+                        <li class="m-nav__submenu__item">
+                            <a href="#" class="m-nav__submenu__link">Transit Time</a>
+                        </li>
+                        <li class="m-nav__submenu__item">
+                            <a href="#" class="m-nav__submenu__link">Co2 Calculator</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="m-nav__item m-nav__item--submenu">
+                    <a href="#" class="m-nav__link m-nav__link--active">
+                        <i class="m-nav__link__icon icon-cloud"></i>
+                        <span class="m-nav__link__text">Orders</span>
+                    </a>
+                    <ul class="m-nav__submenu">
+                        <li class="m-nav__submenu__item m-nav__submenu__item--no-border m-nav__submenu__item--margin m-nav__submenu__item--disabled">
+                            <span class="m-nav__submenu__text">Orders</span>
+                        </li>
+                        <li class="m-nav__submenu__item">
+                            <a href="#" class="m-nav__submenu__link">Overview</a>
+                        </li>
+                        <li class="m-nav__submenu__item">
+                            <a href="#" class="m-nav__submenu__link">Track & Trace</a>
+                        </li>
+                        <li class="m-nav__submenu__item">
+                            <a href="#" class="m-nav__submenu__link">eBooking</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="m-nav__item m-nav__item--submenu">
+                    <a href="#" class="m-nav__link">
+                <span class="m-nav__link__icon">
+
+                    <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0 {
+                                fill: #FFFFFF;
+                            }
+                        </style>
+                        <g id="Ebene_1_1_">
+                            <g id="Ebene_3"></g>
+                            <path class="st0" d="M18,6.4L9,1.3L0,6.5l0,10.2l18,0L18,6.4z M6.4,15.6H2v-3.9h1.6c0,0.2,0.1,0.3,0.2,0.4c0.1,0.1,0.2,0.1,0.3,0.1
+		c0.3,0,0.5-0.1,0.6-0.6h1.6L6.4,15.6L6.4,15.6z M11,15.6H6.6c0-1.3,0-2.6,0-3.9c0,0,0.1,0,0.1,0c0.5,0,0.9,0,1.4,0
+		c0.1,0,0.1,0,0.1,0.1c0,0.2,0.2,0.4,0.5,0.4c0.2,0,0.5-0.1,0.6-0.3c0,0,0.1-0.1,0.1-0.2c0-0.1,0-0.1,0.1-0.1c0.5,0,0.9,0,1.4,0
+		c0,0,0.1,0,0.1,0C11,13,11,14.3,11,15.6z M11,11.5H6.6V7.6h1.6c0,0.1,0.1,0.2,0.1,0.3c0.1,0.2,0.4,0.3,0.6,0.3
+		c0.2,0,0.4-0.2,0.5-0.5c0,0,0.1-0.1,0.1-0.1c0.5,0,1,0,1.5,0c0,0,0,0,0,0C11,8.9,11,10.2,11,11.5z M11.3,7.6h1.6
+		c0.1,0.4,0.3,0.6,0.7,0.6C13.8,8.1,14,8,14,7.6h1.6v3.9h-4.4L11.3,7.6L11.3,7.6z M15.7,15.6h-4.4v-3.9h1.6c0.1,0.4,0.3,0.6,0.6,0.6
+		c0.3,0,0.5-0.2,0.6-0.6h1.6L15.7,15.6L15.7,15.6z"/>
+                        </g>
+                    </svg>
+                </span>
+                        <span class="m-nav__link__text">Warehousing</span>
+                    </a>
+                    <ul class="m-nav__submenu">
+                        <li class="m-nav__submenu__item m-nav__submenu__item--no-border m-nav__submenu__item--margin m-nav__submenu__item--disabled">
+                            <span class="m-nav__submenu__text">Warehousing</span>
+                        </li>
+                        <li class="m-nav__submenu__item">
+                            <a href="#" class="m-nav__submenu__link">Overview</a>
+                        </li>
+                        <li class="m-nav__submenu__item">
+                            <a href="#" class="m-nav__submenu__link">Inventory</a>
+                        </li>
+                        <li class="m-nav__submenu__item">
+                            <a href="#" class="m-nav__submenu__link">Article Inquiry</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="m-nav__item m-nav__item--submenu">
+                    <a href="#" class="m-nav__link">
+                        <i class="m-nav__link__icon icon-cloud"></i>
+                        <span class="m-nav__link__text">Documents</span>
+                    </a>
+                    <ul class="m-nav__submenu">
+                        <li class="m-nav__submenu__item m-nav__submenu__item--no-border m-nav__submenu__item--margin m-nav__submenu__item--disabled">
+                            <span class="m-nav__submenu__text">Documents</span>
+                        </li>
+                        <li class="m-nav__submenu__item">
+                            <a href="#" class="m-nav__submenu__link">Agreements</a>
+                        </li>
+                        <li class="m-nav__submenu__item">
+                            <a href="#" class="m-nav__submenu__link">GW Invoices</a>
+                        </li>
+                        <li class="m-nav__submenu__item">
+                            <a href="#" class="m-nav__submenu__link">Document Exchange</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="m-nav__item">
+                    <a href="#" class="m-nav__link">
+                        <i class="m-nav__link__icon icon-cloud"></i>
+                        <span class="m-nav__link__text">Reporting</span>
+                    </a>
+                </li>
+                <li class="m-nav__item m-nav__item--submenu">
+                    <a href="#" class="m-nav__link">
+                        <i class="m-nav__link__icon icon-comments-alt"></i>
+                        <span class="m-nav__link__text">Communication</span>
+                    </a>
+                    <ul class="m-nav__submenu">
+                        <li class="m-nav__submenu__item m-nav__submenu__item--no-border m-nav__submenu__item--margin m-nav__submenu__item--disabled">
+                            <span class="m-nav__submenu__text">Communication</span>
+                        </li>
+                        <li class="m-nav__submenu__item">
+                            <a href="#"
+                               class="m-nav__submenu__link {{#if this.page.isOrderDetail}}m-nav__submenu__link--active{{/if}}">My
+                                requests</a>
+                        </li>
+                        <li class="m-nav__submenu__item">
+                            <a href="#" class="m-nav__submenu__link">Add request</a>
+                        </li>
+                        <li class="m-nav__submenu__item">
+                            <a href="#" class="m-nav__submenu__link">Contacts</a>
+                        </li>
+                        <li class="m-nav__submenu__item">
+                            <a href="#" class="m-nav__submenu__link">FAQ</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="m-nav__item m-nav__item--submenu">
+                    <a href="#" class="m-nav__link">
+                        <i class="m-nav__link__icon icon-cloud"></i>
+                        <span class="m-nav__link__text">Information Point</span>
+                    </a>
+                    <ul class="m-nav__submenu">
+                        <li class="m-nav__submenu__item m-nav__submenu__item--no-border m-nav__submenu__item--margin m-nav__submenu__item--disabled">
+                            <span class="m-nav__submenu__text">Information Point</span>
+                        </li>
+                        <li class="m-nav__submenu__item">
+                            <a href="#" class="m-nav__submenu__link">Portal News</a>
+                        </li>
+                        <li class="m-nav__submenu__item">
+                            <a href="#" class="m-nav__submenu__link">GW News</a>
+                        </li>
+                        <li class="m-nav__submenu__item">
+                            <a href="#" class="m-nav__submenu__link">Customs & Trade</a>
+                        </li>
+                        <li class="m-nav__submenu__item">
+                            <a href="#" class="m-nav__submenu__link">About GW</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="m-nav__item">
+                    <a href="#" class="m-nav__link js-open-nav">
+                        <i class="m-nav__link__icon icon-angle-right"></i>
+                        <span class="m-nav__link__text m-nav__link__text--alt">Collapse Menu</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="m-nav__footer">
+                <img src="/images/logo-mygw.png" alt="My GW" class="center-block">
+            </div>
+        </nav>
+        <div class="clearfix"></div>
+        <h4>Footer</h4>
+
+        <footer class="m-footer"></footer>
+
+        <h4>Footer bottom</h4>
+
+        <div class="m-footer-bottom"></div>
+
+        <h4>Pagination</h4>
+
+        <nav class="relative">
+            <ul class="m-pagination">
+                <li class="m-pagination__item">
+                    <a class="m-pagination__link" href="#">Previous</a></li>
+                <li class="m-pagination__item">
+                    <button type="button" class="m-pagination__arrow"><span class="icon-angle-left"></span></button>
+                </li>
+                <li class="m-pagination__item active">
+                    <a class="m-pagination__link" href="#">1</a></li>
+                <li class="m-pagination__item separator"></li>
+                <li class="m-pagination__item">
+                    <a class="m-pagination__link" href="#">2</a></li>
+                <li class="m-pagination__item separator"></li>
+                <li class="m-pagination__item">
+                    <a class="m-pagination__link" href="#">3</a></li>
+                <li class="m-pagination__item separator"></li>
+                <li class="m-pagination__item">
+                    <a class="m-pagination__link" href="#">4</a></li>
+                <li class="m-pagination__item"><span>&hellip;</span></li>
+                <li class="m-pagination__item">
+                    <a class="m-pagination__link" href="#">24</a></li>
+                <li class="m-pagination__item">
+                    <button type="button" class="m-pagination__arrow"><span class="icon-angle-right"></span>
+                    </button>
+                </li>
+                <li class="m-pagination__item"><a class="m-pagination__link" href="#">Next</a></li>
+            </ul>
+
+            <ul class="m-pagination m-pagination--mobile">
+                <li class="m-pagination__item"><a class="m-pagination__link" href="#">Previous</a></li>
+                <li class="m-pagination__item">
+                    <button type="button" class="m-pagination__arrow"><span class="icon-angle-left"></span></button>
+                </li>
+                <li class="m-pagination__item active"><a class="m-pagination__link" href="#">1</a></li>
+                <li class="m-pagination__item"><span>&hellip;</span></li>
+                <li class="m-pagination__item"><a class="m-pagination__link" href="#">24</a></li>
+                <li class="m-pagination__item">
+                    <button type="button" class="m-pagination__arrow"><span class="icon-angle-right"></span>
+                    </button>
+                </li>
+                <li class="m-pagination__item"><a class="m-pagination__link" href="#">Next</a></li>
+            </ul>
+        </nav>
+
+        <h4>Filters</h4>
+
+        <div class="inscript-container">
+            <div class="m-filters">
+                <div class="m-filters-nav">
+                    <ul class="m-filters-nav__list">
+                        <li class="m-filters-nav__item active">
+                            <a href="#content-1" class="m-filters-nav__link" aria-controls="content-1" role="tab"
+                               data-toggle="tab">
+                                Filter 1
+                            </a>
+                        </li>
+                        <li class="m-filters-nav__item">
+                            <a href="#content-2" class="m-filters-nav__link" role="tab" data-toggle="tab"
+                               aria-controls="content-2">
+                                Filter 2
+                            </a>
+                        </li>
+                        <li class="m-filters-nav__item">
+                            <a href="#content-3" class="m-filters-nav__link" role="tab" data-toggle="tab"
+                               aria-controls="content-3">
+                                Filter 3
+                            </a>
+                        </li>
+                        <li class="m-filters-nav__item">
+                            <a href="#content-4" class="m-filters-nav__link" role="tab" data-toggle="tab"
+                               aria-controls="content-4">
+                                Filter 4
+                            </a>
+                        </li>
+                        <li class="m-filters-nav__item">
+                            <a href="#content-5" class="m-filters-nav__link" role="tab" data-toggle="tab"
+                               aria-controls="content-5">
+                                Filter 5
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="m-filters__form">
+                    <form class="m-form">
+                        <div class="m-form__group m-form__group--mobile-margin">
+                            <select class="form-control form-control--mobile-fixed-width" data-width="75px"
+                                    data-icon="<span class='icon-search'></span>">
+                                <option value="1">All Columns</option>
+                                <option value="2">Customer Reference Number</option>
+                                <option value="3">Order Type</option>
+                                <option value="4">Order Date</option>
+                                <option value="5">Shipper Adress</option>
+                                <option value="6">Consignee Adress</option>
+                                <option value="7">Weight</option>
+                                <option value="8">Shipping Unit</option>
+                                <option value="9">Interaction</option>
+                            </select>
+                        </div>
+
+                        <div class="m-form__group m-form__group--width m-form__group--mobile-width  m-form__group--mobile-margin">
+                            <input type="text" class="form-control hidden-xs" placeholder="Search">
+                            <div class="m-datepicker">
+                                <div class="input-group input-daterange">
+                                    <div class="row row--reduce-gutter-mobile">
+                                        <div class="col-xxs-6 col-xs-6">
+                                            <input type="text" class="form-control" name="start-date" value=""
+                                                   placeholder="From" readonly="true">
+                                        </div>
+                                        <div class="col-xxs-6 col-xs-6">
+                                            <input type="text" class="form-control" name="end-date" value=""
+                                                   placeholder="To" readonly="true">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="m-form__group m-form__group--rmargin-big m-form__group--mobile-margin m-form__group--mobile-as">
+                            <button type="submit" class="button button--secondary"><span>go</span></button>
+                        </div>
+                        <div class="m-form__group m-form__group--width m-form__group--rmargin-big m-form__group--mobile-cl m-form__group--mobile-width">
+                            <div class="select-custom">
+                                <span class="select-custom__selected">Filter 01</span>
+                                <span class="select-custom__icon">
+                        <i class="icon-angle-down"></i>
+                    </span>
+
+                                <ul class="select-custom__list" id="sort">
+                                    <li class="select-custom__item"><span
+                                            class="select-custom__item__name">Filter 01</span><a href="#modalDelete"
+                                                                                                 data-toggle="modal"
+                                                                                                 class="select-custom__item__icon"><span
+                                            class="icon-remove"></span></a></li>
+                                    <li class="select-custom__item"><span
+                                            class="select-custom__item__name">Filter 02</span><span
+                                            class="select-custom__item__icon"><span
+                                            class="icon-remove"></span></span></li>
+                                    <li class="select-custom__item"><span
+                                            class="select-custom__item__name">Filter 03</span><span
+                                            class="select-custom__item__icon"><span
+                                            class="icon-remove"></span></span></li>
+                                    <li class="select-custom__item"><span
+                                            class="select-custom__item__name">Filter 04</span><span
+                                            class="select-custom__item__icon"><span
+                                            class="icon-remove"></span></span></li>
+                                    <li class="select-custom__item"><span
+                                            class="select-custom__item__name">Filter 05</span><span
+                                            class="select-custom__item__icon"><span
+                                            class="icon-remove"></span></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="m-form__group m-form__group--width m-form__group--mobile-width hidden-xs">
+                            <input type="text" class="form-control" placeholder="Filter name">
+                        </div>
+                        <div class="m-form__group m-form__group--right-alt m-form__group--mobile-width-small hidden-xs">
+                            <button type="submit" class="button button--secondary"><span>save</span></button>
+                        </div>
+                        <div class="m-form__group m-form__group--right hidden-xs hidden-sm">
+                            <button type="submit" class="button button--secondary"><span
+                                    class="icon-repeat reverse"></span> <span>reset</span></button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="m-filter-results">
+                    <form class="m-filter-results__form">
+                        <ul class="m-filter-results__list">
+                            <li class="m-filter-results__item m-filter-results__item--dropdown">
+                                <label class="fa-checkbox-custom">
+                                    <input name="checkbox" type="checkbox" value="1"
+                                           class="fa-checkbox-custom__input">
+                                    <i class="fa-checkbox-custom__icon-state fa-checkbox-custom__icon-state--alt"></i>
+                                </label>
+                                <div class="m-filter-results__item__content">
+                                    <div class="m-filter-results__item__icon">
+                                        <i class="icon-filter"></i>
+                                        <span class="m-filter-results__item__found">2</span>
+                                    </div>
+                                    <div class="m-filter-results__item__text">Row text contains “Vösendorf”</div>
+                                </div>
+                                <a href="#" class="m-filter-results__item__arrow">
+                                    <span class="icon-caret-right"></span>
+                                </a>
+                                <a href="#modalDelete" data-toggle="modal" class="m-filter-results__item__action">
+                                    <i class="icon-remove"></i>
+                                </a>
+                                <ul class="m-filter-results__dropdown">
+                                    <li class="m-filter-results__item">
+                                        <label class="fa-checkbox-custom">
+                                            <input name="checkbox" type="checkbox" value="1"
+                                                   class="fa-checkbox-custom__input">
+                                            <i class="fa-checkbox-custom__icon-state fa-checkbox-custom__icon-state--alt"></i>
+                                        </label>
+                                        <div class="m-filter-results__item__content">
+                                            <div class="m-filter-results__item__icon">
+                                                <span class="icon-filter"></span>
+                                            </div>
+                                            <div class="m-filter-results__item__text">Row text contains “Vösendorf”
+                                            </div>
+                                        </div>
+                                        <a class="m-filter-results__item__action" href="#">
+                                            <span class="icon-remove"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for request -->
+        <div class="modal fade" id="modalRequest" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-dialog--alt" role="document">
+                <div class="modal-content">
+                    <section class="margin-default">
+                        <div class="m-section--bg-color-white">
+
+                            <div class="m-request">
+                                <div class="m-request__nav">
+                                    <ul class="m-request__nav__list nav nav-tabs" role="tablist">
+                                        <li class="m-request__nav__item">
+                                            <a href="#request-content-1" class="m-request__nav__link"
+                                               aria-controls="request-content-1" role="tab" data-toggle="tab">
+                                                General
+                                            </a>
+                                        </li>
+                                        <li class="m-request__nav__item active">
+                                            <a href="#request-content-2" class="m-request__nav__link"
+                                               aria-controls="request-content-2" role="tab" data-toggle="tab"
+                                               aria-expanded="true">
+                                                Shipment
+                                            </a>
+                                        </li>
+                                        <li class="m-request__nav__item">
+                                            <a href="#request-content-3" class="m-request__nav__link"
+                                               aria-controls="request-content-3" role="tab" data-toggle="tab">
+                                                Accounting
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="m-request__content">
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane" id="request-content-1">
+                                            1
+                                        </div>
+
+                                        <div role="tabpanel" class="tab-pane active" id="request-content-2">
+                                            <form class="m-form" action="">
+                                                <div class="m-form__group m-form__group--margin m-form__group--full">
+                                                    <select class="form-control form-control--show-title"
+                                                            title="My filters" data-width="100%">
+                                                        <option value="">Reason *</option>
+                                                        <option value="1">Option 1</option>
+                                                        <option value="2">Option 2</option>
+                                                    </select>
+                                                </div>
+                                                <div class="m-form__group m-form__group--margin m-form__group--full">
+                                                    <input type="text" class="form-control"
+                                                           placeholder="GW Reference Number *">
+                                                </div>
+                                                <div class="m-form__group m-form__group--margin m-form__group--full">
+                                                    <input type="text" class="form-control"
+                                                           placeholder="Reference Number">
+                                                </div>
+                                                <div class="m-form__group m-form__group--margin m-form__group--full">
+                                                    <textarea class="form-control form-control--textarea-big"
+                                                              placeholder="Message *"></textarea>
+                                                </div>
+                                                <p class="font-small">All fields marked with * are required</p>
+                                                <div class="text-right">
+                                                    <button type="submit" class="button button--brand">Add Request
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div role="tabpanel" class="tab-pane" id="request-content-3">
+                                            3
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" class="modal-close modal-close--right" data-dismiss="modal"
+                                    aria-label="Close">
+                                <span class="icon-remove"></span>
+                            </button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for delete -->
+        <div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-dialog--small" role="document">
+                <div class="modal-content">
+                    <div class="m-modal">
+                        <header class="m-modal__header">
+                            <h2 class="m-modal__title">Delete</h2>
+                        </header>
+                        <div class="m-modal__content">
+                            <div class="m-modal__body">
+                                <p class="m-modal__text">Do you really want do delete the filter?</p>
+                                <div>
+                                    <a href="#" class="button button--secondary">Ok</a>
+                                    <a href="#" class="button button--border">Cancel</a>
+                                </div>
+
+                            </div>
+                            <button type="button" class="modal-close modal-close--right modal-close--right-alt-top"
+                                    data-dismiss="modal"
+                                    aria-label="Close">
+                                <span class="icon-remove"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for disable info -->
+        <div class="modal fade" id="modalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-dialog--small" role="document">
+                <div class="modal-content">
+                    <div class="m-modal">
+                        <header class="m-modal__header">
+                            <h2 class="m-modal__title">Help</h2>
+                        </header>
+                        <div class="m-modal__content">
+                            <div class="m-modal__body">
+                                <p class="m-modal__text">Don’t show this help again.</p>
+                                <div>
+                                    <a href="#" class="button button--secondary" data-dismiss="modal">Ok</a>
+                                    <a href="#" class="button button--border" data-dismiss="modal">Cancel</a>
+                                </div>
+
+                            </div>
+                            <button type="button" class="modal-close modal-close--right modal-close--right-alt-top"
+                                    data-dismiss="modal"
+                                    aria-label="Close">
+                                <span class="icon-remove"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-filters-tabs">
+
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="content-1">
+                    1
+                </div>
+                <div role="tabpanel" class="tab-pane" id="content-2">
+                    2
+                </div>
+                <div role="tabpanel" class="tab-pane" id="content-3">
+                    3
+                </div>
+                <div role="tabpanel" class="tab-pane" id="content-4">
+                    4
+                </div>
+                <div role="tabpanel" class="tab-pane" id="content-5">
+                    5
+                </div>
+            </div>
+        </div>
+
+        <div class="fake-container">
+
+            <h4>Portal news</h4>
+
+
+            <div class="m-portal-news">
+                <div class="m-portal-news__filters">
+                    <ul class="m-portal-news__filters__list">
+                        <li class="m-portal-news__filters__item">
+                            <label class="fa-checkbox-custom" for="all">
+                                <input name="all" type="checkbox" value="0"
+                                       class="fa-checkbox-custom__input" id="all">
+                                <i class="fa-checkbox-custom__icon-state"></i>
+                                <span class="fa-checkbox-custom__label">All</span>
+                            </label>
+                        </li>
+                        <li class="m-portal-news__filters__item">
+                            <label class="fa-checkbox-custom" for="bug">
+                                <input name="bug" type="checkbox" value="bug"
+                                       class="fa-checkbox-custom__input" id="bug">
+                                <i class="fa-checkbox-custom__icon-state"></i>
+                                <span class="fa-checkbox-custom__label"><i
+                                        class="fa fa-bug"></i> Bug Fixing</span>
+                            </label>
+                        </li>
+                        <li class="m-portal-news__filters__item">
+                            <label class="fa-checkbox-custom" for="function">
+                                <input name="function" type="checkbox" value="function"
+                                       class="fa-checkbox-custom__input" id="function">
+                                <i class="fa-checkbox-custom__icon-state"></i>
+                                <span class="fa-checkbox-custom__label"><i
+                                        class="fa fa-cog"></i> New Function</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="m-portal-news__content">
+                    <div class="m-portal-news__content__col" data-category="bug">
+                        <div class="m-news" data-target="#modalNews1" data-toggle="modal">
+                            <div class="m-news__icon m-news__icon--bg-secondary">
+                                <i class="fa fa-bug"></i>
+                            </div>
+                            <div class="m-news__content">
+                                <h2 class="m-news__title">Bug Fixing: Notification Bug fixed</h2>
+                                <p class="m-news__text">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                    tempor invidunt ut labore et dolore magna aliquyam era set ...
+                                </p>
+                                <div class="m-news__meta">
+                                    <span class="m-news__meta__item"><i
+                                            class="fa fa-calendar-o"></i>15. März 2018</span><span
+                                        class="m-news__meta__item"><i class="fa fa-globe"></i>Lauterach</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="m-portal-news__content__col" data-category="function">
+                        <div class="m-news">
+                            <div class="m-news__icon m-news__icon--bg-primary">
+                                <i class="fa fa-cog"></i>
+                            </div>
+                            <div class="m-news__content">
+                                <h2 class="m-news__title">New Function: eBook available</h2>
+                                <p class="m-news__text">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                    tempor invidunt ut labore et dolore magna aliquyam era set ...
+                                </p>
+                                <div class="m-news__meta">
+                                    <span class="m-news__meta__item"><i
+                                            class="fa fa-calendar-o"></i>15. März 2018</span><span
+                                        class="m-news__meta__item"><i class="fa fa-globe"></i>Lauterach</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <h4>Filters full width</h4>
+
+            <div class="m-filters__form m-filters__form--small-b-padding">
+                <form class="m-form">
+                    <div class="m-form__group m-form__group--full-search m-form__group--mobile-margin">
+                        <div class="m-form__group__input-icon">
+                            <span class="form-control__icon form-control__icon--left"><i class="icon-search"></i></span>
+                            <input type="text" class="form-control form-control--icon-left" placeholder="search item">
+                            <span class="form-control__icon form-control__icon--right"><i
+                                    class="icon-remove"></i></span>
+                        </div>
+                        <button type="submit" class="button button--secondary"><span>Go</span></button>
+                    </div>
+                </form>
+            </div>
+
+            <h4>Box with contacts</h4>
+
+            <div class="m-box">
+                <header class="m-box__header">
+                    <h2 class="m-box__title">
+                        My Additional GW Contacts
+                    </h2>
+                </header>
+                <div class="m-box__content">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-10">
+                            <div class="m-contact-box">
+
+                                <div class="m-contact-box__image">
+                                    <img src="/images/contact-image-placeholder.jpg" alt="">
+                                </div>
+
+                                <span class="m-contact-box__name">Stefan Oberhauser</span><br>
+                                Head of Sales<br>
+                                Sales Department<br><br>
+
+                                Gebrüder Weiss Gesellschaft m.b.H.<br>
+                                Senderstraße 26<br>
+                                6961 Wolfurt, Austria<br><br>
+
+                                T. <a class="m-contact-box__link" href="tel:+43.5574.696.2330">+43.5574.696.2330</a><br>
+                                M. <a class="m-contact-box__link" href="tel:+43.664.837.0292">+43.664.837.0292</a><br>
+                                <a href="mailto:stefan.oberhauser@gw-world.com">stefan.oberhauser@gw-world.com</a>
+
+                                <div class="m-contact-box__hover">
+                                    <div class="m-contact-box__hover__content">
+                                        <a href="#" class="m-contact-box__icon">
+                                            <i class="icon-envelope"></i>
+                                        </a>
+                                        <a href="#" class="m-contact-box__icon">
+                                            <i class="icon-phone"></i>
+                                        </a>
+                                        <a href="#" class="m-contact-box__icon">
+                                            <i class="icon-calendar"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="add-contact__col col-sm-12 col-md-2">
+                            <a href="#" class="add-contact__link" data-toggle="modal" data-target="#modalContact"><i
+                                    class="icon-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4>FAQ with nav</h4>
+
+            <div class="m-faq">
+                <div class="m-faq__nav">
+                    <ul class="m-faq__nav__list">
+                        <li class="m-faq__nav__list__item active">
+                            <a href="#faq-1" class="m-faq__nav__list__link" aria-controls="faq-1" role="tab"
+                               data-toggle="tab">
+                                <span class="m-faq__nav__list__link-inner">Categorie 1</span>
+                            </a>
+                        </li>
+                        <li class="m-faq__nav__list__item">
+                            <a href="#faq-2" class="m-faq__nav__list__link" role="tab" data-toggle="tab"
+                               aria-controls="faq-2">
+                                <span class="m-faq__nav__list__link-inner">Categorie 2</span>
+                            </a>
+                        </li>
+                        <li class="m-faq__nav__list__item">
+                            <a href="#faq-3" class="m-faq__nav__list__link" role="tab" data-toggle="tab"
+                               aria-controls="faq-3">
+                                <span class="m-faq__nav__list__link-inner">Categorie 3</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="m-faq__content tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="faq-1">
+                        <div class="m-accordion">
+                            <div class="m-accordion__content">
+                                <div class="m-accordion__content__item">
+
+                                    <ul class="m-accordion__content__list panel-group" id="accordion">
+                                        <li class="m-accordion__content__list-item panel">
+                                            <a href="#content-11"
+                                               class="m-accordion__content__list-item__title collapsed"
+                                               data-toggle="collapse"
+                                               data-parent="#accordion" aria-expanded="false"
+                                               aria-controls="content-11">
+                                                How to set my notification preferences?
+
+                                                <span class="m-accordion__content__list-item__expand">
+                                                <i class="icon-angle-down"></i>
+                                            </span>
+                                            </a>
+
+                                            <div id="content-11" class="panel-collapse collapse">
+                                                <div class="m-accordion__content__list-item__content">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                                                        diam nonumy eirmod tempor
+                                                        invidunt
+                                                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                                                        vero eos et accusam et
+                                                        justo
+                                                        duo
+                                                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                                                        sanctus est Lorem ipsum
+                                                        dolor
+                                                        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+                                                        elitr, sed diam nonumy
+                                                        eirmod
+                                                        tempor
+                                                        invidunt ut labore et dolore magna aliquyam erat.
+
+                                                        <br><br>
+                                                        <a href="#">Lorem ipsum</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="m-accordion__content__list-item panel">
+                                            <a href="#content-1a"
+                                               class="m-accordion__content__list-item__title collapsed"
+                                               data-toggle="collapse"
+                                               data-parent="#accordion" aria-expanded="false"
+                                               aria-controls="content-1a">
+                                                How to set my notification preferences?
+
+                                                <span class="m-accordion__content__list-item__expand">
+                                                <i class="icon-angle-down"></i>
+                                            </span>
+                                            </a>
+
+                                            <div id="content-1a" class="panel-collapse collapse">
+                                                <div class="m-accordion__content__list-item__content">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                                                        diam nonumy eirmod tempor
+                                                        invidunt
+                                                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                                                        vero eos et accusam et
+                                                        justo
+                                                        duo
+                                                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                                                        sanctus est Lorem ipsum
+                                                        dolor
+                                                        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+                                                        elitr, sed diam nonumy
+                                                        eirmod
+                                                        tempor
+                                                        invidunt ut labore et dolore magna aliquyam erat.
+
+                                                        <br><br>
+                                                        <a href="#">Lorem ipsum</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="m-accordion__content__list-item panel">
+                                            <a href="#content-1b"
+                                               class="m-accordion__content__list-item__title collapsed"
+                                               data-toggle="collapse"
+                                               data-parent="#accordion" aria-expanded="false"
+                                               aria-controls="content-1b">
+                                                How to set my notification preferences?
+
+                                                <span class="m-accordion__content__list-item__expand">
+                                                <i class="icon-angle-down"></i>
+                                            </span>
+                                            </a>
+
+                                            <div id="content-1b" class="panel-collapse collapse">
+                                                <div class="m-accordion__content__list-item__content">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                                                        diam nonumy eirmod tempor
+                                                        invidunt
+                                                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                                                        vero eos et accusam et
+                                                        justo
+                                                        duo
+                                                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                                                        sanctus est Lorem ipsum
+                                                        dolor
+                                                        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+                                                        elitr, sed diam nonumy
+                                                        eirmod
+                                                        tempor
+                                                        invidunt ut labore et dolore magna aliquyam erat.
+
+                                                        <br><br>
+                                                        <a href="#">Lorem ipsum</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="faq-2">
+                        <div class="m-accordion">
+                            <div class="m-accordion__content">
+                                <div class="m-accordion__content__item">
+
+                                    <ul class="m-accordion__content__list panel-group" id="accordion1">
+                                        <li class="m-accordion__content__list-item panel">
+                                            <a href="#content-3a"
+                                               class="m-accordion__content__list-item__title collapsed"
+                                               data-toggle="collapse"
+                                               data-parent="#accordion" aria-expanded="false"
+                                               aria-controls="content-3a">
+                                                How to set my notification preferences?
+
+                                                <span class="m-accordion__content__list-item__expand">
+                                                <i class="icon-angle-down"></i>
+                                            </span>
+                                            </a>
+
+                                            <div id="content-3a" class="panel-collapse collapse">
+                                                <div class="m-accordion__content__list-item__content">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                                                        diam nonumy eirmod tempor
+                                                        invidunt
+                                                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                                                        vero eos et accusam et
+                                                        justo duo
+                                                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                                                        sanctus est Lorem ipsum
+                                                        dolor
+                                                        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+                                                        elitr, sed diam nonumy
+                                                        eirmod tempor
+                                                        invidunt ut labore et dolore magna aliquyam erat.
+
+                                                        <br><br>
+                                                        <a href="#">Lorem ipsum</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="faq-3">
+                        <div class="m-accordion">
+                            <div class="m-accordion__content">
+                                <div class="m-accordion__content__item">
+
+                                    <ul class="m-accordion__content__list panel-group" id="accordion2">
+                                        <li class="m-accordion__content__list-item panel">
+                                            <a href="#content-4a"
+                                               class="m-accordion__content__list-item__title collapsed"
+                                               data-toggle="collapse"
+                                               data-parent="#accordion" aria-expanded="false"
+                                               aria-controls="content-4a">
+                                                Lorem ipsum dolor
+
+                                                <span class="m-accordion__content__list-item__expand">
+                                                <i class="icon-angle-down"></i>
+                                            </span>
+                                            </a>
+
+                                            <div id="content-4a" class="panel-collapse collapse">
+                                                <div class="m-accordion__content__list-item__content">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                                                        diam nonumy eirmod tempor
+                                                        invidunt
+                                                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                                                        vero eos et accusam et
+                                                        justo duo
+                                                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                                                        sanctus est Lorem ipsum
+                                                        dolor
+                                                        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+                                                        elitr, sed diam nonumy
+                                                        eirmod tempor
+                                                        invidunt ut labore et dolore magna aliquyam erat.
+
+                                                        <br><br>
+                                                        <a href="#">Lorem ipsum</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4>Chat</h4>
+            <div class="m-chat">
+                <header class="m-chat__header">
+                    <h2 class="m-chat__title">
+                        Conversation
+                    </h2>
+                </header>
+                <div class="m-chat__content">
+                    <div class="m-chat__message">
+                        <div class="m-chat__message__image">
+                            <img src="/images/chat-person-1.png" alt="name">
+                        </div>
+                        <div class="m-chat__message__body">
+                            <p class="m-chat__message__info"><strong>Me</strong> <span
+                                    class="m-chat__message__info__date">03.03.2018 09:03</span>
+                            </p>
+                            <p class="m-chat__message__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                                sed diam
+                                nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                                voluptua.</p>
+                        </div>
+                    </div>
+                    <div class="m-chat__message m-chat__message--support">
+                        <div class="m-chat__message__image">
+                            <img src="/images/chat-person-1.png" alt="name">
+                        </div>
+                        <div class="m-chat__message__body">
+                            <p class="m-chat__message__info"><strong>Hand Müller</strong> <span
+                                    class="m-chat__message__info__date">03.03.2018 11:21</span>
+                            </p>
+                            <p class="m-chat__message__text">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut labore
+                                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                                dolores et ea
+                                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                                amet. Lorem
+                                ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut labore
+                                et dolore magna aliquyam erat, sed diam voluptua.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="m-chat__message">
+                        <div class="m-chat__message__image">
+                            <img src="/images/chat-person-1.png" alt="name">
+                        </div>
+                        <div class="m-chat__message__body">
+                            <p class="m-chat__message__info"><strong>Me</strong> <span
+                                    class="m-chat__message__info__date">03.03.2018 09:03</span>
+                            </p>
+                            <p class="m-chat__message__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                                sed diam
+                                nonumy eirmod tempor invidunt ut labore</p>
+                        </div>
+                    </div>
+
+                    <form class="m-chat__form" action="">
+                        <textarea class="m-chat__form__textarea form-control"
+                                  placeholder="Type in your message"></textarea>
+                        <div class="m-chat__form__button-container">
+                            <button class="m-chat__form__button button button--primary" type="submit">Send message
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="m-chat__footer">
+                        <a href="#" class="button button--border">Reopen</a>
+                    </div>
+                </div>
+            </div>
+
+            <h4>Box list</h4>
+
+            <div class="m-box-list">
+                <header class="m-box-list__header">
+                    <h2 class="m-box-list__title">
+                        Documents
+                    </h2>
+                </header>
+
+                <div class="m-box-list__content">
+                    <ul class="m-box-list__list">
+                        <li class="m-box-list__list__item">
+                            <p class="m-box-list__list__item__file">
+                                <a class="m-box-list__list__item__link" href="#"><i class="icon-file"></i> <strong>File
+                                    Title</strong></a>
+                            </p>
+                            <p class="m-box-list__list__item__date">Upload 03.03.2018 09:03</p>
+                        </li>
+                        <li class="m-box-list__list__item">
+                            <p class="m-box-list__list__item__file">
+                                <a class="m-box-list__list__item__link" href="#"><i class="icon-file"></i> <strong>File
+                                    Title</strong></a>
+                            </p>
+                            <p class="m-box-list__list__item__date">Upload 03.03.2018 09:03</p>
+                        </li>
+                        <li class="m-box-list__list__item">
+                            <p class="m-box-list__list__item__file">
+                                <a class="m-box-list__list__item__link" href="#"><i class="icon-file"></i> <strong>File
+                                    Title</strong></a>
+                            </p>
+                            <p class="m-box-list__list__item__date">Upload 03.03.2018 09:03</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h4>Upload</h4>
+
+            <div class="m-upload">
+                <form action="/file-upload" class="dropzone">
+                    <div class="dz-message">
+                        <div class="dz-message__icon"><i class="icon-file"></i></div>
+                        Drop files here<br><span class="dz-message__small">or</span>
+                        <br>
+                        <div class="dz-message__select">Select Files</div>
+                    </div>
+                    <div class="fallback">
+                        <input name="file" type="file" multiple/>
+                    </div>
+                </form>
+            </div>
+
+            <h4>Notification settings</h4>
+
+            <div class="m-notification-settings">
+                <div class="m-accordion" id="accordion-s">
+                    <div class="m-accordion__content">
+                        <div class="m-accordion__content__item">
+
+                            <ul class="m-accordion__content__list panel-group" id="accordion-s1">
+                                <li class="m-accordion__content__list-item panel">
+                                    <a href="#content-1s" class="m-accordion__content__list-item__title collapsed"
+                                       data-toggle="collapse"
+                                       data-parent="#accordion" aria-expanded="false" aria-controls="content-1s">
+                                        <span class="m-accordion__content__list-item__icon"><i
+                                                class="icon-calculator"></i></span>Calculation
+
+                                        <span class="m-accordion__content__list-item__expand">
+                                                <i class="icon-angle-down"></i>
+                                            </span>
+                                    </a>
+
+                                    <div id="content-1s" class="panel-collapse collapse">
+                                        <div class="m-accordion__content__list-item__content">
+
+                                            <table class="table-v1 table-v1--bmargin-small">
+                                                <tr class="table-v1__row table-v1__row--bg-white table-v1__row--text-grey">
+                                                    <th class="table-v1__th">Receive notification for:</th>
+                                                    <th class="table-v1__th">myGW Portal</th>
+                                                    <th class="table-v1__th">E-Mail</th>
+                                                </tr>
+                                                <tr class="table-v1__row table-v1__row--mobile-stay">
+                                                    <td class="table-v1__td table-v1__td-20">Subscribed Documents</td>
+                                                    <td class="table-v1__td table-v1__td-10">
+                                                        <label class="fa-checkbox-status" for="status1">
+                                                            <input name="status1" type="checkbox" value="0"
+                                                                   class="fa-checkbox-status__input" id="status1">
+                                                            <span class="fa-checkbox-status__label"></span>
+                                                            <span class="fa-checkbox-status__text"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="table-v1__td table-v1__td-30">
+                                                        <label class="fa-checkbox-status" for="status2">
+                                                            <input name="status2" type="checkbox" value="0"
+                                                                   class="fa-checkbox-status__input" id="status2">
+                                                            <span class="fa-checkbox-status__label"></span>
+                                                            <span class="fa-checkbox-status__text"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-v1__row table-v1__row--mobile-stay">
+                                                    <td class="table-v1__td table-v1__td-20">Invoices</td>
+                                                    <td class="table-v1__td table-v1__td-10">
+                                                        <label class="fa-checkbox-status" for="status3">
+                                                            <input name="status3" type="checkbox" value="0"
+                                                                   class="fa-checkbox-status__input" id="status3">
+                                                            <span class="fa-checkbox-status__label"></span>
+                                                            <span class="fa-checkbox-status__text"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="table-v1__td table-v1__td-30">
+                                                        <label class="fa-checkbox-status" for="status4">
+                                                            <input name="status4" type="checkbox" value="0"
+                                                                   class="fa-checkbox-status__input" id="status4">
+                                                            <span class="fa-checkbox-status__label"></span>
+                                                            <span class="fa-checkbox-status__text"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-v1__row table-v1__row--mobile-stay">
+                                                    <td class="table-v1__td">Personal Offers</td>
+                                                    <td class="table-v1__td">
+                                                        <label class="fa-checkbox-status" for="status5">
+                                                            <input name="status5" type="checkbox" value="0"
+                                                                   class="fa-checkbox-status__input" id="status5">
+                                                            <span class="fa-checkbox-status__label"></span>
+                                                            <span class="fa-checkbox-status__text"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="table-v1__td">
+                                                        <label class="fa-checkbox-status" for="status6">
+                                                            <input name="status6" type="checkbox" value="0"
+                                                                   class="fa-checkbox-status__input" id="status6">
+                                                            <span class="fa-checkbox-status__label"></span>
+                                                            <span class="fa-checkbox-status__text"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-v1__row table-v1__row--mobile-stay">
+                                                    <td class="table-v1__td">Service Level Agreements (SLA’s)</td>
+                                                    <td class="table-v1__td">
+                                                        <label class="fa-checkbox-status" for="status7">
+                                                            <input name="status7" type="checkbox" value="0"
+                                                                   class="fa-checkbox-status__input" id="status7">
+                                                            <span class="fa-checkbox-status__label"></span>
+                                                            <span class="fa-checkbox-status__text"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="table-v1__td">
+                                                        <label class="fa-checkbox-status" for="status8">
+                                                            <input name="status8" type="checkbox" value="0"
+                                                                   class="fa-checkbox-status__input" id="status8">
+                                                            <span class="fa-checkbox-status__label"></span>
+                                                            <span class="fa-checkbox-status__text"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-v1__row table-v1__row--mobile-stay">
+                                                    <td class="table-v1__td">Contracts</td>
+                                                    <td class="table-v1__td">
+                                                        <label class="fa-checkbox-status" for="status9">
+                                                            <input name="status9" type="checkbox" value="0"
+                                                                   class="fa-checkbox-status__input" id="status9">
+                                                            <span class="fa-checkbox-status__label"></span>
+                                                            <span class="fa-checkbox-status__text"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="table-v1__td">
+                                                        <label class="fa-checkbox-status" for="status10">
+                                                            <input name="status10" type="checkbox" value="0"
+                                                                   class="fa-checkbox-status__input" id="status10">
+                                                            <span class="fa-checkbox-status__label"></span>
+                                                            <span class="fa-checkbox-status__text"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-v1__row table-v1__row--mobile-stay">
+                                                    <td class="table-v1__td">POD’s</td>
+                                                    <td class="table-v1__td">
+                                                        <label class="fa-checkbox-status" for="status11">
+                                                            <input name="status11" type="checkbox" value="0"
+                                                                   class="fa-checkbox-status__input" id="status11">
+                                                            <span class="fa-checkbox-status__label"></span>
+                                                            <span class="fa-checkbox-status__text"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="table-v1__td">
+                                                        <label class="fa-checkbox-status" for="status12">
+                                                            <input name="status12" type="checkbox" value="0"
+                                                                   class="fa-checkbox-status__input" id="status12">
+                                                            <span class="fa-checkbox-status__label"></span>
+                                                            <span class="fa-checkbox-status__text"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                            <a href="#" class="button button--brand">Save</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="m-accordion__content__list-item panel">
+                                    <a href="#content-2s" class="m-accordion__content__list-item__title collapsed"
+                                       data-toggle="collapse"
+                                       data-parent="#accordion" aria-expanded="false" aria-controls="content-2s">
+                                        <span class="m-accordion__content__list-item__icon"><i
+                                                class="icon-cube"></i></span>Orders
+
+                                        <span class="m-accordion__content__list-item__expand">
+                                                <i class="icon-angle-down"></i>
+                                            </span>
+                                    </a>
+
+                                    <div id="content-2s" class="panel-collapse collapse">
+                                        <div class="m-accordion__content__list-item__content">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                                eirmod tempor
+                                                invidunt
+                                                ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                                                et accusam et
+                                                justo duo
+                                                dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+                                                est Lorem ipsum
+                                                dolor
+                                                sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                                                diam nonumy
+                                                eirmod tempor
+                                                invidunt ut labore et dolore magna aliquyam erat.
+
+                                                <br><br>
+                                                <a href="#">Lorem ipsum</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="m-accordion__content__list-item panel">
+                                    <a href="#content-3s" class="m-accordion__content__list-item__title collapsed"
+                                       data-toggle="collapse"
+                                       data-parent="#accordion" aria-expanded="false" aria-controls="content-3s">
+                                        <span class="m-accordion__content__list-item__icon"><i class="icon-archive"></i></span>Warehousing
+
+                                        <span class="m-accordion__content__list-item__expand">
+                                                <i class="icon-angle-down"></i>
+                                            </span>
+                                    </a>
+
+                                    <div id="content-3s" class="panel-collapse collapse">
+                                        <div class="m-accordion__content__list-item__content">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                                eirmod tempor
+                                                invidunt
+                                                ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                                                et accusam et
+                                                justo duo
+                                                dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+                                                est Lorem ipsum
+                                                dolor
+                                                sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                                                diam nonumy
+                                                eirmod tempor
+                                                invidunt ut labore et dolore magna aliquyam erat.
+
+                                                <br><br>
+                                                <a href="#">Lorem ipsum</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="m-accordion__content__list-item panel">
+                                    <a href="#content-4s" class="m-accordion__content__list-item__title collapsed"
+                                       data-toggle="collapse"
+                                       data-parent="#accordion" aria-expanded="false" aria-controls="content-4s">
+                                        <span class="m-accordion__content__list-item__icon"><i class="icon-files-o"></i></span>Documents
+
+                                        <span class="m-accordion__content__list-item__expand">
+                                                <i class="icon-angle-down"></i>
+                                            </span>
+                                    </a>
+
+                                    <div id="content-4s" class="panel-collapse collapse">
+                                        <div class="m-accordion__content__list-item__content">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                                eirmod tempor
+                                                invidunt
+                                                ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                                                et accusam et
+                                                justo duo
+                                                dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+                                                est Lorem ipsum
+                                                dolor
+                                                sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                                                diam nonumy
+                                                eirmod tempor
+                                                invidunt ut labore et dolore magna aliquyam erat.
+
+                                                <br><br>
+                                                <a href="#">Lorem ipsum</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="m-accordion__content__list-item panel">
+                                    <a href="#content-5s" class="m-accordion__content__list-item__title collapsed"
+                                       data-toggle="collapse"
+                                       data-parent="#accordion" aria-expanded="false" aria-controls="content-5s">
+                                        <span class="m-accordion__content__list-item__icon"><i
+                                                class="icon-pie-chart"></i></span>Reporting
+
+                                        <span class="m-accordion__content__list-item__expand">
+                                                <i class="icon-angle-down"></i>
+                                            </span>
+                                    </a>
+
+                                    <div id="content-5s" class="panel-collapse collapse">
+                                        <div class="m-accordion__content__list-item__content">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                                eirmod tempor
+                                                invidunt
+                                                ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                                                et accusam et
+                                                justo duo
+                                                dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+                                                est Lorem ipsum
+                                                dolor
+                                                sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                                                diam nonumy
+                                                eirmod tempor
+                                                invidunt ut labore et dolore magna aliquyam erat.
+
+                                                <br><br>
+                                                <a href="#">Lorem ipsum</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="m-accordion__content__list-item panel">
+                                    <a href="#content-6s" class="m-accordion__content__list-item__title collapsed"
+                                       data-toggle="collapse"
+                                       data-parent="#accordion" aria-expanded="false" aria-controls="content-6s">
+                                        <span class="m-accordion__content__list-item__icon"><i
+                                                class="icon-comments-o"></i></span>Communication
+
+                                        <span class="m-accordion__content__list-item__expand">
+                                                <i class="icon-angle-down"></i>
+                                            </span>
+                                    </a>
+
+                                    <div id="content-6s" class="panel-collapse collapse">
+                                        <div class="m-accordion__content__list-item__content">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                                eirmod tempor
+                                                invidunt
+                                                ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                                                et accusam et
+                                                justo duo
+                                                dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+                                                est Lorem ipsum
+                                                dolor
+                                                sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                                                diam nonumy
+                                                eirmod tempor
+                                                invidunt ut labore et dolore magna aliquyam erat.
+
+                                                <br><br>
+                                                <a href="#">Lorem ipsum</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <h4>User profile</h4>
+
+        <div class="fake-container">
+
+            <div class="m-user">
+                <h2 class="m-user__name">Kevin Mangold-Arias</h2>
+
+                <div class="m-user__picture">
+                    <img src="/images/user.jpg" alt="User name">
+                    <a href="#" data-toggle="modal" data-target="#modalUploadImage" class="m-user__picture__link">
+                        <i class="icon-pencil"></i> Change Picture</a>
+                </div>
+
+                <ul class="m-user__details">
+                    <li class="m-user__details__item m-user__details__item--margin">
+                        <span class="m-user__details__item__term">Company</span>
+                        <span class="m-user__details__item__value">Gebrüder Weiss Gesellschaft m.b.H.</span>
+                    </li>
+                    <li class="m-user__details__item">
+                        <span class="m-user__details__item__term">Mobile</span>
+                        <span class="m-user__details__item__value">+43.664.8872.2640</span>
+                    </li>
+                    <li class="m-user__details__item m-user__details__item--margin">
+                        <span class="m-user__details__item__term">Phone</span>
+                        <span class="m-user__details__item__value">+43.557.696.2322</span>
+                    </li>
+                    <li class="m-user__details__item m-user__details__item--margin">
+                        <span class="m-user__details__item__term">E-mail</span>
+                        <span class="m-user__details__item__value">kevin.mangold-arias@gw-world.com</span>
+                    </li>
+                    <li class="m-user__details__item m-user__details__item--margin">
+                        <span class="m-user__details__item__term">Adress</span>
+                        <span class="m-user__details__item__value">Bundesstraße 110<br>6923 Lauterach, Austria</span>
+                    </li>
+                    <li class="m-user__details__item">
+                        <span class="m-user__details__item__term">Function</span>
+                        <span class="m-user__details__item__value">-</span>
+                    </li>
+                    <li class="m-user__details__item">
+                        <span class="m-user__details__item__term">Position</span>
+                        <span class="m-user__details__item__value">-</span>
+                    </li>
+                    <li class="m-user__details__item">
+                        <span class="m-user__details__item__term">Customer account</span>
+                        <span class="m-user__details__item__value">149765</span>
+                    </li>
+                    <li class="m-user__details__item">
+                        <span class="m-user__details__item__term">CRM ID</span>
+                        <span class="m-user__details__item__value">-</span>
+                    </li>
+                </ul>
+
+                <a href="#" class="button button--brand">Request Modification</a>
+                <a href="#" data-toggle="modal" data-target="#modalChangeUserPass" class="button button--brand-alt">Change
+                    Password</a>
+
+            </div>
+        </div>
+
+        <h4>Notifications</h4>
+
+        <div class="fake-container">
+
+            <div class="m-notifications">
+                <ul class="m-notifications__list">
+                    <li class="m-notifications__item">
+                        <label class="fa-checkbox-custom" for="all1">
+                            <input name="all1" type="checkbox" value="all1"
+                                   class="fa-checkbox-custom__input" id="all1">
+                            <i class="fa-checkbox-custom__icon-state"></i>
+                            <span class="fa-checkbox-custom__label"></span>
+                        </label>
+                    </li>
+                    <li class="m-notifications__item">
+                        <label class="fa-checkbox-custom" for="not1">
+                            <input name="bug" type="checkbox" value="not1"
+                                   class="fa-checkbox-custom__input" id="not1">
+                            <i class="fa-checkbox-custom__icon-state"></i>
+                            <span class="fa-checkbox-custom__label">
+                            <span class="fa-checkbox-custom__label__icon">
+                                <i class="icon-file"></i>
+                            </span>
+                            <span class="fa-checkbox-custom__label__text">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+                            </span>
+                            <span class="fa-checkbox-custom__label__subtext">vor 2 Stunden</span>
+                        </span>
+                        </label>
+                    </li>
+                    <li class="m-notifications__item">
+                        <label class="fa-checkbox-custom" for="not2">
+                            <input name="not2" type="checkbox" value="not2"
+                                   class="fa-checkbox-custom__input" id="not2">
+                            <i class="fa-checkbox-custom__icon-state"></i>
+                            <span class="fa-checkbox-custom__label">
+                            <span class="fa-checkbox-custom__label__icon">
+                                <i class="icon-file"></i>
+                            </span>
+                            <span class="fa-checkbox-custom__label__text">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+                            </span>
+                            <span class="fa-checkbox-custom__label__subtext">vor 2 Stunden</span>
+                        </span>
+                        </label>
+                    </li>
+                    <li class="m-notifications__item">
+                        <label class="fa-checkbox-custom" for="not3">
+                            <input name="not3" type="checkbox" value="not3"
+                                   class="fa-checkbox-custom__input" id="not3">
+                            <i class="fa-checkbox-custom__icon-state"></i>
+                            <span class="fa-checkbox-custom__label">
+                            <span class="fa-checkbox-custom__label__icon">
+                                <i class="icon-file"></i>
+                            </span>
+                            <span class="fa-checkbox-custom__label__text">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+                            </span>
+                            <span class="fa-checkbox-custom__label__subtext">vor 2 Stunden</span>
+                        </span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+
+            <h4>Note bar</h4>
+
+            <div class="m-note-bar m-note-bar--static">
+                <div class="m-note-bar__inner">
+                    <span class="m-note-bar__text">1 selected</span>
+                    <div class="m-note-bar__content">
+                        <a href="#" class="button button--border-alt">Mark as read</a>
+                        <a href="#" class="button button--border-alt">Mark all as read</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <h4>Notification search</h4>
+
+            <form action="#">
+                <div class="row">
+                    <div class="col-xs-12 col-md-7">
+                        <div class="m-form__group m-form__group--full m-form__group--margin">
+                            <div class="m-form__group__label-inline">
+                                Order Type
+                            </div>
+                            <div class="m-form__group__field-inline">
+                                <label class="fa-radio-icon-custom">
+                                    <input name="radio" type="radio" value="1"
+                                           class="fa-radio-icon-custom__input">
+                                    <i class="fa-radio-icon-custom__icon-state icon-cloud"></i>
+                                </label>
+
+                                <label class="fa-radio-icon-custom">
+                                    <input name="radio" type="radio" value="2"
+                                           class="fa-radio-icon-custom__input">
+                                    <i class="fa-radio-icon-custom__icon-state icon-file"></i>
+                                </label>
+
+                                <label class="fa-radio-icon-custom">
+                                    <input name="radio" type="radio" value="3"
+                                           class="fa-radio-icon-custom__input">
+                                    <i class="fa-radio-icon-custom__icon-state icon-file"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-7">
+                        <div class="m-form__group m-form__group--full m-form__group--margin">
+                            <div class="m-form__group__label-inline">
+                                Reference Number
+                            </div>
+                            <div class="m-form__group__field-inline">
+                                <input class="form-control" placeholder="Reference number">
+                            </div>
+                            <div class="m-form__group__popover">
+                                <button type="button" class="popover-button" data-toggle="popover" data-trigger="focus"
+                                        data-content="Lorem ipsum dolor sit amet">
+                                    <i class="icon-question"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row--low-zindex">
+                    <div class="col-xs-12 col-md-7">
+                        <div class="m-form__group m-form__group--full m-form__group--margin">
+                            <div class="m-form__group__label-inline">
+                                Adress
+                            </div>
+                            <div class="m-form__group__field-inline">
+                                <input class="form-control" placeholder="Adress">
+                            </div>
+                            <div class="m-form__group__popover">
+                                <button type="button" class="popover-button" data-toggle="popover" data-trigger="focus"
+                                        data-content="Lorem ipsum dolor sit amet">
+                                    <i class="icon-question"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-md-7">
+                        <div class="m-form__group m-form__group--full m-form__group--margin">
+                            <div class="m-form__group__label-inline">
+                                Date
+                            </div>
+                            <div class="m-form__group__field-inline">
+                                <div class="m-datepicker m-datepicker--alt">
+                                    <div class="input-daterange">
+                                        <div class="row row--reduce-gutter-mobile">
+                                            <div class="col-xxs-12 col-xs-6">
+                                                <div class="row">
+                                                    <div class="col-xxs-12 col-xs-3 col-sm-3">
+                                                        <div class="m-form__group__text-right">
+                                                            From
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxs-12 col-xs-9 col-sm-9">
+                                                        <div class="m-form__group__input-icon">
+                                                            <input type="text" class="form-control"
+                                                                   name="start-date" value=""
+                                                                   readonly="true">
+                                                            <span class="form-control__icon form-control__icon--right form-control__icon--grey">
+                                                                <i class="icon-calendar"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xxs-12 col-xs-6">
+                                                <div class="row">
+                                                    <div class="col-xxs-12 col-xs-3 col-sm-3">
+                                                        To
+                                                    </div>
+                                                    <div class="col-xxs-12 col-xs-9 col-sm-9">
+                                                        <div class="m-form__group__input-icon">
+                                                            <input type="text" class="form-control"
+                                                                   name="end-date"
+                                                                   value="" readonly="true">
+                                                            <span class="form-control__icon form-control__icon--right form-control__icon--grey">
+                                                                <i class="icon-calendar"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-md-7">
+                        <div class="m-form__group m-form__group--full m-form__group--margin-mid">
+                            <div class="m-form__group__label-inline">
+                                Status
+                            </div>
+                            <div class="m-form__group__field-inline">
+                                <select class="form-control form-control--show-title" title="Status"
+                                        data-width="100%">
+                                    <option value="">All</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-7">
+                        <div class="m-form__group__label-inline"></div>
+                        <div class="m-form__group__field-inline">
+                            <div class="m-form__group__text-right">
+                                <a href="#" class="button button--brand-alt">Cancel</a>
+                                <a href="#" class="button button--brand">Search</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Modal news 1-->
+        <div class="modal fade" id="modalNews1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-dialog--alt" role="document">
+                <div class="modal-content">
+                    <div class="modal-body modal-body--no-padding">
+                        <div class="m-news">
+                            <div class="m-news__icon m-news__icon--bg-secondary">
+                                <i class="fa fa-bug"></i>
+                            </div>
+                            <div class="m-news__content">
+                                <h2 class="m-news__title">Bug Fixing: Notification Bug fixed</h2>
+                                <div class="m-news__meta">
+                                    <span class="m-news__meta__item"><i
+                                            class="fa fa-calendar-o"></i>15. März 2018</span><span
+                                        class="m-news__meta__item"><i class="fa fa-globe"></i>Lauterach</span>
+                                </div>
+                                <p class="m-news__text">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                    tempor invidunt ut labore et dolore magna aliquyam era set ...
+                                </p>
+                            </div>
+                        </div>
+                        <button type="button" class="modal-close modal-close--right" data-dismiss="modal"
+                                aria-label="Close">
+                            <i class="fa fa-close"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for upload image -->
+        <div class="modal fade" id="modalUploadImage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-dialog--alt" role="document">
+                <div class="modal-content">
+                    <div class="m-upload">
+                        <form action="/file-upload" class="dropzone">
+                            <div class="dz-message">
+                                <div class="dz-message__icon"><i class="fa fa-file"></i></div>
+                                Drop files here<br><span class="dz-message__small">or</span>
+                                <br>
+                                <div class="dz-message__select">Select Files</div>
+                            </div>
+                            <div class="fallback">
+                                <input name="file" type="file" multiple/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for contact-->
+        <div class="modal fade" id="modalContact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-dialog--alt" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h2 class="modal-title">Add new contact</h2>
+                        <form class="m-form" action="">
+                            <div class="row row--reduce-gutter">
+                                <div class="col-md-6">
+                                    <div class="m-form__group m-form__group--margin m-form__group--full">
+                                        <input type="text" class="form-control" placeholder="Name *">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="m-form__group m-form__group--margin m-form__group--full">
+                                        <input type="text" class="form-control" placeholder="Surname *">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="m-form__group m-form__group--margin m-form__group--full">
+                                <select class="form-control form-control--show-title" title="Function"
+                                        data-width="100%">
+                                    <option value="">Function *</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                </select>
+                            </div>
+                            <div class="m-form__group m-form__group--margin m-form__group--full">
+                                <select class="form-control form-control--show-title" title="Location"
+                                        data-width="100%">
+                                    <option value="">Location *</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                </select>
+                            </div>
+
+                            <div class="row row--reduce-gutter">
+                                <div class="col-md-6">
+                                    <div class="m-form__group m-form__group--margin m-form__group--full">
+                                        <input type="text" class="form-control" placeholder="Phone *">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="m-form__group m-form__group--margin m-form__group--full">
+                                        <input type="text" class="form-control" placeholder="Mobile">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row row--reduce-gutter">
+                                <div class="col-md-8">
+                                    <div class="m-form__group m-form__group--margin m-form__group--full">
+                                        <input type="text" class="form-control" placeholder="E-mail adress *">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="m-form__group m-form__group--full m-form__group--text-va">
+                                        @gw-world.com
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="font-small">All fields marked with * are required</p>
+                            <div class="modal-buttons">
+                                <button type="submit" class="button button--brand button--xxs-margin">Add new contact</button>
+                                <button type="submit" class="button button--brand-alt">Cancel</button>
+                            </div>
+                        </form>
+                        <button type="button" class="modal-close modal-close--right" data-dismiss="modal"
+                                aria-label="Close">
+                            <i class="icon-remove"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>

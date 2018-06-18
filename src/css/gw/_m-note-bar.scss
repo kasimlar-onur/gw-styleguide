@@ -1,0 +1,56 @@
+.m-note-bar {
+  background-color: $color2;
+  @include position(fixed, null 0 15vh 0);
+  height: 100px;
+  line-height: 100px;
+  z-index: 6;
+  color: #ffffff;
+
+  &--static {
+    position: static;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    line-height: normal;
+    padding: 20px 0;
+    height: auto;
+  }
+
+  &__inner {
+    padding-left: 115px;
+    @include transition(.3s padding-left linear);
+
+    @media (max-width: $screen-xs-max) {
+      padding-left: 25px;
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    color: inherit;
+    padding-right: 25px;
+
+    @media (max-width: $screen-xs-max) {
+      display: block;
+      padding: 0 10px 10px 0;
+    }
+  }
+
+  &__content {
+    display: inline-block;
+
+    @media (max-width: $screen-xs-max) {
+      display: block;
+    }
+
+    .button {
+      &:last-child {
+        margin-left: 16px;
+
+        @media (max-width: $screen-xs-max) {
+          margin: 0 0 0 5px;
+        }
+      }
+    }
+  }
+}

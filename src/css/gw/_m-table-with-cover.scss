@@ -1,0 +1,126 @@
+.m-table-with-cover {
+  position: relative;
+  background-color: #ffffff;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #dddede;
+
+  &__cover {
+    font-size: rem(14);
+    font-weight: 800;
+    color: #ffffff;
+    padding: 25px 40px;
+    background-color: $color1;
+    height: 37vh;
+
+    @media (max-width: $screen-sm-max) {
+      height: 100px;
+      padding: 17px 40px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      padding: 15px;
+      height: auto;
+    }
+
+    &__image {
+
+    }
+  }
+
+  &__show-details {
+    display: none;
+
+    @media (max-width: $screen-xs-max) {
+      display: inline-block;
+    }
+  }
+
+  &__status-image {
+    padding-top: 10px;
+    display: none;
+
+    @media (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
+      display: block;
+    }
+
+    &__item {
+      display: inline-block;
+
+      .fa {
+        font-size: 30px;
+      }
+
+      &--small {
+
+      }
+
+      &--big {
+        width: calc(100% - 66px);
+        text-align: right;
+        padding-right: 35px;
+      }
+
+      &--border {
+        border-bottom: 1px solid #ffffff;
+      }
+    }
+  }
+
+  &__status-info {
+    display: none;
+
+    @media (max-width: $screen-xs-max) {
+      display: block;
+      padding-top: 20px;
+    }
+
+    &__list {
+      @extend .list-unstyled !optional;
+    }
+
+    &__item {
+      font-weight: $font-weight-base;
+      position: relative;
+      padding-bottom: 45px;
+
+      &:not(:first-child) {
+
+        &:after {
+          content: '';
+          @include position(absolute, -46px null null 8px);
+          height: 47px;
+          border-left: 1px dashed #ffffff;
+        }
+      }
+
+      &__icon {
+        font-size: 21px;
+        display: inline-block;
+        margin-right: 5px;
+        line-height: 1;
+        vertical-align: bottom;
+
+        &:before {
+          font-family: 'fontawesome';
+          content: '\f1db';
+        }
+      }
+
+      &.completed {
+
+        &::after {
+          border-left: 1px solid #ffffff;
+
+        }
+        .m-table-with-cover__status-info__item__icon::before {
+          font-family: 'fontawesome';
+          content: '\f058';
+        }
+      }
+    }
+
+    &__show-details {
+
+    }
+  }
+}

@@ -3,7 +3,21 @@
   display: none;
   width: 360px;
 
+  @media (max-width: $screen-xs-max) {
+    position: relative;
+    top: -7px;
+    right: 0;
+    left: auto;
+    width: 60vw;
+  }
+
   &.is-opened {
     display: block;
+  }
+
+  &.is-focused {
+    @media (max-width: $screen-xs-max) {
+      display: block;
+    }
   }
 }

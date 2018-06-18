@@ -1,0 +1,9 @@
+.m-footer {
+  padding: 45px 0 0;
+  background-color: $color2;
+  clear: both;
+
+  &__row {
+    @extend .row !optional;
+  }
+}
