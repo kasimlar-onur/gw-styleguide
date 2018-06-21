@@ -289,7 +289,6 @@
     top: 0 !important;
     border: 1px solid #e0e0e0;
     border-top: none;
-    width: 367px !important;
     padding-top: 10px;
     padding-bottom: 10px;
 
@@ -319,6 +318,7 @@
       border-radius: 50%;
       background-color: #ffffff;
       border: 2px solid $border-color-2;
+      line-height: 9px;
     }
 
     &[aria-selected=true] {
@@ -360,11 +360,29 @@
 .select2-container.top-fixed {
   .select2-dropdown {
     top: -1px !important;
-    width: 600px !important;
     border-top: 1px solid $color1 !important;
     border-radius: 0;
     &:before {
 
+    }
+
+    &.full-width {
+      @media (max-width: $screen-xs-max) {
+        width: auto;
+      }
+    }
+  }
+}
+
+.select2-container.mobile-fixed-width {
+  .select2-dropdown {
+
+    @media (max-width: $screen-xs-max) {
+      width: 320px !important;
+    }
+
+    @media (max-width: $screen-xs - 1) {
+      width: 280px !important;
     }
   }
 }

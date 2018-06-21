@@ -136,15 +136,27 @@
         };
 
         $(this).select2(select2Options).on('select2:open', function() {
+          var $formGroup = $(this).parents('form').find('.m-form__group');
+
           $('body').append('<div class="overlay"></div>');
           $('.overlay').addClass('is-visible');
+
+          $.each($formGroup, function () {
+            $(this).css('z-index', '1');
+          });
+
         }).on('select2:close', function() {
+          var $formGroup = $(this).parents('form').find('.m-form__group'),
+              $selectFocused = $(this).
+            parent().
+            find('.select2-container--focus');
+
           $('.overlay').removeClass('is-visible');
           $('.overlay').remove();
 
-          var $selectFocused = $(this).
-            parent().
-            find('.select2-container--focus');
+          $.each($formGroup, function () {
+            $(this).removeAttr('style');
+          });
 
           $selectFocused.removeClass('select2-container--focus');
 
@@ -189,6 +201,7 @@
         }
       });
       $select.on('select2:open', function() {
+
         if ($(this).hasClass('form-control--white--alt')) {
           $('span.select2-container').addClass('color-alt');
         }
@@ -662,13 +675,6 @@
         changePosition();
       });
     },
-    initBootstrapPopover: function () {
-      var placement = (window.matchMedia('(max-width:767px)').matches ? 'left' : 'right');
-
-      $('[data-toggle=popover]').popover({
-        placement: placement
-      });
-    }
   };
 
   $(document).ready(function() {
@@ -689,7 +695,6 @@
     app.initPortalFilters();
     app.initNotificationsDropdown();
     app.initNoteBar();
-    app.initBootstrapPopover();
   });
 
   $(window).on('resize', function () {
