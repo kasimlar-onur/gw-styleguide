@@ -1,0 +1,53 @@
+// from font-awesome to compile the @extend
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-circle:before {
+  content: "\f111";
+}
+
+.fa-circle-thin:before {
+  content: "\f1db";
+}
+
+.fa-check-circle:before {
+  content: "\f058";
+}
+
+// style the SES status id
+.sesstatus {
+  @extend .fa;
+  @extend .fa-circle;
+
+  &.sesicon {
+    @extend .icon-status;
+  }
+
+  &.sesstatus1 {
+    color: $colorSuccess;
+    @extend .fa-circle-thin;
+  }
+
+  &.sesstatus2 {
+    color: $colorSuccess;
+  }
+
+  &.sesstatus3 {
+    color: $colorWarningLight;
+  }
+
+  &.sesstatus4 {
+    color: $colorDanger100;
+  }
+
+  &.sesstatus5 {
+    color: $colorSuccess;
+    @extend .fa-check-circle;
+  }
+}

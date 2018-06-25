@@ -448,7 +448,7 @@ input.toggle-switch:focus ~ .toggle-switch-bar::before {
 /* inscript buttons begin */
 
 .button {
-  //@extend .btn;
+  @extend .btn;
   @include button-variant-alt(#fff, $color1, #F16000);
   @include button-size(12px, 22px, 14px, $line-height-base, $btn-border-radius-base);
   @include font-smoothing();
@@ -538,7 +538,7 @@ input.toggle-switch:focus ~ .toggle-switch-bar::before {
   }
 
   &--block {
-    //@extend .btn-block;
+    @extend .btn-block;
   }
 
   &--wide {

@@ -1,0 +1,46 @@
+// this style is not clearly defined in lexicon
+// --> the problem .fad.in has the same priority, so it is ambiguous which one would be taken
+.modal-backdrop.in {
+  opacity: 0.15 !important;
+}
+
+.modal-footer, .modal-body {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.modal-footer {
+  box-shadow: none;
+  padding-bottom: 40px;
+}
+
+.modal-header {
+  padding-right: 20px !important;
+
+  .close {
+    color: $color3 !important;
+
+    &:hover {
+      color: $colorError !important;
+    }
+  }
+}
+
+.modal-body {
+  background-color: inherit;
+}
+
+.modal-content {
+  border-radius: 0;
+}
+
+@media (min-width: 768px) {
+  h2.modal-title {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .modal-dialog {
+    width: 450px;
+  }
+}

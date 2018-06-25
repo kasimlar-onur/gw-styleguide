@@ -33,6 +33,7 @@
 @import "gw/lists";
 @import "gw/tooltip";
 @import "gw/m-nav-tabs";
+@import "gw/modals";
 
 @import "gw/portlets/userPortlet";
 @import "gw/portlets/contactPortlet";
@@ -41,6 +42,7 @@
 @import "gw/portlets/filterTable";
 @import "gw/portlets/rssPortlet";
 @import "gw/portlets/statisticsPortlet";
+@import "gw/search-container";
 
 /* Decoator */
 @import "gw/gw_decorator";
@@ -58,7 +60,7 @@
 @import "gw/base/overrides";
 @import "gw/base/grid";
 
-//@import "gw/vendor/bootstrap";
+@import "gw/vendor/bootstrap";
 
 // filter navigation inscript
 @import "gw/m-filters";
@@ -161,16 +163,22 @@
 
 /* Tooltipster */
 @import "tooltipster/tooltipster.bundle.css";
-@import "tooltipster/tooltipster-sideTip-light.min.css";
+@import "tooltipster/tooltipster-sideTip-borderless.min.css";
 
 @import "gw/vendor/select2";
 
 // select inscript
 @import "gw/m-select";
 
+// ses status styling circles
+@import "gw/sesstatus";
+
+// import order status icons
+@import "gw/ordertype";
+
 body,html{
-    font-family: Arial, Helvetica, sans-serif;
-    /*position: relative;*/
+  font-family: $font-family-sans-serif !important;
+  /*position: relative;*/
     
     .flipped{
         position: relative;
@@ -179,6 +187,7 @@ body,html{
 
 body{
     overflow-x: hidden;
+
 }
 
 .dialog-iframe-root-node, .dialog-iframe-root-node .portal-popup, .dialog-iframe-root-node .portal-popup .flipped{
@@ -254,6 +263,14 @@ fieldset {
   border: 0;
   margin: 0 1px;
   padding: 0;
+}
+
+.error{
+  color:$colorError !important;
+  &.form-control.trigger{
+    color:$colorError !important;
+  }
+
 }
 
 /* To be enabled when finally defined */

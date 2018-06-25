@@ -70,7 +70,7 @@
     background: #ffffff;
     color: $f-light-bg-disabled;
 
-   // @include placeholder($f-light-bg-disabled);
+    @include placeholder($f-light-bg-disabled);
   }
 
   &--padding {
@@ -686,10 +686,6 @@ label {
   &__item {
     padding: 10px 0 10px 15px;
 
-    &:active, &:hover, &:focus {
-      cursor: url(../images/icon-arrows.png), move;
-    }
-
     &__name {
       vertical-align: middle;
     }
@@ -756,6 +752,6 @@ label {
   }
 }
 
-.sortable-chosen {
+.sortable-chosen, .sortable {
   cursor: url(../images/icon-arrows.png), move !important;
 }

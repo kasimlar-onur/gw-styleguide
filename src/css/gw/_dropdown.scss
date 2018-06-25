@@ -47,7 +47,7 @@
    border: none;
    border-radius: 0px;
    box-shadow: none;
-   font-size: 16px !important;
+   font-size: 14px !important;
    padding: 0;
 }
 
@@ -57,7 +57,7 @@
 
 .dropdown-menu > li > a, .dropdown-menu .inline-scroller > li > a, .dropdown-menu > li > .checkbox label{
    color: $colorTertiary60 !important;
-   font-size: 16px !important;
+   font-size: 14px !important;
    font-weight: normal;
 }
 
@@ -84,7 +84,7 @@
 
 .dropdown-menu > li > .checkbox:hover label{
    color: $colorPrimary100 !important;
-   font-size: 16px !important;
+   font-size: 14px !important;
 }
 
 .dropdown-menu > li > .checkbox input[type="checkbox"]{
@@ -141,7 +141,7 @@
        border: none;
        border-radius: 0px;
        box-shadow: none;
-       font-size: 16px !important;
+       font-size: 14px !important;
    }
 
    .gw-dropdown-toggle, .gw-dropdown-toggle:focus, .gw-dropdown-toggle:active, .gw-dropdown-menu{
@@ -150,7 +150,7 @@
 
    .dropdown-menu > li > a, .dropdown-menu .inline-scroller > li > a, .dropdown-menu > li > .checkbox label{
        color: $colorForeground70 !important;
-       font-size: 16px !important;
+       font-size: 14px !important;
        font-weight: normal;
    }
 

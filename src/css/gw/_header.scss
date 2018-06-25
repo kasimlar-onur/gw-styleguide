@@ -31,10 +31,6 @@ body.open .flipped #wrapper:nth-child(3){
     padding-left: 0px;
 }
 
-body.signed-out #banner{
-    overflow: visible;
-}
-
 #banner{
     width: 100% !important;
     max-width: 100% !important;
@@ -43,6 +39,11 @@ body.signed-out #banner{
     height: 64px;
     background-color: $color1;
     position: relative;
+
+    .gwkp-notifications-info-portlet .notifications-icon {
+        height: 40px;
+        margin: 0px;
+    }
 
     .search-input {
         height: 40px;
@@ -180,7 +181,7 @@ body.signed-out #banner{
 	
 	.portlet-boundary{
 		float: right;
-        margin-right: 6px;
+        //margin-right: 6px;
 	}
     
 	.portlet-topper{
@@ -240,13 +241,34 @@ body.signed-out #banner{
             top: -17px;
         }
     }
+
+    .header-icon {
+        height: 40px;
+        margin-right: 25px;
+        padding: 8px 0 8px 0;
+        display: inline-block;
+        float: right;
+        line-height: 40px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .header-search-icon {
+        margin-right: 15px;
+    }
+
+    .header-icon.notifications-icon {
+        padding-top: 5px;
+    }
+
+    .header-icon.header-user-menu {
+        margin-right: 35px;
+    }
 	
 	.right-icon{
 		color: $colorForeground100;
-        float: right;
-        cursor: pointer;
-        margin: 16px 16px 0;
-        text-align: center;
+        //float: right;
+        //margin: 16px 16px 0;
         
         span{
             color: $colorForeground100 !important;
@@ -258,8 +280,8 @@ body.signed-out #banner{
         }
         
         i{
-            font-size: 36px;
-            line-height: 50px;
+            font-size: 24px;
+            line-height: 40px;
         }
         
         .dropdown-menu{
@@ -279,10 +301,10 @@ body.signed-out #banner{
         }
         
         .thumbnail-image{
-            width: 36px;
-            height: 36px;
+            width: 24px;
+            height: 24px;
             border-radius: 18px;
-            margin-top: 3px;
+            margin-top: 16px;
         }
 
         .lang-chooser {
@@ -310,9 +332,12 @@ body.signed-out #banner{
         }
 	}
 
-    .notifications-icon {
-        margin-top: 1px;
-    }
+    //.notifications-icon {
+        //margin-top: 8px;
+        //margin-right: 0px;
+        //margin-left: 0px;
+        //float: right;
+    //}
     
     /* login/profile popover - joint css attributes */
     
@@ -437,68 +462,70 @@ body.signed-out #banner{
     }
     
     .fieldset{
-        margin-top: 22px;
-        margin-bottom: 12px;
+        margin-top: 8px;
+        margin-bottom: 8px;
         background-color: transparent;
         
         /* non-active non-hover text color */
         input[type="text"]{
             border-bottom: none !important;
-            color: $colorTextBlack !important;
-            width: 540px;
+            color: $color1 !important;
+            width: 360px;
+            height: 40px;
         }
         
         /* non-hover non-active placeholder  */
         input[type="text"]::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-            color: $colorPrimary100 !important;
+            color: $color1 !important;
         }
         
         input[type="text"]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-            color: $colorPrimary100 !important;
+            color: $color1 !important;
         }
         
         input[type="text"]::-moz-placeholder { /* Mozilla Firefox 19+ */
-            color: $colorPrimary100 !important;
+            color: $color1 !important;
         }
         
         input[type="text"]:-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: $colorPrimary100 !important;
+            color: $color1 !important;
         }
     
         /* on hover text color */
         input[type="text"]:hover{
             border-bottom: none !important;
-            color: $colorTextBlack !important;
+            color: $color1 !important;
         }
     }
     
-    .fieldset:hover{
-        background-color: $colorForeground20;
+    .fieldset:hover input{
+        background-color: $colorForeground100;
+        color: $colorTextBlack !important;
     }
     
     .fieldset:hover input[type="text"]{
         color: $colorTextBlack !important;
     }
     
-    .fieldset:hover input[type="text"]:focus{
+    .fieldset input[type="text"]:focus{
         background-color: $colorForeground100;
         color: $colorTextBlack !important;
     }
     
     .fieldset:hover input[type="text"]::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-        color: $colorForeground100 !important;
+        color: $colorTextBlack !important;
     }
 
     .fieldset:hover input[type="text"]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-        color: $colorForeground100 !important;
+        color: $colorTextBlack !important;
     }
 
     .fieldset:hover input[type="text"]::-moz-placeholder { /* Mozilla Firefox 19+ */
-        color: $colorForeground100 !important;
+        color: $colorTextBlack !important;
     }
 
     .fieldset:hover input[type="text"]:-ms-input-placeholder { /* Internet Explorer 10-11 */
-        color: $colorForeground100 !important;
+        color: $colorTextBlack !important;
     }
     
     .form-group{
@@ -600,8 +627,8 @@ body.signed-out #banner{
     /* language selector for guests */
     
     .gwkp_language_head {
-        font-size: 22px;
-        line-height: 50px;
+        font-size: 24px;
+        line-height: 40px;
         
         .dropdown-menu{
             overflow: visible;
@@ -898,9 +925,41 @@ body.signed-out #banner{
     }
 }
 
+body.signed-out #banner{
+    overflow: visible;
+
+    #header-user-menu,
+    .gwkp_language_head{
+        margin-top: 8px;
+    }
+}
+
 @media(max-width: 1140px){
     #banner .fieldset input[type="text"]{
         width: 360px;
         height: 40px;
     }
+}
+
+@media only screen and (max-width: 1494px) and (min-width: 990px) {
+    #banner .portlet,
+    #banner .portlet-content{
+        width: auto !important;
+    }
+}
+
+/* ActAs header info styling */
+.gw-impersonate-active {
+    display: inline-block;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 15px;
+}
+
+.gw-impersonate-active a {
+    color: white !important;
+    font-size: 20px;
+    font-weight: bold;
 }
