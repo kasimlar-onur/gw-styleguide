@@ -411,4 +411,20 @@
 	.gwkp_contact_logged_out .gwkp_contact p {
 		color: $colorForeground100;
 	}
+
+	.gw-node-information-trigger {
+		width: 10px;
+		height: 10px;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		display: block;
+		z-index: 5000;
+	}
+
+	.gw-node-information-display {
+		padding: 10px;
+		font-size: 20px;
+		font-weight: bold;
+	}
 }

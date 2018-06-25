@@ -55,7 +55,7 @@
   }
 
   &__back-link {
-    @include position(absolute, 30px 40px null null);
+    padding-top: 6px;
 
     .fa {
       font-size: rem(22);

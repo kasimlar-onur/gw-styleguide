@@ -1,0 +1,38 @@
+/* order-type will be used for JavaScript */
+.order-type {
+  @extend [class^="gwicon-"];
+}
+
+.ordertype-land {
+  @extend .gwicon-transport-land;
+}
+
+.ordertype-air {
+  @extend .gwicon-transport-air;
+}
+
+.ordertype-sea {
+  @extend .gwicon-transport-sea;
+}
+
+.ordertype-road {
+  @extend .gwicon-transport-land;
+}
+
+.ordertype-inbound {
+  @extend .gwicon-inbound;
+}
+
+.ordertype-outbound {
+  @extend .gwicon-outbound;
+}
+
+.ordertype-land-premium {
+  @extend .gwicon-transport-land-premium;
+}
+
+.ordertype-road-premium {
+  @extend .gwicon-transport-land-premium;
+}
+
+
