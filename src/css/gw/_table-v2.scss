@@ -11,6 +11,7 @@
 
   @media (max-width: $screen-sm-max) {
     max-width: none;
+    width: 100%;
   }
 
   @media (max-width: $screen-xs-max) {
@@ -30,7 +31,7 @@
       background-color: #ffffff !important;
     }
 
-    &:not(:first-child):nth-child(odd) {
+    &:not(:first-child):nth-child(even) {
       background-color: #f6f6f6;
     }
 
