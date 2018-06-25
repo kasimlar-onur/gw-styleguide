@@ -3,9 +3,9 @@
 @font-face {
   font-family: 'gwicon';
   src:
-    url('#{$icomoon-font-path}/gwicon.ttf?2rlnia') format('truetype'),
-    url('#{$icomoon-font-path}/gwicon.woff?2rlnia') format('woff'),
-    url('#{$icomoon-font-path}/gwicon.svg?2rlnia#gwicon') format('svg');
+    url('#{$icomoon-font-path}/gwicon.ttf?nivnp4') format('truetype'),
+    url('#{$icomoon-font-path}/gwicon.woff?nivnp4') format('woff'),
+    url('#{$icomoon-font-path}/gwicon.svg?nivnp4#gwicon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,44 +26,58 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@function unicode($str) {
+  @return unquote("\"") + $str + unquote("\"");
+}
+
 .gwicon-warehouse-blank {
   &:before {
-    content: $gwicon-warehouse-blank;
+    content: unicode($gwicon-warehouse-blank); 
   }
 }
 .gwicon-checkbox-checked {
   &:before {
-    content: $gwicon-checkbox-checked;
+    content: unicode($gwicon-checkbox-checked); 
   }
 }
 .gwicon-checkbox-unchecked {
   &:before {
-    content: $gwicon-checkbox-unchecked;
+    content: unicode($gwicon-checkbox-unchecked); 
   }
 }
-.gwicon-transport-air {
+.gwicon-transport-land-premium {
   &:before {
-    content: $gwicon-transport-air;
+    content: unicode($gwicon-transport-land-premium); 
   }
 }
-.gwicon-inbound {
+.gwicon-dashboard {
   &:before {
-    content: $gwicon-inbound;
+    content: unicode($gwicon-dashboard); 
   }
 }
 .gwicon-outbound {
   &:before {
-    content: $gwicon-outbound;
+    content: unicode($gwicon-outbound); 
+  }
+}
+.gwicon-inbound {
+  &:before {
+    content: unicode($gwicon-inbound); 
+  }
+}
+.gwicon-transport-air {
+  &:before {
+    content: unicode($gwicon-transport-air); 
   }
 }
 .gwicon-transport-land {
   &:before {
-    content: $gwicon-transport-land;
+    content: unicode($gwicon-transport-land); 
   }
 }
 .gwicon-transport-sea {
   &:before {
-    content: $gwicon-transport-sea;
+    content: unicode($gwicon-transport-sea); 
   }
 }
 
