@@ -4,6 +4,10 @@ a, a:hover, a:focus {
 	color: $colorPrimary100;
 //font-weight: normal;
 }
+th span a:focus{
+    color: $grey-1;
+}
+.toggle-arrow-color{color:$colorPrimary100!important;};
 
 .link-with-icon{
     font-size: 14px !important;

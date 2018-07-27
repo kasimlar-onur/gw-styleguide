@@ -1,6 +1,7 @@
 /* GWKP-12 Layout styling [arodriguez] */
 
 #maincontent{
+    //width: 79%;
     .portlet-column {
         padding-right: 16px;
         padding-left: 16px;
@@ -15,11 +16,11 @@
 /* borders for content */
 
 #content{
-    margin-left: 32px;
-    margin-right: 32px;
+    margin-left: 0px;
+    margin-right: 0px;
     margin-bottom: 10px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 32px;
+    padding-right: 32px;
 }
 
 @media(max-width: 576px){

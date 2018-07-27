@@ -1,6 +1,8 @@
 .m-chat {
   background-color: #ffffff;
   margin-bottom: $margin-default;
+  overflow: scroll;
+  max-height: 600px;
 
   &__content {
     padding: 0 40px 20px;
@@ -42,6 +44,7 @@
     position: relative;
     @include clearfix();
     margin-bottom: 30px;
+    padding-bottom: 30px;
     border-bottom: 1px solid #e0e0e0;
 
     @media (max-width: $screen-xs-max) {
@@ -59,7 +62,7 @@
 
     &__body {
       padding: 0 0 30px 40px;
-      max-width: calc(100% - 80px);
+      max-width: calc(100% - 100px);
 
       @media (max-width: $screen-xs-max) {
         padding: 15px 15px 15px 0;
@@ -100,20 +103,21 @@
       }
     }
   }
+}
 
-  &__form {
-    &__textarea {
-      height: 200px !important;
-      margin-bottom: 20px !important;
-    }
+.m-chat__form {
+  &__textarea {
+    height: 200px !important;
+    margin-bottom: 20px !important;
+    resize: none;
+  }
 
-    &__button-container {
-      text-align: right;
+  &__button-container {
+    text-align: right;
 
-      @media (max-width: $screen-xs-max) {
-        text-align: left;
-        margin-bottom: 15px;
-      }
+    @media (max-width: $screen-xs-max) {
+      text-align: left;
+      margin-bottom: 15px;
     }
   }
 }

@@ -1,9 +1,9 @@
-.gw-portlet-decorate .portlet-content {
+.gw-portlet-decorate .portlet-content, .gw-filter-table-decorate .portlet-content {
   background: #FFF;
   border: none;
   padding: 0;
 
-  .gw-portlet-header, .gw-portlet-body {
+  .gw-portlet-header {
     border: none;
     word-wrap: break-word;
   }
@@ -45,6 +45,24 @@
   .separator-20 {
     height: 20px;
     background-color: $navigationMenuBackground;
+  }
+}
+
+.gw-portlet-decorate .portlet-content {
+
+  .gw-portlet-body {
+    border: none;
+    word-wrap: break-word;
+    padding: 18px 40px 1px;
+  }
+
+}
+
+.gw-filter-table-decorate .portlet-content {
+
+  .gw-portlet-body {
+    border: none;
+    word-wrap: break-word;
   }
 
 }

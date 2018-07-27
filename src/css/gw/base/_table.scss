@@ -30,8 +30,11 @@
   }
 
   &__interaction-link {
-    font-size: rem(22);
     color: #b0b0b0;
+
+    .bt-content {
+      font-size: rem(22);
+    }
 
     .fa {
       margin-right: 5px;
@@ -53,6 +56,7 @@
   &__field-name, &__icon  {
     display: inline-block;
     position: relative;
+    vertical-align: top;
   }
 
   &__icon {
@@ -84,7 +88,7 @@
 
       > th,
       > td {
-        padding: 20px;
+        padding: 15px;
         max-height: 70px;
         vertical-align: middle;
         border-top: none;

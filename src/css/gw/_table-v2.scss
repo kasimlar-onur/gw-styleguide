@@ -20,6 +20,9 @@
   }
 
   &__row {
+
+    background-color: #ffffff;
+
     @media (max-width: $screen-xs-max) {
       display: table-row !important;
     }

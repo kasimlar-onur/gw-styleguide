@@ -118,7 +118,7 @@
 
 .btn-primary,
 .dark-background .btn-primary {
-  background-color: $colorPrimary100;
+  background-color: $colorPrimary100 !important;
   border: none;
   border-radius: 0px;
   font-weight: bold;
@@ -129,7 +129,7 @@
 .btn-primary.active, .btn-primary.active:active, .btn-primary.active:hover, .btn-primary.active:hover:active,
 .btn-primary.active:focus,
 .btn-primary:active, .btn-primary:hover, .btn-primary:hover:active, .btn-primary:active:focus, .btn-primary:focus{
-  background-color: $colorPrimary80;
+  background-color: $colorPrimary80 !important;
   color: $colorForeground100;
   border: none;
 }

@@ -53,7 +53,7 @@
   }
 
   &__picture {
-    @include position(absolute, 80px 140px null null);
+    @include position(absolute, 100px 100px null null);
     display: inline-block;
     text-align: center;
 

@@ -50,6 +50,10 @@ body.open .flipped #wrapper:nth-child(3){
         border: none;
     }
 
+    .form-group input {
+        border: none !important;
+    }
+
     /** start inscript **/
     &__container {
         //@extend .container-fluid;
@@ -949,13 +953,15 @@ body.signed-out #banner{
 }
 
 /* ActAs header info styling */
+
 .gw-impersonate-active {
     display: inline-block;
-    margin: auto;
-    width: 100%;
+    margin: 0 0 0 25%;
+    width: auto;
     text-align: center;
     position: absolute;
     top: 15px;
+    z-index: 0;
 }
 
 .gw-impersonate-active a {

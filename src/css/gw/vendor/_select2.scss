@@ -502,7 +502,15 @@
     }
   }
 
-  @media (min-width: $screen-sm-min) {
+  @media (min-width: $screen-md-min) {
+    &:not(.top-fixed) {
+      .select2-dropdown {
+        width: 385px !important;
+      }
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
     &:not(.top-fixed) {
       .select2-dropdown {
         width: 367px !important;

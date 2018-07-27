@@ -293,7 +293,7 @@ a[href^=mailto] {
       @include position(absolute, 0 null 0 0);
       content: '';
       display: block;
-      width: 70px;
+      width: $nav-menu_width;
       background-color: $nav-menu_bg;
       @include transition(.3s width linear);
     }

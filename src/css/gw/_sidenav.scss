@@ -26,12 +26,18 @@
     font-size: rem(16);
     background-color: $nav-menu_bg;
     width: $nav-menu_width;
+
     //position: relative;
     float: left;
     margin-right: 20px;
     min-height: 750px;
     @include transition(.3s width linear, .3s min-height linear);
     z-index: 1;
+
+    @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        position: absolute;
+    }
+
 
     @media (max-width: $screen-sm-max) {
         @include position(absolute, 0 0 null null);
@@ -109,7 +115,9 @@
     }
 
     &.is-opened {
-        width: 235px !important;
+        @media (min-width: $screen-sm-max) {
+            width: 235px !important;
+        }
 
         @media (max-width: $screen-md-max) {
             width: 215px !important;
@@ -117,7 +125,7 @@
 
         @media (max-width: $screen-sm-max) {
             padding-top: 20px;
-            width: 225px !important;
+            width: 0px !important;
             height: auto;
             max-height: 100%;
             bottom: 0;
@@ -156,6 +164,7 @@
                 display: none;
             }
         }
+
     }
 
     // Submenu
@@ -300,13 +309,15 @@
 }
 
 .m-nav {
-
-    + .l-main {
-        max-width: calc(100% - 95px);
+    @media(min-width: $screen-md-min) {
+        + .l-main {
+            max-width: calc(100% - 95px);
+        }
     }
 
     &.is-opened + .l-main {
-        max-width: calc(100% - 240px);
+        // fixme -- only allow for full-view
+        //max-width: calc(100% - 240px);
     }
 }
 
