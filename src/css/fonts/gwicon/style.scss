@@ -3,9 +3,10 @@
 @font-face {
   font-family: 'gwicon';
   src:
-    url('#{$icomoon-font-path}/gwicon.ttf?nivnp4') format('truetype'),
-    url('#{$icomoon-font-path}/gwicon.woff?nivnp4') format('woff'),
-    url('#{$icomoon-font-path}/gwicon.svg?nivnp4#gwicon') format('svg');
+          url('#{$icomoon-font-path}/gwicon.eot?2epqdv') format('eot'),
+    url('#{$icomoon-font-path}/gwicon.woff?2epqdv') format('woff'),
+    url('#{$icomoon-font-path}/gwicon.ttf?2epqdv') format('truetype'),
+    url('#{$icomoon-font-path}/gwicon.svg?2epqdv#gwicon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -29,55 +30,74 @@
 @function unicode($str) {
   @return unquote("\"") + $str + unquote("\"");
 }
-
-.gwicon-warehouse-blank {
-  &:before {
-    content: unicode($gwicon-warehouse-blank); 
-  }
-}
 .gwicon-checkbox-checked {
   &:before {
-    content: unicode($gwicon-checkbox-checked); 
+    content: unicode($gwicon-checkbox-checked);
   }
 }
 .gwicon-checkbox-unchecked {
   &:before {
-    content: unicode($gwicon-checkbox-unchecked); 
+    content: unicode($gwicon-checkbox-unchecked);
   }
 }
 .gwicon-transport-land-premium {
   &:before {
-    content: unicode($gwicon-transport-land-premium); 
+    content: unicode($gwicon-transport-land-premium);
   }
 }
 .gwicon-dashboard {
   &:before {
-    content: unicode($gwicon-dashboard); 
+    content: unicode($gwicon-dashboard);
   }
 }
 .gwicon-outbound {
   &:before {
-    content: unicode($gwicon-outbound); 
+    content: unicode($gwicon-outbound);
   }
 }
 .gwicon-inbound {
   &:before {
-    content: unicode($gwicon-inbound); 
+    content: unicode($gwicon-inbound);
   }
 }
 .gwicon-transport-air {
   &:before {
-    content: unicode($gwicon-transport-air); 
+    content: unicode($gwicon-transport-air);
   }
 }
 .gwicon-transport-land {
   &:before {
-    content: unicode($gwicon-transport-land); 
+    content: unicode($gwicon-transport-land);
   }
 }
 .gwicon-transport-sea {
   &:before {
-    content: unicode($gwicon-transport-sea); 
+    content: unicode($gwicon-transport-sea);
   }
 }
-
+// new icons
+.gwicon-air {
+  &:before {
+    content: unicode($gwicon-air);
+  }
+}
+.gwicon-airport {
+  &:before {
+    content: unicode($gwicon-airport);
+  }
+}
+.gwicon-port {
+  &:before {
+    content: unicode($gwicon-port);
+  }
+}
+.gwicon-stapler{
+  &:before {
+    content: unicode($gwicon-stapler);
+  }
+}
+.gwicon-warehouse {
+  &:before {
+    content: unicode($gwicon-warehouse);
+  }
+}

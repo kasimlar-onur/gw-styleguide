@@ -381,3 +381,8 @@ span[class^=icon-] {
     width: 100%;
   }
 }
+
+.portal-popup .columns-max > .portlet-layout.row > .portlet-column .portlet-boundary {
+  padding-left: 25px;
+  padding-right: 25px;
+}

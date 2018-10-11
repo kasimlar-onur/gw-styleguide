@@ -404,15 +404,9 @@
 
   display: inline-block;
 
-  /*
-  .border-left {
-    border-left: 1px solid $overviewTableBorderColor;
+  .select-custom__item:before {
+    display: none;
   }
-
-  .border-right {
-    border-left: 1px solid $overviewTableBorderColor;
-  }
-*/
 
   .search-input-text {
     width: 300px;

@@ -8,9 +8,8 @@
 }
 
 .ordertype-air {
-  @extend .gwicon-transport-air;
+  @extend .gwicon-air;
 }
-
 .ordertype-sea {
   @extend .gwicon-transport-sea;
 }

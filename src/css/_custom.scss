@@ -43,6 +43,8 @@
 @import "gw/portlets/filterTable";
 @import "gw/portlets/rssPortlet";
 @import "gw/portlets/statisticsPortlet";
+@import "gw/portlets/feedbackPortlet";
+@import "gw/portlets/journalPortlet";
 @import "gw/search-container";
 
 /* Decoator */
@@ -162,7 +164,8 @@
 
 /* Tooltipster */
 @import "tooltipster/tooltipster.bundle.css";
-@import "tooltipster/tooltipster-sideTip-borderless.min.css";
+
+@import "tooltipster/tooltipster-sideTip-gw.scss";
 
 @import "gw/vendor/select2";
 
@@ -174,6 +177,9 @@
 
 // import order status icons
 @import "gw/ordertype";
+
+// popover inscript
+@import "gw/m-popover.scss";
 
 @import "gw/vendor/jquery.floatingscroll";
 
@@ -214,7 +220,7 @@ body{
     box-shadow: inset 0px 5px 4px -4px rgba(0, 0, 0, 0.35);
   */
 
-  @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  @media only screen and (min-width: $screen-md-min) and (max-width: $screen-nav-abs-min) {
     padding-left: 100px;
   }
 }
@@ -223,7 +229,7 @@ body{
   background-color: $colorSecondary100;
   color: $colorForeground100;
 }
-  
+
 .portlet:hover > .portlet-content-editable { border-color: transparent; }
 
 .sticker-default {
@@ -277,6 +283,21 @@ fieldset {
   }
 
 }
+.language-selector:hover{
+  cursor: pointer;
+}
+
+.form-control:focus {
+  color: #29353D !important;
+}
+
+//no hovereffect in ie
+/*@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  tbody>tr{
+    pointer-events: none;
+  }
+}
+*/
 
 /* To be enabled when finally defined */
 /*

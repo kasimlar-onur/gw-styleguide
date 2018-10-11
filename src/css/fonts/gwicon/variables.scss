@@ -1,12 +1,18 @@
 $icomoon-font-path: "fonts/gwicon/fonts" !default;
 
-$gwicon-warehouse-blank: \e903;
-$gwicon-checkbox-checked: \e901;
-$gwicon-checkbox-unchecked: \e902;
-$gwicon-transport-land-premium: \e907;
-$gwicon-dashboard: \e904;
-$gwicon-outbound: \e905;
-$gwicon-inbound: \e906;
-$gwicon-transport-air: \e90a;
-$gwicon-transport-land: \e900;
-$gwicon-transport-sea: \e909;
+$gwicon-checkbox-checked: "\e901";
+$gwicon-checkbox-unchecked: "\e902";
+$gwicon-transport-land-premium: "\e907";
+$gwicon-dashboard: "\e904";
+$gwicon-outbound: "\e905";
+$gwicon-inbound: "\e906";
+$gwicon-transport-air: "\e90a";
+$gwicon-transport-land: "\e900";
+$gwicon-transport-sea: "\e909";
+
+// new icons
+$gwicon-air: "\e90d";
+$gwicon-airport: "\e90b";
+$gwicon-port: "\e90c";
+$gwicon-stapler: "\e90e";
+$gwicon-warehouse: "\e90f";

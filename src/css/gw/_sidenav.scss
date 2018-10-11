@@ -34,7 +34,7 @@
     @include transition(.3s width linear, .3s min-height linear);
     z-index: 1;
 
-    @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    @media only screen and (min-width: $screen-md-min) and (max-width: $screen-nav-abs-min) {
         position: absolute;
     }
 
@@ -530,7 +530,7 @@
             font-weight: bold;
             vertical-align: sub !important;
         }
-        i[class="gwicon-warehouse-blank"] {
+        i[class="gwicon-warehouse"] {
             font-size: 19px !important;
             font-weight: bold;
             vertical-align: sub !important;
@@ -888,8 +888,14 @@
 
 /* responsiveness of maincontent */
 
-@media(max-width: 992px){
+@media(max-width: $screen-md-min){
     #maincontent{
         padding-left: 0;
+    }
+}
+
+@media only screen and (min-width: $screen-md-min) and (max-width: $screen-nav-abs-min) {
+    #maincontent {
+        width: 100%;
     }
 }

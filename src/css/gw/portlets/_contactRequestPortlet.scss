@@ -1,190 +1,190 @@
 #gkwp-contact-request-portlet {
-	
 
-    th.lfr-status-column:before{
-        content:none;
+  th.lfr-status-column:before {
+    content: none;
+  }
+
+  .status-signal:before {
+    margin: 4px auto 0;
+    line-height: 15px;
+  }
+
+  .red:before {
+    padding-top: 9px !important;
+    color: #FF2400;
+    font-family: FontAwesome;
+    content: "\f111 ";
+    font-size: 25px;
+    padding-left: 5px;
+  }
+
+  .yellow:before {
+    color: #FFFF00;
+    font-family: FontAwesome;
+    content: "\f111";
+    padding-top: 9px !important;
+    font-size: 25px;
+    padding-left: 5px;
+  }
+
+  .green:before {
+    color: #00C853;
+    font-family: FontAwesome;
+    content: "\f111";
+    padding-top: 9px !important;
+    font-size: 25px;
+    padding-left: 5px;
+  }
+
+  .done:before {
+    font-family: FontAwesome;
+    content: "\f058";
+    font-size: 25px;
+    color: #00C853;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    padding-left: 5px;
+    padding-top: 9px !important;
+  }
+
+  .detail-view-header {
+    padding: 10px 0px 30px 30px;
+  }
+
+  .detail-view-left-column {
+    display: inline-block;
+    width: 65%;
+  }
+
+  .detail-view-right-column {
+    display: inline-block;
+    padding: 0 0 0 20px;
+    width: 34%;
+    float: right
+  }
+
+  .detail-view-box {
+    max-height: 500px;
+    border: 1px solid #dddddd;
+    overflow: auto;
+  }
+
+  .detail-view-message {
+    border: 1px solid #dddddd;
+    padding: 5px;
+  }
+
+  .detail-view-message-box {
+    padding-top: 15px;
+
+    .message-area {
+      height: 100px;
+      resize: none;
+      width: 100%;
     }
+  }
 
-	.status-signal:before {
-		margin: 4px auto 0;
-		line-height: 15px;
-	}
+  .detail-view-action-button {
+    display: inline-block;
+    float: right;
+  }
 
-	.red:before {
-		padding-top: 9px !important;
-		color: #FF2400;
-		font-family: FontAwesome;
-		content: "\f111 ";
-		font-size: 25px;
-		padding-left: 5px;
-	}
+  .detail-view-info-row-prop {
+    display: inline-block;
+    width: 38%;
+  }
 
-	.yellow:before {
-		color: #FFFF00;
-		font-family: FontAwesome;
-		content: "\f111";
-		padding-top: 9px !important;
-		font-size: 25px;
-		padding-left: 5px;
-	}
+  .detail-view-info-row-prop-key {
+    float: left;
+    width: 62%;
+  }
 
-	.green:before {
-		color: #00C853;
-		font-family: FontAwesome;
-		content: "\f111";
-		padding-top: 9px !important;
-		font-size: 25px;
-		padding-left: 5px;
-	}
+  .gwkp-contact-request-overview-hedaline {
+    float: left;
+  }
 
-	.done:before {
-		font-family: FontAwesome;
-		content: "\f058";
-		font-size: 25px;
-		color: #00C853;
-		font-style: normal;
-		font-weight: normal;
-		text-decoration: inherit;
-		padding-left: 5px;
-		padding-top: 9px !important;
-	}
+  .gwkp-contact-request-overview-addRequest-btn {
+    float: right;
+  }
+  .gwkp-contact-request-add-request-btn {
+    color: $colorForeground100;
+  }
 
-	.detail-view-header {
-		padding: 10px 0px 30px 30px;
-	}
+  .gwkp-contact-request-add-request-btn:hover {
+    text-decoration: none;
+  }
 
-	.detail-view-left-column {
-		display: inline-block;
-		width: 65%;
-	}
-
-	.detail-view-right-column {
-		display: inline-block;
-		padding: 0 0 0 20px;
-		width: 34%;
-		float: right
-	}
-
-	.detail-view-box {
-		max-height: 500px;
-		border: 1px solid #dddddd;
-		overflow: auto;
-	}
-
-	.detail-view-message {
-		border: 1px solid #dddddd;
-		padding: 5px;
-	}
-
-	.detail-view-message-box {
-		padding-top: 15px;
-
-		.message-area {
-			height: 100px;
-			resize: none;
-			width: 100%;
-		}
-	}
-
-	.detail-view-action-button {
-		display: inline-block;
-		float: right;
-	}
-
-
-	.detail-view-info-row-prop {
-		display: inline-block;
-		width: 38%;
-	}
-
-	.detail-view-info-row-prop-key {
-    		float: left;
-    		width:62%;
-    	}
-
-	.gwkp-contact-request-overview-hedaline{
-		float: left;
-	}
-
-	.gwkp-contact-request-overview-addRequest-btn{
-		float:right;
-	}
-	.gwkp-contact-request-add-request-btn{
-		color: $colorForeground100;
-	}
-
-	.gwkp-contact-request-add-request-btn:hover{
-		text-decoration: none;
-	}
-
-	.gwkp-clear{
-	clear:both;}
+  .gwkp-clear {
+    clear: both;
+  }
 }
 
-.gwkp-add-contact-request-portlet{
+.gwkp-add-contact-request-portlet {
 
-	margin-bottom: 70px;
+  margin-bottom: 70px;
 
-	.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-		background-color: none;
-		border: none;
-	}
+  .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    background-color: none;
+    border: none;
+  }
 
-	.gw-dropdown-toggle, .gw-dropdown-toggle:focus, .gw-dropdown-toggle:active, .gw-dropdown-menu {
-        min-width: 100% !important;
-	}
+  .gw-dropdown-toggle, .gw-dropdown-toggle:focus, .gw-dropdown-toggle:active, .gw-dropdown-menu {
+    min-width: 100% !important;
+  }
 
-	.topicHidden{
-		display: none;
-	}
+  .topicHidden {
+    display: none;
+  }
 
-	.reasonHidden{
-		display: none;
-	}
+  .reasonHidden {
+    display: none;
+  }
 
-	.btn-default{
-		background-color: #FF6600;
-		border: none;
-		border-radius: 0px;
-		font-weight: bold;
-		color: white;
-		font-family: Arial, sans-serif;
-	}
+  .btn-default {
+    background-color: #FF6600;
+    border: none;
+    border-radius: 0px;
+    font-weight: bold;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
 
-	.text-warning {
-		color: #ff2400;
+  .text-warning {
+    color: #ff2400;
 
-		svg {
-			height: 4px;
-			widht: 4px;
-			margin-top: -0.8em;
-		}
-	}
+    svg {
+      height: 4px;
+      widht: 4px;
+      margin-top: -0.8em;
+    }
+  }
 }
 
-.glyphicon-asterisk{
-	color:#FF6600;
+.glyphicon-asterisk {
+  color: #FF6600;
 }
 
-#add-request-button-request-overview{
-	margin-top: -80px;
-	margin-right: 55px;
+#add-request-button-request-overview {
+  margin-top: -80px;
+  margin-right: 15px;
 
 }
 
-#addRequestModal{
-	.modal-header {
-	    background-color: #FCFEFF;
-	    color: #29353D;
-	}.modal-header .close {
-	  		color: #869CAD;
-	}.modal-footer {
-	  		background-color: #FCFEFF;
-	 			color: #29353D;
-	}.modal-title {
-	  		text-align: left;
-	}
-	
-	
-}
+#addRequestModal {
+  .modal-header {
+    background-color: #FCFEFF;
+    color: #29353D;
+  }
+  .modal-header .close {
+    color: #869CAD;
+  }
+  .modal-footer {
+    background-color: #FCFEFF;
+    color: #29353D;
+  }
+  .modal-title {
+    text-align: left;
+  }
 
+}

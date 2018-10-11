@@ -46,7 +46,7 @@
 		color: $colorForeground100;
 	}
 
-	a.secondary {
+	a.secondary, #language-selector {
 		color: $colorForeground70;
 	}
 	
@@ -120,7 +120,7 @@
 	
 	.gwkp_copy_right {
 		float: left;
-		padding-left: 30px;
+		//padding-left: 30px;
 		font-size: 16px;
 	}
 	
@@ -142,7 +142,7 @@
 		}
 	}
 	
-	.gwkp_language_right {
+/*	.gwkp_language_right {
 		padding-top: 0;
 		float: right;
 		margin-top: -5px;
@@ -188,7 +188,7 @@
 				margin-right: -20px
 			}
 		}
-	}
+	}*/
 		
 	.gwkp_clear {
 		clear: both;
@@ -204,14 +204,19 @@
 	.gwkp_imprint_links_mobile {
 		display: none;
 	}
-	
+
+
 	.gwkp_imprint_links {
 		font-size: 16px;
 		a {
+			&:first-child{
+				padding-left: 0;
+			}
 			padding-left: 10px;
 			padding-right: 10px;
 		}
 	}
+
 
 	.gwkp_bottom_container_left {
 		padding-top:10px;
@@ -382,12 +387,17 @@
 			
 		.gwkp_imprint_links_mobile {
 			background-color: $colorBackgroundFooterDark;
+			/*
 			padding-left: 40px;
+			*/
 			display: block;
 			height: 52px;
 			padding-top: 13px;
 
 			a {
+				&:first-child{
+					padding-left: 0;
+				}
 				padding-left: 10px;
 				padding-right: 10px;
 			}
@@ -415,9 +425,9 @@
 	.gw-node-information-trigger {
 		width: 10px;
 		height: 10px;
-		position: absolute;
+		position: relative;
 		left: 0;
-		bottom: 0;
+		bottom: 10px;
 		display: block;
 		z-index: 5000;
 	}
@@ -427,4 +437,72 @@
 		font-size: 20px;
 		font-weight: bold;
 	}
+
+
+	#languageModal {
+		ul{
+			list-style-type: none;
+			li{
+				border-top: 1px solid #E9EAEB;
+				padding-bottom: 0;
+				a{
+					color: #343434;
+					display: block;
+					padding: 9px 0;
+					&:hover{
+						color:#f60;
+					}
+				}
+			}
+		}
+		h4{
+			margin-top: 0px!important;
+			margin-bottom: 0px!important;
+			color:#f60;
+			font-weight: bold;
+		}
+		.modal-header{
+			text-align: left;
+			background-color: #fff;
+		}
+		img{
+			width:336px;
+		}
+	}
+
+	.language-selector{
+		font-size: 16px;
+		&:hover{
+			color: #fff!important;
+		}
+	}
+
+
+	@media only screen and (min-width: 992px) {
+		#language-selector{
+			float: right;
+		}
+	}
+
+	@media only screen and (max-width: 991px) {
+		#languageModal{
+			.m-language-selector__map{
+						margin-bottom: 30px;
+				}
+		}
+	}
+	@media only screen and (min-width: 481px) {
+		.language-selector-mobile{
+			display: none;
+		}
+	}
+
+	@media (min-width: 768px) {
+		#languageModal{
+			.modal-dialog {
+				width: 700px;
+			}
+		}
+	}
+
 }

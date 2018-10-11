@@ -63,8 +63,6 @@ $gwicon-transport-sea: "\e909";
 $gwicon-transport-air: "\e90a";
 $gwicon-checkbox-checked: "\e901";
 $gwicon-checkbox-unchecked: "\e902";
-$gwicon-warehouse-blank: "\e903";
-
 // Breadcrumbs
 $breadcrumb-separator: "/";
 $breadcrumb-padding-vertical: 0;
@@ -73,3 +71,6 @@ $breadcrumb-padding-horizontal: 0;
 // Menu
 $nav-menu_width: 70px;
 $nav-menu_font-size: rem(16);
+
+
+$screen-nav-abs-min: 1568px;
