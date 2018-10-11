@@ -1,0 +1,78 @@
+/* from tooltipster sideTip borderless copied */
+.tooltipster-sidetip.tooltipster-borderless .tooltipster-box{border:none;background:#1b1b1b;background:rgba(10,10,10,.9)}.tooltipster-sidetip.tooltipster-borderless.tooltipster-bottom .tooltipster-box{margin-top:8px}.tooltipster-sidetip.tooltipster-borderless.tooltipster-left .tooltipster-box{margin-right:8px}.tooltipster-sidetip.tooltipster-borderless.tooltipster-right .tooltipster-box{margin-left:8px}.tooltipster-sidetip.tooltipster-borderless.tooltipster-top .tooltipster-box{margin-bottom:8px}.tooltipster-sidetip.tooltipster-borderless .tooltipster-arrow{height:8px;margin-left:-8px;width:16px}.tooltipster-sidetip.tooltipster-borderless.tooltipster-left .tooltipster-arrow,.tooltipster-sidetip.tooltipster-borderless.tooltipster-right .tooltipster-arrow{height:16px;margin-left:0;margin-top:-8px;width:8px}.tooltipster-sidetip.tooltipster-borderless .tooltipster-arrow-background{display:none}.tooltipster-sidetip.tooltipster-borderless .tooltipster-arrow-border{border:8px solid transparent}.tooltipster-sidetip.tooltipster-borderless.tooltipster-bottom .tooltipster-arrow-border{border-bottom-color:#1b1b1b;border-bottom-color:rgba(10,10,10,.9)}.tooltipster-sidetip.tooltipster-borderless.tooltipster-left .tooltipster-arrow-border{border-left-color:#1b1b1b;border-left-color:rgba(10,10,10,.9)}.tooltipster-sidetip.tooltipster-borderless.tooltipster-right .tooltipster-arrow-border{border-right-color:#1b1b1b;border-right-color:rgba(10,10,10,.9)}.tooltipster-sidetip.tooltipster-borderless.tooltipster-top .tooltipster-arrow-border{border-top-color:#1b1b1b;border-top-color:rgba(10,10,10,.9)}.tooltipster-sidetip.tooltipster-borderless.tooltipster-bottom .tooltipster-arrow-uncropped{top:-8px}.tooltipster-sidetip.tooltipster-borderless.tooltipster-right .tooltipster-arrow-uncropped{left:-8px}
+
+.tooltipster-gw {
+    .container-fluid-1280 {
+        padding: 0;
+    }
+    .ddl-form-builder-app .lfr-ddm-form-page > .row {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .portlet-forms .lfr-ddm-form-field-container {
+        padding: 10px 0 15px 0;
+    }
+    .tooltipster-content {
+        padding: 5px;
+
+        .portlet-boundary {
+            background: #ffffff;
+        }
+    }
+    .tooltipster-box{
+        border:none;
+        background:$colorPrimary100;
+    }
+    .tooltipster-bottom .tooltipster-box{
+        margin-top:8px;
+    }
+    .tooltipster-left .tooltipster-box{
+        margin-right:8px;
+    }
+    .tooltipster-right .tooltipster-box{
+        margin-left:8px;
+    }
+    .tooltipster-top .tooltipster-box{
+        margin-bottom:8px;
+    }
+    .tooltipster-arrow{
+        height:8px;
+        margin-left:-8px;
+        width:16px;
+    }
+    .tooltipster-left .tooltipster-arrow,
+    .tooltipster-right .tooltipster-arrow{
+        height:16px;
+        margin-left:0;
+        margin-top:-8px;
+        width:8px;
+    }
+    .tooltipster-arrow-background{
+        display:none;
+    }
+    .tooltipster-arrow-border{
+        border:10px solid transparent;
+    }
+    .tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-border {
+        border-bottom-color:$colorPrimary100;
+    }
+    .tooltipster-left .tooltipster-arrow-border{
+        border-left-color:$colorPrimary100;
+    }
+    .tooltipster-right .tooltipster-arrow-border{
+        border-right-color:$colorPrimary100;
+    }
+    .tooltipster-top .tooltipster-arrow-border{
+        border-top-color:$colorPrimary100;
+    }
+    .tooltipster-bottom .tooltipster-arrow-uncropped{
+        top:-8px;
+    }
+    .tooltipster-right .tooltipster-arrow-uncropped{
+        left:-8px;
+    }
+}
+
+.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-border {
+    border-bottom-color:$colorPrimary100;
+}
